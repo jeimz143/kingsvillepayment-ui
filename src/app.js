@@ -80,9 +80,7 @@ var io = socketIO(server)
 app.set('socketio', io)
 var routes = require('./routes/routes')
 routes(app, io)
-console.log(env === 'PRODUCTION')
 if (env === 'PRODUCTION') {
-  console.log('production corner')
   app.use(express.static(__dirname + '/public/'))
   // handle SPA
   app.get(/.*/, (req, res) => {
