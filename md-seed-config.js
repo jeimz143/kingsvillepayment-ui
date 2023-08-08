@@ -5,6 +5,7 @@ const Role = require('./src/database/seeders/role.seeder')
 const Permission = require('./src/database/seeders/permissions.seeder')
 
 const mongoURL = process.env.MONGO_DB_URL
+console.log(mongoURL)
 
 /**
  * Seeders List
