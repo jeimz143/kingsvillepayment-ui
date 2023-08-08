@@ -2,7 +2,7 @@
   "name": "kingsvillepaymentsystem",
   "version": "1.0.0",
   "description": "Kingsville Advanced School Inc.",
-  "main": "index.js",
+  "main": "./src/app.js",
   "scripts": {
     "start": "SET NODE_ENV=PRODUCTION&&nodemon ./src/app.js",
     "dev": "SET NODE_ENV=DEVELOPMENT&&nodemon ./src/app.js",
