@@ -1,0 +1,415 @@
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+::1 - - [25/Sep/2020:02:50:18 +0000] "GET / HTTP/1.1" 200 4059 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/runtime.f10c6a0c.js HTTP/1.1" 200 4929 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/015f53a0.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/0c89dda6.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/app.56c2fc26.css HTTP/1.1" 200 387629 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/10992d92.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/1488fb57.b6f1a062.css HTTP/1.1" 200 55 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/4bc5bed1.1488dbb3.css HTTP/1.1" 200 114 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/app.74caa096.js HTTP/1.1" 200 57476 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/514b3f6e.c322bfd3.css HTTP/1.1" 200 173 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/5d988343.e437f47d.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/64a15e74.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/66c216b0.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/5c3af3de.bd84b2ca.css HTTP/1.1" 200 637 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/54f6b556.676d29f7.css HTTP/1.1" 200 87 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/68fe3ddc.f7bdeae6.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/6d3abe6e.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/6e426f8d.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/7a75f085.f3a5e403.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/88f57b30.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/a37919ec.c84e70f4.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/b0a338e8.51c3118b.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/74a8b8c9.49d2d2a8.css HTTP/1.1" 200 9585 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/b9b0095a.8a299d20.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/cb583702.74b156be.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /css/ccaea43e.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/10992d92.1b10620d.js HTTP/1.1" 200 1075 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/015f53a0.81c5cc47.js HTTP/1.1" 200 1063 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/0c89dda6.081f2373.js HTTP/1.1" 200 11005 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/2d0c1b63.02f51b31.js HTTP/1.1" 200 2473 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/2d0b2346.6af75b5f.js HTTP/1.1" 200 8418 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/1488fb57.24d2ef83.js HTTP/1.1" 200 3266 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/2d0d0639.1d408f7d.js HTTP/1.1" 200 2867 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/2d0d607e.8845ed17.js HTTP/1.1" 200 3430 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/2d0decf4.667834ed.js HTTP/1.1" 200 4267 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/2d208a47.41869352.js HTTP/1.1" 200 4669 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/2d0e6c2d.f5fecde0.js HTTP/1.1" 200 3453 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/2d21a7b4.c0e6da8d.js HTTP/1.1" 200 9003 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/2d225069.3c487543.js HTTP/1.1" 200 2668 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/2d224c48.dd8176ab.js HTTP/1.1" 200 3428 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/4bc5bed1.4b23cae3.js HTTP/1.1" 200 474 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/514b3f6e.8aa91a8b.js HTTP/1.1" 200 5286 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/4b47640d.6a327936.js HTTP/1.1" 200 12425 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/54f6b556.de2272d7.js HTTP/1.1" 200 620 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/5c3af3de.637ac2c0.js HTTP/1.1" 200 3929 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/5d988343.52039783.js HTTP/1.1" 200 4495 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/64a15e74.a4da3b9d.js HTTP/1.1" 200 1074 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/66c216b0.3f32df39.js HTTP/1.1" 200 1074 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/6d3abe6e.d3fce1c1.js HTTP/1.1" 200 1077 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/68fe3ddc.e9272858.js HTTP/1.1" 200 6326 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/6e426f8d.e658c13e.js HTTP/1.1" 200 1080 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/74a8b8c9.508c1d02.js HTTP/1.1" 200 14548 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/7beec169.a8d7c8b2.js HTTP/1.1" 200 5397 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/7a75f085.00d019a1.js HTTP/1.1" 200 14347 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/354913ba.beb3b2e0.js HTTP/1.1" 200 364179 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/7bef68f1.ef038d38.js HTTP/1.1" 200 3346 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/88f57b30.df65abf6.js HTTP/1.1" 200 1086 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/a37919ec.94c60afd.js HTTP/1.1" 200 4219 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/b0a338e8.aad286af.js HTTP/1.1" 200 3863 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/b9b0095a.57a630a3.js HTTP/1.1" 200 4110 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/cb583702.127d805c.js HTTP/1.1" 200 7506 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/ccaea43e.0c6961b3.js HTTP/1.1" 200 1083 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/f417a492.7b09e33d.js HTTP/1.1" 200 19776 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/f43ff8ac.627a0dd9.js HTTP/1.1" 200 26706 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /js/vendor.5b997707.js HTTP/1.1" 200 2215832 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+Made Socket connection bWBibTOhYL-82TQAAAAA
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /fonts/KFOmCnqEu92Fr1Mu4mxM.bafb105b.woff HTTP/1.1" 200 19824 "http://localhost:5000/css/app.56c2fc26.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /fonts/KFOlCnqEu92Fr1MmEU9fBBc-.de8b7431.woff HTTP/1.1" 200 20012 "http://localhost:5000/css/app.56c2fc26.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:19 +0000] "GET /fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.8a9a261c.woff2 HTTP/1.1" 200 55088 "http://localhost:5000/css/app.56c2fc26.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:20 +0000] "GET /statics/quasar-logo.png HTTP/1.1" 200 7197 "http://localhost:5000/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+::1 - - [25/Sep/2020:02:50:20 +0000] "GET /statics/icons/favicon-32x32.png HTTP/1.1" 200 2604 "http://localhost:5000/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 Edg/85.0.564.51"
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET / HTTP/1.1" 200 4059 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/015f53a0.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/0c89dda6.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/app.56c2fc26.css HTTP/1.1" 200 387629 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/10992d92.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/runtime.f10c6a0c.js HTTP/1.1" 200 4929 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/app.74caa096.js HTTP/1.1" 200 57476 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/1488fb57.b6f1a062.css HTTP/1.1" 200 55 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/4bc5bed1.1488dbb3.css HTTP/1.1" 200 114 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/514b3f6e.c322bfd3.css HTTP/1.1" 200 173 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/5d988343.e437f47d.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/64a15e74.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/54f6b556.676d29f7.css HTTP/1.1" 200 87 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/5c3af3de.bd84b2ca.css HTTP/1.1" 200 637 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/66c216b0.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/68fe3ddc.f7bdeae6.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/6d3abe6e.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/6e426f8d.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/7a75f085.f3a5e403.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/88f57b30.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/a37919ec.c84e70f4.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/b0a338e8.51c3118b.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/74a8b8c9.49d2d2a8.css HTTP/1.1" 200 9585 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/b9b0095a.8a299d20.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/cb583702.74b156be.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /css/ccaea43e.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/10992d92.1b10620d.js HTTP/1.1" 200 1075 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/015f53a0.81c5cc47.js HTTP/1.1" 200 1063 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/0c89dda6.081f2373.js HTTP/1.1" 200 11005 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/1488fb57.24d2ef83.js HTTP/1.1" 200 3266 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/2d0b2346.6af75b5f.js HTTP/1.1" 200 8418 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/2d0c1b63.02f51b31.js HTTP/1.1" 200 2473 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/2d0d607e.8845ed17.js HTTP/1.1" 200 3430 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/2d0d0639.1d408f7d.js HTTP/1.1" 200 2867 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/2d0decf4.667834ed.js HTTP/1.1" 200 4267 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/2d208a47.41869352.js HTTP/1.1" 200 4669 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/2d0e6c2d.f5fecde0.js HTTP/1.1" 200 3453 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/2d21a7b4.c0e6da8d.js HTTP/1.1" 200 9003 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/2d224c48.dd8176ab.js HTTP/1.1" 200 3428 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/2d225069.3c487543.js HTTP/1.1" 200 2668 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/4bc5bed1.4b23cae3.js HTTP/1.1" 200 474 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/514b3f6e.8aa91a8b.js HTTP/1.1" 200 5286 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/4b47640d.6a327936.js HTTP/1.1" 200 12425 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/54f6b556.de2272d7.js HTTP/1.1" 200 620 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/5d988343.52039783.js HTTP/1.1" 200 4495 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/5c3af3de.637ac2c0.js HTTP/1.1" 200 3929 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/64a15e74.a4da3b9d.js HTTP/1.1" 200 1074 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/66c216b0.3f32df39.js HTTP/1.1" 200 1074 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/68fe3ddc.e9272858.js HTTP/1.1" 200 6326 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/6d3abe6e.d3fce1c1.js HTTP/1.1" 200 1077 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/6e426f8d.e658c13e.js HTTP/1.1" 200 1080 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/74a8b8c9.508c1d02.js HTTP/1.1" 200 14548 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/7beec169.a8d7c8b2.js HTTP/1.1" 200 5397 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/354913ba.beb3b2e0.js HTTP/1.1" 200 364179 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/7a75f085.00d019a1.js HTTP/1.1" 200 14347 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/7bef68f1.ef038d38.js HTTP/1.1" 200 3346 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/88f57b30.df65abf6.js HTTP/1.1" 200 1086 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/a37919ec.94c60afd.js HTTP/1.1" 200 4219 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/b0a338e8.aad286af.js HTTP/1.1" 200 3863 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/b9b0095a.57a630a3.js HTTP/1.1" 200 4110 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/ccaea43e.0c6961b3.js HTTP/1.1" 200 1083 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/cb583702.127d805c.js HTTP/1.1" 200 7506 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/f417a492.7b09e33d.js HTTP/1.1" 200 19776 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:26 +0000] "GET /js/f43ff8ac.627a0dd9.js HTTP/1.1" 200 26706 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:27 +0000] "GET /js/vendor.5b997707.js HTTP/1.1" 200 2215832 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+Made Socket connection h7G7hgeWNqF4e8BCAAAA
+::1 - - [01/Oct/2020:13:49:27 +0000] "GET /fonts/KFOmCnqEu92Fr1Mu4mxM.bafb105b.woff HTTP/1.1" 200 19824 "http://localhost:5000/css/app.56c2fc26.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:27 +0000] "GET /fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.8a9a261c.woff2 HTTP/1.1" 200 55088 "http://localhost:5000/css/app.56c2fc26.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:27 +0000] "GET /fonts/KFOlCnqEu92Fr1MmEU9fBBc-.de8b7431.woff HTTP/1.1" 200 20012 "http://localhost:5000/css/app.56c2fc26.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:27 +0000] "GET /statics/quasar-logo.png HTTP/1.1" 200 7197 "http://localhost:5000/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:49:27 +0000] "GET /statics/icons/favicon-32x32.png HTTP/1.1" 200 2604 "http://localhost:5000/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+Made Socket connection wFnljupbrcamRJiZAAAB
+::1 - - [01/Oct/2020:13:50:05 +0000] "OPTIONS /api/signin HTTP/1.1" 204 0 "http://localhost:8080/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:50:05 +0000] "POST /api/signin HTTP/1.1" 401 54 "http://localhost:8080/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:50:11 +0000] "OPTIONS /api/signin HTTP/1.1" 204 0 "http://localhost:8080/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:50:11 +0000] "POST /api/signin HTTP/1.1" 401 54 "http://localhost:8080/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:50:17 +0000] "OPTIONS /api/signin HTTP/1.1" 204 0 "http://localhost:8080/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:50:17 +0000] "POST /api/signin HTTP/1.1" 401 54 "http://localhost:8080/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:50:23 +0000] "OPTIONS /api/signin HTTP/1.1" 204 0 "http://localhost:8080/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:50:23 +0000] "POST /api/signin HTTP/1.1" 401 54 "http://localhost:8080/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:51:08 +0000] "OPTIONS /api/signin HTTP/1.1" 204 0 "http://localhost:8080/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:51:08 +0000] "POST /api/signin HTTP/1.1" 401 54 "http://localhost:8080/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+Made Socket connection vLMci_xBAbsIm9ueAAAA
+Made Socket connection cPO13U5e5QOpY2fIAAAB
+::1 - - [01/Oct/2020:13:52:10 +0000] "OPTIONS /api/signin HTTP/1.1" 204 0 "http://localhost:8080/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:52:10 +0000] "POST /api/signin HTTP/1.1" 401 54 "http://localhost:8080/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:52:14 +0000] "POST /api/signin HTTP/1.1" 401 54 "http://localhost:8080/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [01/Oct/2020:13:53:28 +0000] "OPTIONS /api/signin HTTP/1.1" 204 0 "http://localhost:8080/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+Made Socket connection CWR6sH7fVHXtLXFYAAAA
+Made Socket connection w8gfd8uZHX8v6DfhAAAB
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+Made Socket connection FxRCdD1t3Hjs3oocAAAA
+Made Socket connection BT84btPTMqpzmbYDAAAB
+Made Socket connection cCFDIO8P1lkGDOMKAAAC
+::1 - - [01/Oct/2020:13:53:53 +0000] "OPTIONS /api/signin HTTP/1.1" 204 0 "http://localhost:8080/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET / HTTP/1.1" 200 4059 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/015f53a0.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/0c89dda6.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/app.56c2fc26.css HTTP/1.1" 200 387629 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/runtime.f10c6a0c.js HTTP/1.1" 200 4929 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/10992d92.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/4bc5bed1.1488dbb3.css HTTP/1.1" 304 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/1488fb57.b6f1a062.css HTTP/1.1" 200 55 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/5c3af3de.bd84b2ca.css HTTP/1.1" 304 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/app.74caa096.js HTTP/1.1" 200 57476 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/514b3f6e.c322bfd3.css HTTP/1.1" 200 173 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/54f6b556.676d29f7.css HTTP/1.1" 200 87 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/5d988343.e437f47d.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/64a15e74.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/66c216b0.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/68fe3ddc.f7bdeae6.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/6d3abe6e.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/6e426f8d.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/7a75f085.f3a5e403.css HTTP/1.1" 304 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/88f57b30.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/a37919ec.c84e70f4.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/b0a338e8.51c3118b.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/74a8b8c9.49d2d2a8.css HTTP/1.1" 200 9585 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/b9b0095a.8a299d20.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/cb583702.74b156be.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /css/ccaea43e.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/015f53a0.81c5cc47.js HTTP/1.1" 200 1063 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/10992d92.1b10620d.js HTTP/1.1" 200 1075 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/0c89dda6.081f2373.js HTTP/1.1" 200 11005 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/1488fb57.24d2ef83.js HTTP/1.1" 200 3266 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/2d0b2346.6af75b5f.js HTTP/1.1" 200 8418 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/2d0c1b63.02f51b31.js HTTP/1.1" 200 2473 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/2d0d0639.1d408f7d.js HTTP/1.1" 200 2867 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/2d0d607e.8845ed17.js HTTP/1.1" 200 3430 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/2d0decf4.667834ed.js HTTP/1.1" 200 4267 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/2d208a47.41869352.js HTTP/1.1" 200 4669 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/2d0e6c2d.f5fecde0.js HTTP/1.1" 200 3453 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/2d21a7b4.c0e6da8d.js HTTP/1.1" 200 9003 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/2d224c48.dd8176ab.js HTTP/1.1" 200 3428 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/4bc5bed1.4b23cae3.js HTTP/1.1" 304 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/2d225069.3c487543.js HTTP/1.1" 200 2668 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/5c3af3de.637ac2c0.js HTTP/1.1" 304 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/514b3f6e.8aa91a8b.js HTTP/1.1" 200 5286 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/54f6b556.de2272d7.js HTTP/1.1" 200 620 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/4b47640d.6a327936.js HTTP/1.1" 200 12425 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/5d988343.52039783.js HTTP/1.1" 200 4495 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/64a15e74.a4da3b9d.js HTTP/1.1" 200 1074 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/66c216b0.3f32df39.js HTTP/1.1" 200 1074 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/68fe3ddc.e9272858.js HTTP/1.1" 200 6326 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/6d3abe6e.d3fce1c1.js HTTP/1.1" 200 1077 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/7a75f085.00d019a1.js HTTP/1.1" 304 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/6e426f8d.e658c13e.js HTTP/1.1" 200 1080 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/74a8b8c9.508c1d02.js HTTP/1.1" 200 14548 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/7beec169.a8d7c8b2.js HTTP/1.1" 200 5397 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/354913ba.beb3b2e0.js HTTP/1.1" 200 364179 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/88f57b30.df65abf6.js HTTP/1.1" 200 1086 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/7bef68f1.ef038d38.js HTTP/1.1" 200 3346 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/a37919ec.94c60afd.js HTTP/1.1" 200 4219 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/b0a338e8.aad286af.js HTTP/1.1" 200 3863 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/b9b0095a.57a630a3.js HTTP/1.1" 200 4110 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/cb583702.127d805c.js HTTP/1.1" 200 7506 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/ccaea43e.0c6961b3.js HTTP/1.1" 200 1083 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/f417a492.7b09e33d.js HTTP/1.1" 200 19776 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/f43ff8ac.627a0dd9.js HTTP/1.1" 200 26706 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /js/vendor.5b997707.js HTTP/1.1" 200 2215832 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+Made Socket connection 2YMsLxXWaxP2NQUAAAAA
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /fonts/KFOlCnqEu92Fr1MmEU9fBBc-.de8b7431.woff HTTP/1.1" 200 20012 "http://localhost:5000/css/app.56c2fc26.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /fonts/KFOmCnqEu92Fr1Mu4mxM.bafb105b.woff HTTP/1.1" 200 19824 "http://localhost:5000/css/app.56c2fc26.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.8a9a261c.woff2 HTTP/1.1" 200 55088 "http://localhost:5000/css/app.56c2fc26.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [02/Oct/2020:02:23:25 +0000] "GET /statics/quasar-logo.png HTTP/1.1" 200 7197 "http://localhost:5000/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+::1 - - [30/Nov/2020:14:43:39 +0000] "GET / HTTP/1.1" 200 4059 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/app.74caa096.js HTTP/1.1" 200 57476 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/015f53a0.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/0c89dda6.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/runtime.f10c6a0c.js HTTP/1.1" 200 4929 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/10992d92.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/4bc5bed1.1488dbb3.css HTTP/1.1" 200 114 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/1488fb57.b6f1a062.css HTTP/1.1" 200 55 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/514b3f6e.c322bfd3.css HTTP/1.1" 200 173 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/54f6b556.676d29f7.css HTTP/1.1" 200 87 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/5d988343.e437f47d.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/64a15e74.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/5c3af3de.bd84b2ca.css HTTP/1.1" 200 637 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/66c216b0.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/68fe3ddc.f7bdeae6.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/6d3abe6e.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/6e426f8d.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/7a75f085.f3a5e403.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/88f57b30.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/a37919ec.c84e70f4.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/b0a338e8.51c3118b.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/b9b0095a.8a299d20.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/cb583702.74b156be.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/ccaea43e.0e433876.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/app.56c2fc26.css HTTP/1.1" 200 387629 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /css/74a8b8c9.49d2d2a8.css HTTP/1.1" 200 9585 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/10992d92.1b10620d.js HTTP/1.1" 200 1075 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/015f53a0.81c5cc47.js HTTP/1.1" 200 1063 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/0c89dda6.081f2373.js HTTP/1.1" 200 11005 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/1488fb57.24d2ef83.js HTTP/1.1" 200 3266 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/2d0b2346.6af75b5f.js HTTP/1.1" 200 8418 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/2d0c1b63.02f51b31.js HTTP/1.1" 200 2473 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/2d0d0639.1d408f7d.js HTTP/1.1" 200 2867 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/2d0decf4.667834ed.js HTTP/1.1" 200 4267 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/2d0d607e.8845ed17.js HTTP/1.1" 200 3430 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/2d0e6c2d.f5fecde0.js HTTP/1.1" 200 3453 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/2d208a47.41869352.js HTTP/1.1" 200 4669 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/2d21a7b4.c0e6da8d.js HTTP/1.1" 200 9003 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/2d224c48.dd8176ab.js HTTP/1.1" 200 3428 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/4bc5bed1.4b23cae3.js HTTP/1.1" 200 474 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/2d225069.3c487543.js HTTP/1.1" 200 2668 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/514b3f6e.8aa91a8b.js HTTP/1.1" 200 5286 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/54f6b556.de2272d7.js HTTP/1.1" 200 620 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:41 +0000] "GET /js/4b47640d.6a327936.js HTTP/1.1" 200 12425 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/5d988343.52039783.js HTTP/1.1" 200 4495 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/5c3af3de.637ac2c0.js HTTP/1.1" 200 3929 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/66c216b0.3f32df39.js HTTP/1.1" 200 1074 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/64a15e74.a4da3b9d.js HTTP/1.1" 200 1074 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/6d3abe6e.d3fce1c1.js HTTP/1.1" 200 1077 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/68fe3ddc.e9272858.js HTTP/1.1" 200 6326 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/6e426f8d.e658c13e.js HTTP/1.1" 200 1080 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/74a8b8c9.508c1d02.js HTTP/1.1" 200 14548 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/7a75f085.00d019a1.js HTTP/1.1" 200 14347 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/7beec169.a8d7c8b2.js HTTP/1.1" 200 5397 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/7bef68f1.ef038d38.js HTTP/1.1" 200 3346 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/354913ba.beb3b2e0.js HTTP/1.1" 200 364179 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/88f57b30.df65abf6.js HTTP/1.1" 200 1086 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/a37919ec.94c60afd.js HTTP/1.1" 200 4219 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/b0a338e8.aad286af.js HTTP/1.1" 200 3863 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/b9b0095a.57a630a3.js HTTP/1.1" 200 4110 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/ccaea43e.0c6961b3.js HTTP/1.1" 200 1083 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/cb583702.127d805c.js HTTP/1.1" 200 7506 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/f417a492.7b09e33d.js HTTP/1.1" 200 19776 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/f43ff8ac.627a0dd9.js HTTP/1.1" 200 26706 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /js/vendor.5b997707.js HTTP/1.1" 200 2215832 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+Made Socket connection GLsezE__E02px7XOAAAA
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /fonts/KFOlCnqEu92Fr1MmEU9fBBc-.de8b7431.woff HTTP/1.1" 200 20012 "http://localhost:5000/css/app.56c2fc26.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.8a9a261c.woff2 HTTP/1.1" 200 55088 "http://localhost:5000/css/app.56c2fc26.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /fonts/KFOmCnqEu92Fr1Mu4mxM.bafb105b.woff HTTP/1.1" 200 19824 "http://localhost:5000/css/app.56c2fc26.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /statics/quasar-logo.png HTTP/1.1" 200 7197 "http://localhost:5000/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+::1 - - [30/Nov/2020:14:43:42 +0000] "GET /statics/icons/favicon-32x32.png HTTP/1.1" 200 2604 "http://localhost:5000/auth/sign-in?redirect=%2F" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+Made Socket connection RxPCCMLVFQCZDJSjAAAB
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.
+PRODUCTION
+true
+production corner
+listening at port: 5000 running in PRODUCTION mode.

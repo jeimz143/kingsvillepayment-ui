@@ -1,0 +1,33 @@
+<service>
+	<id>kingsvillepaymentapp.exe</id>
+	<name>KingsvillePaymentApp</name>
+	<description>Payment Management System</description>
+	<executable>D:\_Programs\NodeJs\node.exe</executable>
+	<argument>--harmony</argument>
+	<argument>--max_old_space_size=4096</argument>
+	<argument>C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js</argument>
+	<argument>--file</argument>
+	<argument>D:\Projects\artisanscreative\kingsville\server\src\app.js</argument>
+	<argument>--scriptoptions=</argument>
+	<argument>--log</argument>
+	<argument>KingsvillePaymentApp wrapper</argument>
+	<argument>--grow</argument>
+	<argument>0.25</argument>
+	<argument>--wait</argument>
+	<argument>1</argument>
+	<argument>--maxrestarts</argument>
+	<argument>3</argument>
+	<argument>--abortonerror</argument>
+	<argument>n</argument>
+	<argument>--stopparentfirst</argument>
+	<argument>undefined</argument>
+	<logmode>rotate</logmode>
+	<stoptimeout>30sec</stoptimeout>
+	<env name="undefined" value="undefined"/>
+	<serviceaccount>
+		<domain>LAPTOP-PPCPOBLG</domain>
+		<user>LocalSystem</user>
+		<password></password>
+	</serviceaccount>
+	<workingdirectory>D:\Projects\artisanscreative\kingsville\server</workingdirectory>
+</service>

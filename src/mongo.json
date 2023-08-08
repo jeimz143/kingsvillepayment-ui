@@ -1,0 +1,10 @@
+{
+  "DEVELOPMENT": {
+    "database": "DBTEST",
+    "host": "localhost",
+    "port": "27017"
+  },
+  "PRODUCTION": {
+    "use_env_variable": "mongodb+srv://jeimzm:oMuWXmxMQwOdWnDF@kingsville.z5q3lhm.mongodb.net/kingsvillepayment?retryWrites=true&w=majority"
+  }
+}

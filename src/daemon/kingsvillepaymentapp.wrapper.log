@@ -1,0 +1,372 @@
+2020-09-25 10:49:10 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-09-25 10:49:10 - Started 6416
+2020-09-25 10:57:43 - Stopping kingsvillepaymentapp.exe
+2020-09-25 10:57:43 - ProcessKill 6416
+2020-09-25 10:57:43 - Found child process: 12980 Name: conhost.exe
+2020-09-25 10:57:43 - Found child process: 576 Name: node.exe
+2020-09-25 10:57:44 - Stopping process 12980
+2020-09-25 10:57:44 - Send SIGINT 12980
+2020-09-25 10:57:44 - SIGINT to 12980 failed - Killing as fallback
+2020-09-25 10:57:44 - Stopping process 576
+2020-09-25 10:57:44 - Send SIGINT 576
+2020-09-25 10:57:44 - SIGINT to 576 failed - Killing as fallback
+2020-09-25 10:57:44 - Stopping process 6416
+2020-09-25 10:57:44 - Send SIGINT 6416
+2020-09-25 10:57:44 - SIGINT to 6416 failed - Killing as fallback
+2020-09-25 10:57:44 - Finished kingsvillepaymentapp.exe
+2020-10-01 02:58:04 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-01 02:58:04 - Started 6708
+2020-10-01 03:09:07 - Stopping kingsvillepaymentapp.exe
+2020-10-01 03:09:07 - ProcessKill 6708
+2020-10-01 03:09:07 - Shutdown exception
+Message:A system shutdown is in progress.
+
+Stacktrace:   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Management.ManagementScope.InitializeGuts(Object o)
+   at System.Management.ManagementScope.Initialize()
+   at System.Management.ManagementObjectSearcher.Initialize()
+   at System.Management.ManagementObjectSearcher.Get()
+   at winsw.WrapperService.GetChildPids(Int32 pid)
+   at winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   at winsw.WrapperService.StopIt()
+   at winsw.WrapperService.OnShutdown()
+2020-10-01 03:09:44 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-01 03:09:44 - Started 6572
+2020-10-01 11:28:30 - Stopping kingsvillepaymentapp.exe
+2020-10-01 11:28:30 - ProcessKill 6572
+2020-10-01 11:28:31 - Shutdown exception
+Message:A system shutdown is in progress.
+
+Stacktrace:   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Management.ManagementScope.InitializeGuts(Object o)
+   at System.Management.ManagementScope.Initialize()
+   at System.Management.ManagementObjectSearcher.Initialize()
+   at System.Management.ManagementObjectSearcher.Get()
+   at winsw.WrapperService.GetChildPids(Int32 pid)
+   at winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   at winsw.WrapperService.StopIt()
+   at winsw.WrapperService.OnShutdown()
+2020-10-01 11:29:07 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-01 11:29:07 - Started 6764
+2020-10-01 21:51:49 - Stopping kingsvillepaymentapp.exe
+2020-10-01 21:51:49 - ProcessKill 6764
+2020-10-01 21:51:49 - Found child process: 7188 Name: conhost.exe
+2020-10-01 21:51:49 - Found child process: 8676 Name: node.exe
+2020-10-01 21:51:49 - Stopping process 7188
+2020-10-01 21:51:49 - Send SIGINT 7188
+2020-10-01 21:51:49 - SIGINT to 7188 failed - Killing as fallback
+2020-10-01 21:51:49 - Stopping process 8676
+2020-10-01 21:51:49 - Send SIGINT 8676
+2020-10-01 21:51:49 - SIGINT to 8676 failed - Killing as fallback
+2020-10-01 21:51:49 - Stopping process 6764
+2020-10-01 21:51:49 - Send SIGINT 6764
+2020-10-01 21:51:49 - SIGINT to 6764 failed - Killing as fallback
+2020-10-01 21:51:49 - Finished kingsvillepaymentapp.exe
+2020-10-01 21:51:52 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-01 21:51:52 - Started 17224
+2020-10-02 10:11:10 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-02 10:11:10 - Started 7932
+2020-10-02 10:38:09 - Stopping kingsvillepaymentapp.exe
+2020-10-02 10:38:09 - ProcessKill 7932
+2020-10-02 10:38:09 - Found child process: 7984 Name: conhost.exe
+2020-10-02 10:38:09 - Found child process: 9432 Name: node.exe
+2020-10-02 10:38:09 - Stopping process 7984
+2020-10-02 10:38:09 - Send SIGINT 7984
+2020-10-02 10:38:09 - SIGINT to 7984 failed - Killing as fallback
+2020-10-02 10:38:09 - Stopping process 9432
+2020-10-02 10:38:09 - Send SIGINT 9432
+2020-10-02 10:38:09 - SIGINT to 9432 failed - Killing as fallback
+2020-10-02 10:38:09 - Stopping process 7932
+2020-10-02 10:38:09 - Send SIGINT 7932
+2020-10-02 10:38:09 - SIGINT to 7932 failed - Killing as fallback
+2020-10-02 10:38:09 - Finished kingsvillepaymentapp.exe
+2020-10-04 16:22:15 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-04 16:22:15 - Started 8132
+2020-10-04 16:28:27 - Stopping kingsvillepaymentapp.exe
+2020-10-04 16:28:27 - ProcessKill 8132
+2020-10-04 16:28:27 - Shutdown exception
+Message:A system shutdown is in progress.
+
+Stacktrace:   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Management.ManagementScope.InitializeGuts(Object o)
+   at System.Management.ManagementScope.Initialize()
+   at System.Management.ManagementObjectSearcher.Initialize()
+   at System.Management.ManagementObjectSearcher.Get()
+   at winsw.WrapperService.GetChildPids(Int32 pid)
+   at winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   at winsw.WrapperService.StopIt()
+   at winsw.WrapperService.OnShutdown()
+2020-10-04 16:29:07 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-04 16:29:07 - Started 7908
+2020-10-05 18:45:44 - Stopping kingsvillepaymentapp.exe
+2020-10-05 18:45:44 - ProcessKill 7908
+2020-10-05 18:45:44 - Found child process: 7932 Name: conhost.exe
+2020-10-05 18:45:44 - Found child process: 9704 Name: node.exe
+2020-10-05 18:45:44 - Stopping process 7932
+2020-10-05 18:45:44 - Send SIGINT 7932
+2020-10-05 18:45:44 - SIGINT to 7932 failed - Killing as fallback
+2020-10-05 18:45:44 - Stopping process 9704
+2020-10-05 18:45:44 - Send SIGINT 9704
+2020-10-05 18:45:44 - SIGINT to 9704 failed - Killing as fallback
+2020-10-05 18:45:44 - Stopping process 7908
+2020-10-05 18:45:44 - Send SIGINT 7908
+2020-10-05 18:45:44 - SIGINT to 7908 failed - Killing as fallback
+2020-10-05 18:45:44 - Finished kingsvillepaymentapp.exe
+2020-10-07 01:01:23 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-07 01:01:24 - Started 5908
+2020-10-07 12:09:24 - Stopping kingsvillepaymentapp.exe
+2020-10-07 12:09:24 - ProcessKill 5908
+2020-10-07 12:09:24 - Shutdown exception
+Message:A system shutdown is in progress.
+
+Stacktrace:   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Management.ManagementScope.InitializeGuts(Object o)
+   at System.Management.ManagementScope.Initialize()
+   at System.Management.ManagementObjectSearcher.Initialize()
+   at System.Management.ManagementObjectSearcher.Get()
+   at winsw.WrapperService.GetChildPids(Int32 pid)
+   at winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   at winsw.WrapperService.StopIt()
+   at winsw.WrapperService.OnShutdown()
+2020-10-07 12:10:22 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-07 12:10:22 - Started 7924
+2020-10-07 12:15:09 - Stopping kingsvillepaymentapp.exe
+2020-10-07 12:15:09 - ProcessKill 7924
+2020-10-07 12:15:10 - Shutdown exception
+Message:A system shutdown is in progress.
+
+Stacktrace:   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Management.ManagementScope.InitializeGuts(Object o)
+   at System.Management.ManagementScope.Initialize()
+   at System.Management.ManagementObjectSearcher.Initialize()
+   at System.Management.ManagementObjectSearcher.Get()
+   at winsw.WrapperService.GetChildPids(Int32 pid)
+   at winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   at winsw.WrapperService.StopIt()
+   at winsw.WrapperService.OnShutdown()
+2020-10-07 12:15:51 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-07 12:15:52 - Started 8116
+2020-10-08 11:08:33 - Stopping kingsvillepaymentapp.exe
+2020-10-08 11:08:33 - ProcessKill 8116
+2020-10-08 11:08:34 - Found child process: 6904 Name: conhost.exe
+2020-10-08 11:08:34 - Found child process: 10308 Name: node.exe
+2020-10-08 11:08:34 - Stopping process 6904
+2020-10-08 11:08:34 - Send SIGINT 6904
+2020-10-08 11:08:34 - SIGINT to 6904 failed - Killing as fallback
+2020-10-08 11:08:34 - Stopping process 10308
+2020-10-08 11:08:34 - Send SIGINT 10308
+2020-10-08 11:08:34 - SIGINT to 10308 failed - Killing as fallback
+2020-10-08 11:08:34 - Stopping process 8116
+2020-10-08 11:08:34 - Send SIGINT 8116
+2020-10-08 11:08:34 - SIGINT to 8116 failed - Killing as fallback
+2020-10-08 11:08:34 - Finished kingsvillepaymentapp.exe
+2020-11-18 22:21:48 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-11-18 22:21:48 - Started 118116
+2020-11-18 22:22:24 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-11-18 22:22:24 - Started 123616
+2020-11-18 22:22:30 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-11-18 22:22:30 - Started 126624
+2020-11-18 22:22:39 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-11-18 22:22:39 - Started 110432
+2020-11-26 19:19:11 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-11-26 19:19:11 - Started 7016
+2020-11-27 13:46:11 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-11-27 13:46:11 - Started 11344
+2020-11-27 13:47:44 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-11-27 13:47:44 - Started 12068
+2020-11-27 13:51:05 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-11-27 13:51:05 - Started 15180
+2020-11-27 13:51:19 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-11-27 13:51:19 - Started 20460
+2020-11-27 13:59:35 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-11-27 13:59:35 - Started 18756
+2020-11-27 14:12:20 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-11-27 14:12:20 - Started 13920
+2020-11-27 14:14:06 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-11-27 14:14:06 - Started 15464
+2020-11-30 22:29:50 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-11-30 22:29:50 - Started 19592
+2020-11-30 22:37:43 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-11-30 22:37:43 - Started 9576
+2020-11-30 22:39:31 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-11-30 22:39:31 - Started 21132
+2020-11-30 22:43:35 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-11-30 22:43:35 - Started 21708
+2020-12-01 21:40:46 - Stopping kingsvillepaymentapp.exe
+2020-12-01 21:40:46 - ProcessKill 21708
+2020-12-01 21:40:46 - Found child process: 24424 Name: conhost.exe
+2020-12-01 21:40:46 - Found child process: 20188 Name: node.exe
+2020-12-01 21:40:46 - Stopping process 24424
+2020-12-01 21:40:46 - Send SIGINT 24424
+2020-12-01 21:40:46 - SIGINT to 24424 failed - Killing as fallback
+2020-12-01 21:40:47 - Stopping process 20188
+2020-12-01 21:40:47 - Send SIGINT 20188
+2020-12-01 21:40:47 - SIGINT to 20188 failed - Killing as fallback
+2020-12-01 21:40:47 - Stopping process 21708
+2020-12-01 21:40:47 - Send SIGINT 21708
+2020-12-01 21:40:47 - SIGINT to 21708 failed - Killing as fallback
+2020-12-01 21:40:47 - Finished kingsvillepaymentapp.exe
+2020-12-04 18:33:05 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-12-04 18:33:05 - Started 7024
+2020-12-05 22:49:43 - Stopping kingsvillepaymentapp.exe
+2020-12-05 22:49:43 - ProcessKill 7024
+2020-12-05 22:49:43 - Found child process: 7220 Name: conhost.exe
+2020-12-05 22:49:43 - Found child process: 8660 Name: node.exe
+2020-12-05 22:49:43 - Stopping process 7220
+2020-12-05 22:49:43 - Send SIGINT 7220
+2020-12-05 22:49:43 - SIGINT to 7220 failed - Killing as fallback
+2020-12-05 22:49:43 - Stopping process 8660
+2020-12-05 22:49:43 - Send SIGINT 8660
+2020-12-05 22:49:43 - SIGINT to 8660 failed - Killing as fallback
+2020-12-05 22:49:43 - Stopping process 7024
+2020-12-05 22:49:43 - Send SIGINT 7024
+2020-12-05 22:49:43 - SIGINT to 7024 failed - Killing as fallback
+2020-12-05 22:49:43 - Finished kingsvillepaymentapp.exe
+2020-12-08 19:00:01 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-12-08 19:00:01 - Started 7104
+2020-12-09 13:33:43 - Stopping kingsvillepaymentapp.exe
+2020-12-09 13:33:43 - ProcessKill 7104
+2020-12-09 13:33:44 - Found child process: 5928 Name: conhost.exe
+2020-12-09 13:33:44 - Found child process: 8576 Name: node.exe
+2020-12-09 13:33:44 - Stopping process 5928
+2020-12-09 13:33:44 - Send SIGINT 5928
+2020-12-09 13:33:44 - SIGINT to 5928 failed - Killing as fallback
+2020-12-09 13:33:44 - Stopping process 8576
+2020-12-09 13:33:44 - Send SIGINT 8576
+2020-12-09 13:33:44 - SIGINT to 8576 failed - Killing as fallback
+2020-12-09 13:33:44 - Stopping process 7104
+2020-12-09 13:33:44 - Send SIGINT 7104
+2020-12-09 13:33:44 - SIGINT to 7104 failed - Killing as fallback
+2020-12-09 13:33:44 - Finished kingsvillepaymentapp.exe
+2020-12-11 10:17:36 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-12-11 10:17:36 - Started 6844
+2020-12-13 12:05:16 - Stopping kingsvillepaymentapp.exe
+2020-12-13 12:05:16 - ProcessKill 6844
+2020-12-13 12:05:16 - Found child process: 6892 Name: conhost.exe
+2020-12-13 12:05:16 - Found child process: 8392 Name: node.exe
+2020-12-13 12:05:16 - Stopping process 6892
+2020-12-13 12:05:16 - Send SIGINT 6892
+2020-12-13 12:05:16 - SIGINT to 6892 failed - Killing as fallback
+2020-12-13 12:05:16 - Stopping process 8392
+2020-12-13 12:05:16 - Send SIGINT 8392
+2020-12-13 12:05:16 - SIGINT to 8392 failed - Killing as fallback
+2020-12-13 12:05:16 - Stopping process 6844
+2020-12-13 12:05:16 - Send SIGINT 6844
+2020-12-13 12:05:16 - SIGINT to 6844 failed - Killing as fallback
+2020-12-13 12:05:16 - Finished kingsvillepaymentapp.exe
+2020-12-17 21:42:12 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-12-17 21:42:12 - Started 7016
+2020-12-22 01:27:28 - Stopping kingsvillepaymentapp.exe
+2020-12-22 01:27:28 - ProcessKill 7016
+2020-12-22 01:27:28 - Found child process: 7052 Name: conhost.exe
+2020-12-22 01:27:28 - Found child process: 8572 Name: node.exe
+2020-12-22 01:27:28 - Stopping process 7052
+2020-12-22 01:27:28 - Send SIGINT 7052
+2020-12-22 01:27:28 - SIGINT to 7052 failed - Killing as fallback
+2020-12-22 01:27:28 - Stopping process 8572
+2020-12-22 01:27:28 - Send SIGINT 8572
+2020-12-22 01:27:28 - SIGINT to 8572 failed - Killing as fallback
+2020-12-22 01:27:28 - Stopping process 7016
+2020-12-22 01:27:28 - Send SIGINT 7016
+2020-12-22 01:27:28 - SIGINT to 7016 failed - Killing as fallback
+2020-12-22 01:27:28 - Finished kingsvillepaymentapp.exe
+2020-12-28 17:43:54 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-12-28 17:43:54 - Started 7036
+2020-12-28 18:37:20 - Stopping kingsvillepaymentapp.exe
+2020-12-28 18:37:20 - ProcessKill 7036
+2020-12-28 18:37:20 - Found child process: 7096 Name: conhost.exe
+2020-12-28 18:37:20 - Found child process: 8628 Name: node.exe
+2020-12-28 18:37:20 - Stopping process 7096
+2020-12-28 18:37:20 - Send SIGINT 7096
+2020-12-28 18:37:20 - SIGINT to 7096 failed - Killing as fallback
+2020-12-28 18:37:20 - Stopping process 8628
+2020-12-28 18:37:20 - Send SIGINT 8628
+2020-12-28 18:37:20 - SIGINT to 8628 failed - Killing as fallback
+2020-12-28 18:37:20 - Stopping process 7036
+2020-12-28 18:37:21 - Send SIGINT 7036
+2020-12-28 18:37:21 - SIGINT to 7036 failed - Killing as fallback
+2020-12-28 18:37:21 - Finished kingsvillepaymentapp.exe
+2021-01-10 19:40:43 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-01-10 19:40:43 - Started 6348
+2021-01-10 20:47:53 - Stopping kingsvillepaymentapp.exe
+2021-01-10 20:47:53 - ProcessKill 6348
+2021-01-10 20:47:53 - Found child process: 6756 Name: conhost.exe
+2021-01-10 20:47:53 - Found child process: 7776 Name: node.exe
+2021-01-10 20:47:53 - Stopping process 6756
+2021-01-10 20:47:53 - Send SIGINT 6756
+2021-01-10 20:47:53 - SIGINT to 6756 failed - Killing as fallback
+2021-01-10 20:47:53 - Stopping process 7776
+2021-01-10 20:47:53 - Send SIGINT 7776
+2021-01-10 20:47:53 - SIGINT to 7776 failed - Killing as fallback
+2021-01-10 20:47:53 - Stopping process 6348
+2021-01-10 20:47:53 - Send SIGINT 6348
+2021-01-10 20:47:53 - SIGINT to 6348 failed - Killing as fallback
+2021-01-10 20:47:53 - Finished kingsvillepaymentapp.exe
+2021-01-14 17:03:04 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-01-14 17:03:04 - Started 7136
+2021-01-14 21:11:58 - Stopping kingsvillepaymentapp.exe
+2021-01-14 21:11:58 - ProcessKill 7136
+2021-01-14 21:11:58 - Found child process: 7164 Name: conhost.exe
+2021-01-14 21:11:58 - Found child process: 8040 Name: node.exe
+2021-01-14 21:11:58 - Stopping process 7164
+2021-01-14 21:11:58 - Send SIGINT 7164
+2021-01-14 21:11:58 - SIGINT to 7164 failed - Killing as fallback
+2021-01-14 21:11:58 - Stopping process 8040
+2021-01-14 21:11:58 - Send SIGINT 8040
+2021-01-14 21:11:58 - SIGINT to 8040 failed - Killing as fallback
+2021-01-14 21:11:58 - Stopping process 7136
+2021-01-14 21:11:58 - Send SIGINT 7136
+2021-01-14 21:11:58 - SIGINT to 7136 failed - Killing as fallback
+2021-01-14 21:11:58 - Finished kingsvillepaymentapp.exe
+2021-01-17 11:21:18 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-01-17 11:21:18 - Started 7104
+2021-01-17 13:51:02 - Stopping kingsvillepaymentapp.exe
+2021-01-17 13:51:02 - ProcessKill 7104
+2021-01-17 13:51:03 - Found child process: 7156 Name: conhost.exe
+2021-01-17 13:51:03 - Found child process: 8696 Name: node.exe
+2021-01-17 13:51:03 - Stopping process 7156
+2021-01-17 13:51:03 - Send SIGINT 7156
+2021-01-17 13:51:03 - SIGINT to 7156 failed - Killing as fallback
+2021-01-17 13:51:03 - Stopping process 8696
+2021-01-17 13:51:03 - Send SIGINT 8696
+2021-01-17 13:51:03 - SIGINT to 8696 failed - Killing as fallback
+2021-01-17 13:51:03 - Stopping process 7104
+2021-01-17 13:51:03 - Send SIGINT 7104
+2021-01-17 13:51:03 - SIGINT to 7104 failed - Killing as fallback
+2021-01-17 13:51:03 - Finished kingsvillepaymentapp.exe
+2021-01-18 08:47:20 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-01-18 08:47:20 - Started 7100
+2021-01-18 17:33:43 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-01-18 17:33:43 - Started 6996
+2021-01-18 17:35:33 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-01-18 17:35:33 - Started 6964
+2021-01-18 19:14:06 - Stopping kingsvillepaymentapp.exe
+2021-01-18 19:14:06 - ProcessKill 6964
+2021-01-18 19:14:06 - Found child process: 7048 Name: conhost.exe
+2021-01-18 19:14:06 - Found child process: 8456 Name: node.exe
+2021-01-18 19:14:06 - Stopping process 7048
+2021-01-18 19:14:06 - Send SIGINT 7048
+2021-01-18 19:14:06 - SIGINT to 7048 failed - Killing as fallback
+2021-01-18 19:14:06 - Stopping process 8456
+2021-01-18 19:14:06 - Send SIGINT 8456
+2021-01-18 19:14:06 - SIGINT to 8456 failed - Killing as fallback
+2021-01-18 19:14:06 - Stopping process 6964
+2021-01-18 19:14:06 - Send SIGINT 6964
+2021-01-18 19:14:06 - SIGINT to 6964 failed - Killing as fallback
+2021-01-18 19:14:06 - Finished kingsvillepaymentapp.exe
+2021-01-24 00:36:29 - Starting D:\_Programs\NodeJs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Jeimz\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Projects\artisanscreative\kingsville\server\src\app.js --scriptoptions= --log "KingsvillePaymentApp wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-01-24 00:36:29 - Started 6372
+2021-01-25 16:00:06 - Stopping kingsvillepaymentapp.exe
+2021-01-25 16:00:06 - ProcessKill 6372
+2021-01-25 16:00:06 - Found child process: 5132 Name: conhost.exe
+2021-01-25 16:00:06 - Found child process: 8416 Name: node.exe
+2021-01-25 16:00:07 - Stopping process 5132
+2021-01-25 16:00:07 - Send SIGINT 5132
+2021-01-25 16:00:07 - SIGINT to 5132 failed - Killing as fallback
+2021-01-25 16:00:07 - Stopping process 8416
+2021-01-25 16:00:07 - Send SIGINT 8416
+2021-01-25 16:00:07 - SIGINT to 8416 failed - Killing as fallback
+2021-01-25 16:00:07 - Stopping process 6372
+2021-01-25 16:00:07 - Send SIGINT 6372
+2021-01-25 16:00:07 - SIGINT to 6372 failed - Killing as fallback
+2021-01-25 16:00:07 - Finished kingsvillepaymentapp.exe

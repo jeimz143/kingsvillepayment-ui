@@ -1,0 +1,46 @@
+<div>
+  <h2 style="margin: 0;"><img src="http://kingsville.edu.ph/assets/images/logo/KV-LION.png" alt="Kingsville Advanced School System" style="display: block; width: 150px; margin: 0 auto;"></h2>
+  <p style="text-align: center; font-size: 24px;">Thank you for your payment!</p>
+  <ul style="list-style: none; padding: 0; margin-bottom: 30px; color: #333">
+    <li style="margin-bottom: 10px"><b>Student Number:</b> {{ student.studentNumber }}</li>
+    <li style="margin-bottom: 10px"><b>Student Name:</b> {{ student.lastName }}, {{ student.givenName }} {{ student.middleName }}.</li>
+    <li style="margin-bottom: 10px"><b>Grade Level:</b> {{ enrollmentFee.enrollment.levelCode }} - {{ enrollmentFee.enrollment.levelDescription }}</li>
+  </ul>
+
+  <table style="width:100%; border-collapse: collapse">
+    <tr style="background-color: #680F11; color: #fff;">
+      <th colspan="2" style="border: 1px solid #333; padding: 5px 0;">Summary Payment</th>
+    </tr>
+    <tr>
+      <th style="width: 50%; text-align: left; border: 1px solid #333; padding: 5px 10px">Particulars</th>
+      <th style="width: 50%; text-align: left; border: 1px solid #333; padding: 5px 10px">Amount Paid</th>
+    </tr>
+    {{#each enrollmentFee.payments as | payment |}}
+    {{#if payment.isPaid}}
+      <tr>
+        <td style="width: 80%; text-align: left; border: 1px solid #333; padding: 0 10px">
+          <p><b>Date paid: {{ payment.datePaid }}</b></p>
+          <p>{{ payment.enrollmentFee.code }} - {{ payment.enrollmentFee.name }}</p>
+          <p>{{ payment.enrollmentFee.remarks }}</p>
+        </td>
+        <td style="width: 20%; text-align: left; border: 1px solid #333; padding: 0 10px">
+          {{ payment.amountToPayPerMonth }}
+        </td>
+      </tr>
+    {{/if}}      
+    {{/each}}    
+  </table>
+  
+  <ul style="list-style: none; padding: 0 0 20px; margin-bottom: 30px; color: #333; border-bottom: 1px solid #333">
+    <li style="margin-bottom: 10px"><b>Balance:</b> {{ enrollmentFee.balance }}</li>
+    <li style="margin-bottom: 10px"><b>Is Paid?: </b>{{ isPaid }}</li>
+  </ul>
+  <p></p>
+  <ul style="list-style: none; padding: 0; margin-bottom: 30px; color: #333">
+    <li style="margin-bottom: 10px"><b>Name:</b> {{ name }}</li>
+    <li style="margin-bottom: 10px; color: #333 !important"><b>Email:</b> {{ email }}</li>
+    <li style="margin-bottom: 10px"><b>Address: </b> {{ address }}</li>
+    <li style="margin-bottom: 10px"><b>Contact:</b> {{ contact }}</li>
+    <li style="margin-bottom: 10px"><b>Visit Us:</b> <a href="{{ website }}">{{ website }}</a></li>
+  </ul>
+</div>

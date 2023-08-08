@@ -1,0 +1,58 @@
+{
+  "name": "kingsvillepaymentsystem",
+  "version": "1.0.0",
+  "description": "Kingsville Advanced School Inc.",
+  "main": "index.js",
+  "scripts": {
+    "start": "SET NODE_ENV=PRODUCTION&&nodemon ./src/app.js",
+    "dev": "SET NODE_ENV=DEVELOPMENT&&nodemon ./src/app.js",
+    "seeder": "node ./src/database/seeder/",
+    "services": "SET NODE_ENV=PRODUCTION&&nodemon ./src/service.js",
+    "uservices": "SET NODE_ENV=PRODUCTION&&nodemon ./src/uservice.js"
+  },
+  "author": "Jeimson Medina",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.18.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.4",
+    "csurf": "^1.11.0",
+    "dotenv": "^8.2.0",
+    "exceljs": "^3.10.0",
+    "express": "^4.16.2",
+    "helmet": "^3.23.3",
+    "joi": "^10.6.0",
+    "jsonwebtoken": "8.3.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.10.14",
+    "mongoose-data-seed": "^2.1.6",
+    "mongoose-sequence": "^5.3.0",
+    "mongooseeder": "^2.0.6",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.16",
+    "nodemailer-express-handlebars": "^3.3.0",
+    "passport": "^0.4.1",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth20": "^1.0.0",
+    "passport-jwt": "^3.0.0",
+    "regenerator-runtime": "^0.13.7",
+    "socket.io": "^2.3.0",
+    "winston": "^3.3.3",
+    "xlsx": "^0.15.5"
+  },
+  "mdSeed": {
+    "seedersFolder": "./src/database/seeders"
+  }
+}
