@@ -47,7 +47,7 @@ const options = {
   socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
   family: 4 // Use IPv4, skip trying IPv6
 }
-if (env === 'PRODUCTION') {
+if (env !== 'PRODUCTION') {
   // mongoose.connect('mongodb+srv://kingsvilledbUser:IQWXnJu8qSQS4XJ0@cluster0-gmprz.mongodb.net/test?retryWrites=true&w=majority', options)
   mongoose.connect('mongodb://localhost:27017/DBTEST', options)
 } else {
