@@ -55,6 +55,7 @@ class EnrollmentSeeder extends Seeder {
         })
         vm.postData = listOfEnrollments
       })
+    console.log(vm.postData)
   }
 
   getLevelCode (value) {
