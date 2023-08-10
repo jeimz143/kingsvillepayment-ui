@@ -3,6 +3,11 @@ const mongoose = require('mongoose')
 const Users = require('./src/database/seeders/users.seeder')
 const Role = require('./src/database/seeders/role.seeder')
 const Permission = require('./src/database/seeders/permissions.seeder')
+const Level = require('./src/database/seeders/levels.seeder')
+const Fee = require('./src/database/seeders/fees.seeder')
+const Student = require('./src/database/seeders/students.seeder')
+const SchoolYear = require('./src/database/seeders/schoolyears.seeder')
+const Enrollment = require('./src/database/seeders/enrollments.seeder')
 
 const mongoURL = process.env.MONGO_DB_URL
 console.log(mongoURL)
@@ -13,6 +18,11 @@ console.log(mongoURL)
  * @type {Object}
  */
 const seedersList = {
+  Level,
+  Fee,
+  Student,
+  SchoolYear,
+  Enrollment,
   Permission,
   Role,
   Users
