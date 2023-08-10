@@ -5,6 +5,7 @@ const Model = require('../../models').Student
 class StudentsSeeder extends Seeder {
   async beforeRun () {
     this.postData = this._generateData()
+    console.log(this.postData)
   }
   async shouldRun () {
     return Model.countDocuments().exec().then(count => count === 0)
