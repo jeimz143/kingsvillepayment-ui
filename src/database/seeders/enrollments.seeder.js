@@ -2,9 +2,9 @@ const { Seeder } = require('mongoose-data-seed')
 const Excel = require('exceljs')
 const Model = require('../../models').Enrollment
 
-class StudentsSeeder extends Seeder {
+class EnrollmentSeeder extends Seeder {
   async beforeRun () {
-    this.postData = this._generateData()
+    this._generateData()
   }
   async shouldRun () {
     return Model.countDocuments().exec().then(count => count === 0)
@@ -16,9 +16,9 @@ class StudentsSeeder extends Seeder {
 
   _generateData () {
     let vm = this
+    vm.postData = []
     var workbook = new Excel.Workbook()
-
-    return workbook.xlsx.readFile(`${__dirname}/../data/Students.xlsx`)
+    workbook.xlsx.readFile(`${__dirname}/../data/Students.xlsx`)
       .then(function () {
         var ws = workbook.getWorksheet('Students')
         var listOfEnrollments = []
@@ -52,7 +52,7 @@ class StudentsSeeder extends Seeder {
             }
           }
         })
-        return listOfEnrollments
+        vm.postData = listOfEnrollments
       })
   }
 
@@ -83,4 +83,4 @@ class StudentsSeeder extends Seeder {
   }
 }
 
-module.exports = StudentsSeeder
+module.exports = EnrollmentSeeder

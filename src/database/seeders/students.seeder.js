@@ -4,8 +4,7 @@ const Model = require('../../models').Student
 
 class StudentsSeeder extends Seeder {
   async beforeRun () {
-    this.postData = this._generateData()
-    console.log(this.postData)
+    this._generateData()
   }
   async shouldRun () {
     return Model.countDocuments().exec().then(count => count === 0)
@@ -16,9 +15,11 @@ class StudentsSeeder extends Seeder {
   }
 
   _generateData () {
+    let vm = this
+    vm.postData = []
     var workbook = new Excel.Workbook()
 
-    return workbook.xlsx.readFile(`${__dirname}/../data/Students.xlsx`)
+    workbook.xlsx.readFile(`${__dirname}/../data/Students.xlsx`)
       .then(function () {
         var ws = workbook.getWorksheet('Students')
         var listOfStudents = []
@@ -60,7 +61,7 @@ class StudentsSeeder extends Seeder {
             listOfStudents.push(theStudent)
           }
         })
-        return listOfStudents
+        vm.postData = listOfStudents
       })
   }
 }
