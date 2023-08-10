@@ -1,12 +1,9 @@
-// var env = process.env.NODE_ENV || 'DEVELOPMENT'
-var env = 'PRODUCTION'
-var config = require('./mongo.json')[env]
 
 const dbConnectionString = function () {
-  var envURL = config.use_env_variable
-  // var localUrl = 'mongodb://' + config.host + ':' + config.port + '/' + config.database
+  var envURL = process.MONGO_DB_URL
+
   var mongoUrl = envURL
   return mongoUrl
 }
 
-module.exports = dbConnectionString
+module.exports = dbConnectionString()

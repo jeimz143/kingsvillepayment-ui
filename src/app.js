@@ -48,10 +48,9 @@ const options = {
   family: 4 // Use IPv4, skip trying IPv6
 }
 if (env !== 'PRODUCTION') {
-  // mongoose.connect('mongodb+srv://kingsvilledbUser:IQWXnJu8qSQS4XJ0@cluster0-gmprz.mongodb.net/test?retryWrites=true&w=majority', options)
   mongoose.connect('mongodb://localhost:27017/DBTEST', options)
 } else {
-  mongoose.connect('mongodb+srv://jeimzm:oMuWXmxMQwOdWnDF@kingsville.z5q3lhm.mongodb.net/kingsvillepayment?retryWrites=true&w=majority', options)
+  mongoose.connect(process.env.MONGO_DB_URL, options)
 }
 const app = express()
 
