@@ -11,6 +11,7 @@ class EnrollmentSeeder extends Seeder {
   }
 
   async run () {
+    console.log(this.postData)
     return Model.create(this.postData)
   }
 
@@ -53,7 +54,6 @@ class EnrollmentSeeder extends Seeder {
           }
         })
         vm.postData = listOfEnrollments
-        console.log(vm.postData)
       })
   }
 
