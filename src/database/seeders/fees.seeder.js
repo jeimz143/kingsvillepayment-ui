@@ -443,12 +443,20 @@ const data = [
 ]
 
 class FeesSeeder extends Seeder {
+  beforeRun () {
+    var fees = []
+    data.forEach(function (feeItem, feeIndex) {
+      feeItem['code'] = `KV11001${feeIndex}`
+      fees.push(feeItem)
+    })
+    this.postData = fees
+  }
   async shouldRun () {
     return Model.countDocuments().exec().then(count => count === 0)
   }
 
   async run () {
-    return Model.create(data)
+    return Model.create(this.postData)
   }
 }
 
