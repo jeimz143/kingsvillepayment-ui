@@ -18,7 +18,7 @@ class StudentsSeeder extends Seeder {
     let vm = this
     var workbook = new Excel.Workbook()
 
-    return workbook.xlsx.readFile(`${__dirname}\\..\\data\\Students.xlsx`)
+    return workbook.xlsx.readFile(`${__dirname}/../data/Students.xlsx`)
       .then(function () {
         var ws = workbook.getWorksheet('Students')
         var listOfEnrollments = []
