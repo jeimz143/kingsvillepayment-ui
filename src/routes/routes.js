@@ -69,6 +69,19 @@ module.exports = function (app, io) {
     .get(isAuthenticated(), levelList.Show)
     .patch(isAuthenticated(), levelList.Update)
 
+  // branches
+  var branchList = require('../app/http/controllers/BranchController')
+  app.route('/api/branches')
+    .get(isAuthenticated(), branchList.Index)
+    .post(isAuthenticated(), branchList.Store)
+  app.route('/api/branches/picklist')
+    .post(isAuthenticated(), branchList.Picklist)
+  app.route('/api/branches/bycode')
+    .post(isAuthenticated(), branchList.ShowByCode)
+  app.route('/api/branches/:id')
+    .get(isAuthenticated(), branchList.Show)
+    .patch(isAuthenticated(), branchList.Update)
+
   // schoolyears
   var schoolyearList = require('../app/http/controllers/SchoolYearController')
   app.route('/api/schoolyears')
