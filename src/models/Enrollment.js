@@ -8,6 +8,10 @@ const EnrollmentSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Users'
   },
+  branch: {
+    type: String,
+    default: null
+  },
   number: {
     type: String,
     required: true,

@@ -21,7 +21,7 @@ const SupplierSchema = new Schema({
       }
 })
 
-SupplierSchema.statics.storeSupplier = function (Supplier, req, cb) {
+SupplierSchema.statics.Store = function (Supplier, req, cb) {
   let vm = this
   var theSupplier = new Supplier({
     name: req.name,
@@ -34,7 +34,7 @@ SupplierSchema.statics.storeSupplier = function (Supplier, req, cb) {
   })
 }
 
-SupplierSchema.statics.updateSupplier = function (req, cb) {
+SupplierSchema.statics.Update = function (req, cb) {
   let vm = this
   var dataSupplier = {
     name: req.body.name,

@@ -28,6 +28,10 @@ const EnrollmentFeeSchema = new Schema({
       ref: 'PaymentFees'
     }
   ],
+  branch: {
+    type: String,
+    default: null
+  },
   type: {
     type: Number
   },

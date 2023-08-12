@@ -8,6 +8,10 @@ const FeeSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Users'
   },
+  branch: {
+    type: String,
+    default: null
+  },
   code: {
     type: String,
     required: 'Code is Required'

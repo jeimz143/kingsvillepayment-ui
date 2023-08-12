@@ -5,7 +5,11 @@ const Student = require('../../../models/Student')
 module.exports = {
   async Index (req, res) {
     var socketio = req.app.get('socketio')
-    await Student.find({}, function (errStudent, response) {
+    var params = {}
+    if (req.user.branch) {
+      params['branch'] = req.user.branch
+    }
+    await Student.find(params, function (errStudent, response) {
       if (errStudent) {
         res.status(404).json({ 'error': 'not found', 'err': errStudent })
         throw errStudent

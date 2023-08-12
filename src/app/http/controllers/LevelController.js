@@ -5,7 +5,11 @@ const Level = require('../../../models/Level')
 module.exports = {
   async Index (req, res) {
     var socketio = req.app.get('socketio')
-    await Level.find({}, function (errLevel, response) {
+    var params = {}
+    if (req.user.branch) {
+      params['branch'] = req.user.branch
+    }
+    await Level.find(params, function (errLevel, response) {
       if (errLevel) {
         res.status(404).json({'error': 'not found', 'err': errLevel})
         throw errLevel

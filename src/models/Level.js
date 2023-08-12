@@ -43,6 +43,10 @@ const LevelSchema = new Schema({
     type: Number,
     default: 0
   },
+  branch: {
+    type: String,
+    default: null
+  },
   deleted_at: {
     type: Date
   },

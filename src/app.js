@@ -23,6 +23,7 @@ const EnrollmentFee = require('./models/EnrollmentFees')
 const PaymentFees = require('./models/PaymentFees')
 const Payment = require('./models/Payment')
 const Receipt = require('./models/Receipt')
+const Branch = require('./models/Branch')
 
 require('dotenv').config()
 

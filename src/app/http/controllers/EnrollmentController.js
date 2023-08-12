@@ -8,7 +8,11 @@ const { parseDocumentStatus } = require('../../../helpers/enums')
 module.exports = {
   async Index (req, res) {
     var socketio = req.app.get('socketio')
-    await Enrollment.find({}).select('-fees').exec(function (errEnrollment, response) {
+    var params = {}
+    if (req.user.branch) {
+      params['branch'] = req.user.branch
+    }
+    await Enrollment.find(params).select('-fees').exec(function (errEnrollment, response) {
       if (errEnrollment) {
         res.status(404).json({'error': 'not found', 'err': errEnrollment})
         throw errEnrollment

@@ -1,17 +1,18 @@
 const { Seeder } = require('mongoose-data-seed')
 const Excel = require('exceljs')
-const Model = require('../../models').Student
+const Model = require('../../models')
+const Student = Model.Student
 
 class StudentsSeeder extends Seeder {
   async beforeRun () {
     this.postData = await this._generateData()
   }
   async shouldRun () {
-    return Model.countDocuments().exec().then(count => count === 0)
+    return Student.countDocuments().exec().then(count => count === 0)
   }
 
   async run () {
-    return Model.create(this.postData)
+    return Student.create(this.postData)
   }
 
   async _generateData () {
@@ -21,7 +22,7 @@ class StudentsSeeder extends Seeder {
       .then(function () {
         var ws = workbook.getWorksheet('Students')
         var listOfStudents = []
-        ws.eachRow(function (row, rowNumber) {
+        ws.eachRow(async function (row, rowNumber) {
           if (rowNumber !== 1) {
             var theStudentNumber = null
             var studentEndingNumber = rowNumber
@@ -31,6 +32,7 @@ class StudentsSeeder extends Seeder {
               theStudentNumber = row.getCell(5).value
             }
             var theStudent = {
+              branch: 'KVB0001',
               studentNumber: theStudentNumber,
               lastName: (row.getCell(6).value) ? row.getCell(6).value : '',
               givenName: (row.getCell(7).value) ? row.getCell(7).value : '',

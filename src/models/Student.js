@@ -8,6 +8,10 @@ const StudentSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Users'
   },
+  branch: {
+    type: String,
+    default: null
+  },
   studentNumber: {
     type: String,
     required: true,

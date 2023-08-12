@@ -2,6 +2,7 @@ const { Seeder } = require('mongoose-data-seed')
 const Model = require('../../models')
 const Role = Model.Role
 const User = Model.User
+const Branch = Model.Branch
 
 const data = []
 data.push({
@@ -35,6 +36,7 @@ data.push({
 })
 
 data.push({
+  branch: 'KVB0001',
   lastName: 'Villarica',
   givenName: 'Vanessa',
   middleName: 'Dolor',
@@ -46,8 +48,9 @@ data.push({
 
 class UserSeeder extends Seeder {
   async beforeRun () {
+    const branches = await Branch.find({}).exec()
     const roles = await Role.find({}).exec()
-    this.postData = this._generateData(roles)
+    this.postData = this._generateData(roles, branches)
   }
 
   async shouldRun () {
@@ -58,7 +61,7 @@ class UserSeeder extends Seeder {
     return User.create(this.postData)
   }
 
-  _generateData (roles) {
+  _generateData (roles, branches) {
     var res = []
     data.forEach(async (user) => {
       var role = roles.find(r => r.name === user.role)

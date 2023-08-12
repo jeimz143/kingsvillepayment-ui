@@ -73,6 +73,10 @@ const UsersSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Roles'
   },
+  branch: {
+    type: String,
+    default: null
+  },
   loginAttempts: { type: Number, required: true, default: 0 },
   lockUntil: { type: Number }
 })
@@ -150,7 +154,7 @@ var reasons = UsersSchema.statics.failedLogin = {
 }
 UsersSchema.statics.UploadUserProfile = function (req, cb) {
   let vm = this
-  vm.update({ _id: req.params.userId }, { $set: { 'avatar': req.file.filename } }, { safe: true }, function (err, user) {
+  vm.update({ _id: req.params.userId }, { $set: { 'avatar': req.file.filename } }, { safe: true }, function (_err, user) {
     if (!user) {
       return cb(null, null, reasons.NOT_FOUND)
     } else {
@@ -165,7 +169,7 @@ UsersSchema.statics.UploadUserProfile = function (req, cb) {
 }
 UsersSchema.statics.DeleteUserAddress = function (req, cb) {
   let vm = this
-  vm.update({ _id: req.params.userId }, { $pull: { address: { _id: req.params.addressId} } }, { safe: true }, function (err, user) {
+  vm.update({ _id: req.params.userId }, { $pull: { address: { _id: req.params.addressId } } }, { safe: true }, function (_err, user) {
     if (!user) {
       return cb(null, null, reasons.NOT_FOUND)
     } else {
@@ -180,11 +184,11 @@ UsersSchema.statics.DeleteUserAddress = function (req, cb) {
 }
 UsersSchema.statics.SetDefaultAddress = function (req, cb) {
   let vm = this
-  vm.update({ _id: req.params.userId }, { $set: { 'address.$[].isDefaultAddress': false } }, function (err, user) {
+  vm.update({ _id: req.params.userId }, { $set: { 'address.$[].isDefaultAddress': false } }, function (_err, user) {
     if (!user) {
       return cb(null, null, reasons.NOT_FOUND)
     } else {
-      vm.update({ 'address._id': req.params.addressId }, { $set: { 'address.$.isDefaultAddress': true } }, function (err, user) {
+      vm.update({ 'address._id': req.params.addressId }, { $set: { 'address.$.isDefaultAddress': true } }, function (_err, user) {
         if (!user) {
           return cb(null, null, reasons.NOT_FOUND)
         } else {
@@ -209,7 +213,7 @@ UsersSchema.statics.UpdateUserAddress = function (req, cb) {
     'address.$.isDefaultAddress': req.body.isDefaultAddress,
     'address.$.isPickUpAddress': req.body.isPickUpAddress
   }
-  vm.update({ 'address._id': req.params.addressId }, { $set: AddressDetails }, function (err, userRaw) {
+  vm.update({ 'address._id': req.params.addressId }, { $set: AddressDetails }, function (_err, userRaw) {
     if (!userRaw) {
       return cb(null, null, reasons.NOT_FOUND)
     } else {
@@ -232,7 +236,7 @@ UsersSchema.statics.addUserAddress = function (req, cb) {
     isDefaultAddress: req.body.isDefaultAddress,
     isPickUpAddress: req.body.isPickUpAddress
   }
-  vm.update({ _id: req.params.userId }, { $push: { address: AddressDetails } }, function (err, userRaw) {
+  vm.update({ _id: req.params.userId }, { $push: { address: AddressDetails } }, function (_err, userRaw) {
     if (!userRaw) {
       return cb(null, null, reasons.NOT_FOUND)
     } else {
@@ -254,7 +258,7 @@ UsersSchema.statics.updateUser = function (req, cb) {
     birthdate: req.body.birthdate,
     updated_at: Date.now()
   }
-  vm.update({ _id: req.params.userId }, userNewDetails, function (err, userRaw) {
+  vm.update({ _id: req.params.userId }, userNewDetails, function (_err, userRaw) {
     if (!userRaw) {
       return cb(null, null, reasons.NOT_FOUND)
     } else {

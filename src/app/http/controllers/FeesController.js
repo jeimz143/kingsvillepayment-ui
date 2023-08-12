@@ -5,7 +5,11 @@ const Fee = require('../../../models/Fee')
 module.exports = {
   async Index (req, res) {
     var socketio = req.app.get('socketio')
-    await Fee.find({}, function (errFee, response) {
+    var params = {}
+    if (req.user.branch) {
+      params['branch'] = req.user.branch
+    }
+    await Fee.find(params, function (errFee, response) {
       if (errFee) {
         res.status(404).json({'error': 'not found', 'err': errFee})
         throw errFee

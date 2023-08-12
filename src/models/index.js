@@ -17,4 +17,5 @@ models['EnrollmentFee'] = require('./EnrollmentFees')
 models['Payment'] = require('./Payment')
 models['PaymentFees'] = require('./PaymentFees')
 models['Receipt'] = require('./Receipt')
+models['Branch'] = require('./Branch')
 module.exports = models

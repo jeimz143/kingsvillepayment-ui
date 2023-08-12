@@ -9,7 +9,8 @@ const data = [{
   miscellUnitPrice: 6613,
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
-  booksUnitPrice: 5350.00
+  booksUnitPrice: 5350.00,
+  branch: 'KVB0001'
 },
 {
   code: 'KG0000',
@@ -19,7 +20,8 @@ const data = [{
   miscellUnitPrice: 6613,
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
-  booksUnitPrice: 5350.00
+  booksUnitPrice: 5350.00,
+  branch: 'KVB0001'
 },
 {
   code: 'GRLVL0001',
@@ -29,7 +31,8 @@ const data = [{
   miscellUnitPrice: 6613,
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
-  booksUnitPrice: 5350.00
+  booksUnitPrice: 5350.00,
+  branch: 'KVB0001'
 },
 {
   code: 'GRLVL0002',
@@ -39,7 +42,8 @@ const data = [{
   miscellUnitPrice: 6613,
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
-  booksUnitPrice: 6850.00
+  booksUnitPrice: 6850.00,
+  branch: 'KVB0001'
 },
 {
   code: 'GRLVL0003',
@@ -49,7 +53,8 @@ const data = [{
   miscellUnitPrice: 6613,
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
-  booksUnitPrice: 6850.00
+  booksUnitPrice: 6850.00,
+  branch: 'KVB0001'
 },
 {
   code: 'GRLVL0004',
@@ -59,7 +64,8 @@ const data = [{
   miscellUnitPrice: 6613,
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
-  booksUnitPrice: 7350.00
+  booksUnitPrice: 7350.00,
+  branch: 'KVB0001'
 },
 {
   code: 'GRLVL0005',
@@ -69,7 +75,8 @@ const data = [{
   miscellUnitPrice: 6613,
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
-  booksUnitPrice: 7350.00
+  booksUnitPrice: 7350.00,
+  branch: 'KVB0001'
 },
 {
   code: 'GRLVL0006',
@@ -79,7 +86,8 @@ const data = [{
   miscellUnitPrice: 6613,
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
-  booksUnitPrice: 7350.00
+  booksUnitPrice: 7350.00,
+  branch: 'KVB0001'
 },
 {
   code: 'GRLVL0007',
@@ -91,7 +99,8 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 7350.00,
-  booksScholarUnitPrice: 6850.00
+  booksScholarUnitPrice: 6850.00,
+  branch: 'KVB0001'
 },
 {
   code: 'GRLVL0008',
@@ -103,7 +112,8 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 7350.00,
-  booksScholarUnitPrice: 6850.00
+  booksScholarUnitPrice: 6850.00,
+  branch: 'KVB0001'
 },
 {
   code: 'GRLVL0009',
@@ -115,7 +125,8 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 7350.00,
-  booksScholarUnitPrice: 6850.00
+  booksScholarUnitPrice: 6850.00,
+  branch: 'KVB0001'
 },
 {
   code: 'GRLVL0010',
@@ -127,7 +138,8 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 7350.00,
-  booksScholarUnitPrice: 6850.00
+  booksScholarUnitPrice: 6850.00,
+  branch: 'KVB0001'
 },
 {
   code: 'GRLVL0011',
@@ -138,7 +150,8 @@ const data = [{
   miscellUnitPrice: 6613,
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
-  booksUnitPrice: 8500.00
+  booksUnitPrice: 8500.00,
+  branch: 'KVB0001'
 },
 {
   code: 'GRLVL0012',
@@ -149,7 +162,8 @@ const data = [{
   miscellUnitPrice: 6613,
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
-  booksUnitPrice: 8500.00
+  booksUnitPrice: 8500.00,
+  branch: 'KVB0001'
 }]
 
 class LevelsSeeder extends Seeder {

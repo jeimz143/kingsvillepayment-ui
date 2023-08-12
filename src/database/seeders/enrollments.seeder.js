@@ -1,17 +1,18 @@
 const { Seeder } = require('mongoose-data-seed')
 const Excel = require('exceljs')
-const Model = require('../../models').Enrollment
+const Model = require('../../models')
+const Enrollment = Model.Enrollment
 
-class Enrollment extends Seeder {
+class EnrollmentSeeder extends Seeder {
   async beforeRun () {
     this.postData = await this._generateData()
   }
   async shouldRun () {
-    return Model.countDocuments().exec().then(count => count === 0)
+    return Enrollment.countDocuments().exec().then(count => count === 0)
   }
 
   async run () {
-    return Model.create(this.postData)
+    return Enrollment.create(this.postData)
   }
 
   async _generateData () {
@@ -83,4 +84,4 @@ class Enrollment extends Seeder {
   }
 }
 
-module.exports = Enrollment
+module.exports = EnrollmentSeeder

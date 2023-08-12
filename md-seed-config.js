@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
 
+const Branches = require('./src/database/seeders/branches.seeder')
 const Users = require('./src/database/seeders/users.seeder')
 const Role = require('./src/database/seeders/role.seeder')
-const Permission = require('./src/database/seeders/permissions.seeder')
+const Permissions = require('./src/database/seeders/permissions.seeder')
 const Level = require('./src/database/seeders/levels.seeder')
 const Fee = require('./src/database/seeders/fees.seeder')
 const Student = require('./src/database/seeders/students.seeder')
@@ -18,12 +19,13 @@ console.log(mongoURL)
  * @type {Object}
  */
 const seedersList = {
+  Branches,
   Level,
   Fee,
   Student,
   SchoolYear,
   Enrollment,
-  Permission,
+  Permissions,
   Role,
   Users
 }
