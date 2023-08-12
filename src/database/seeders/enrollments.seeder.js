@@ -48,7 +48,8 @@ class EnrollmentSeeder extends Seeder {
                 paymentTerm: (parseInt(vm.getLevelDescription(row.getCell(25).value)) === 'Full Payment') ? 1 : 2,
                 discount: (row.getCell(26).value) ? parseInt(row.getCell(26).value) : 0,
                 remarks: row.getCell(28).value,
-                isReserved: false
+                isReserved: false,
+                branch: 'KVB0001'
               })
             }
           }

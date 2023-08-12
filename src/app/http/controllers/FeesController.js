@@ -6,7 +6,7 @@ module.exports = {
   async Index (req, res) {
     var socketio = req.app.get('socketio')
     var params = {}
-    if (req.user.branch) {
+    if (req.user.branch !== null) {
       params['branch'] = req.user.branch
     }
     await Fee.find(params, function (errFee, response) {
@@ -32,6 +32,9 @@ module.exports = {
         }
       ]
     } : { 'isMandatory': false }
+    if (req.user.branch !== null) {
+      query['branch'] = req.user.branch
+    }
     await Fee.find(query).limit(10).exec(function (errFee, response) {
       if (errFee) {
         res.status(404).json({'error': 'not found', 'err': errFee})

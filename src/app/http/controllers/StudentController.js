@@ -6,7 +6,7 @@ module.exports = {
   async Index (req, res) {
     var socketio = req.app.get('socketio')
     var params = {}
-    if (req.user.branch) {
+    if (req.user.branch !== null) {
       params['branch'] = req.user.branch
     }
     await Student.find(params, function (errStudent, response) {
@@ -66,7 +66,9 @@ module.exports = {
   },
   async Picklist (req, res) {
     var query = (req.body.terms) ? { $or: [{ 'studentNumber': { $regex: new RegExp(req.body.terms, 'i') } }, { 'lastName': { $regex: new RegExp(req.body.terms, 'i') } }, { 'givenName': { $regex: new RegExp(req.body.terms, 'i') } }] } : {}
-    console.log(new RegExp('^' + req.body.terms, 'i'))
+    if (req.user.branch !== null) {
+      query['branch'] = req.user.branch
+    }
     await Student.find(query).limit(10).exec(function (errStudent, response) {
       if (errStudent) {
         res.status(404).json({ 'error': 'not found', 'err': errStudent })

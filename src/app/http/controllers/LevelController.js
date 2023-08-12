@@ -6,7 +6,7 @@ module.exports = {
   async Index (req, res) {
     var socketio = req.app.get('socketio')
     var params = {}
-    if (req.user.branch) {
+    if (req.user.branch !== null) {
       params['branch'] = req.user.branch
     }
     await Level.find(params, function (errLevel, response) {
@@ -23,6 +23,9 @@ module.exports = {
   },
   async Picklist (req, res) {
     var query = (req.body.terms) ? { $or: [{ 'name': { $regex: new RegExp(req.body.terms, 'i') } }, { 'code': { $regex: new RegExp(req.body.terms, 'i') } }] } : {}
+    if (req.user.branch !== null) {
+      query['branch'] = req.user.branch
+    }
     await Level.find(query).limit(10).exec(function (errLevel, response) {
       if (errLevel) {
         res.status(404).json({'error': 'not found', 'err': errLevel})

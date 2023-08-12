@@ -9,7 +9,7 @@ module.exports = {
   async Index (req, res) {
     var socketio = req.app.get('socketio')
     var params = {}
-    if (req.user.branch) {
+    if (req.user.branch !== null) {
       params['branch'] = req.user.branch
     }
     await Enrollment.find(params).select('-fees').exec(function (errEnrollment, response) {
