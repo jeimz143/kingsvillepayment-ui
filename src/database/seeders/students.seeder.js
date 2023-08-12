@@ -32,7 +32,6 @@ class StudentsSeeder extends Seeder {
               theStudentNumber = row.getCell(5).value
             }
             var theStudent = {
-              branch: 'KVB0001',
               studentNumber: theStudentNumber,
               lastName: (row.getCell(6).value) ? row.getCell(6).value : '',
               givenName: (row.getCell(7).value) ? row.getCell(7).value : '',
