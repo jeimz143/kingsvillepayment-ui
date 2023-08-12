@@ -20,6 +20,9 @@ module.exports = {
   },
   async Picklist (req, res) {
     var query = (req.body.terms) ? { $or: [{ 'name': { $regex: new RegExp(req.body.terms, 'i') } }, { 'code': { $regex: new RegExp(req.body.terms, 'i') } }] } : {}
+    if (req.user.branch !== null) {
+      query['branch'] = req.user.branch
+    }
     await Branch.find(query).limit(10).exec(function (errBranch, response) {
       if (errBranch) {
         res.status(404).json({'error': 'not found', 'err': errBranch})
