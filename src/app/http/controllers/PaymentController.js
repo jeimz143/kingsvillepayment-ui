@@ -158,6 +158,7 @@ module.exports = {
     workbook.xlsx.readFile(`${__dirname}/../../../database/data/SummaryPayments.xlsx`)
       .then(async function () {
         var levelCode = req.body.levelCode
+        var schoolBranch = req.body.branch
         var schoolYearCode = req.body.schoolYearCode
         var workSheetNameList = [
           'PRESCHOOL',
@@ -260,7 +261,7 @@ module.exports = {
             bold: true
           }
         })
-        var enrolledList = await Enrollment.find({ schoolYearCode: schoolYearCode, levelCode: levelCode }).populate([{
+        var enrolledList = await Enrollment.find({ branch: schoolBranch, schoolYearCode: schoolYearCode, levelCode: levelCode }).populate([{
           path: 'fees',
           model: 'EnrollmentFees',
           populate: [
