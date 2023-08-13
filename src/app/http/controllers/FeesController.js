@@ -25,6 +25,9 @@ module.exports = {
     var query = (req.body.terms) ? {
       $and: [
         {
+          branch: req.body.branch
+        },
+        {
           $or: [{ 'code': { $regex: new RegExp(req.body.terms, 'i') } }, { 'name': { $regex: new RegExp(req.body.terms, 'i') } }]
         },
         {
@@ -32,9 +35,6 @@ module.exports = {
         }
       ]
     } : { 'isMandatory': false }
-    if (req.user.branch !== null) {
-      query['branch'] = req.user.branch
-    }
     await Fee.find(query).limit(10).exec(function (errFee, response) {
       if (errFee) {
         res.status(404).json({'error': 'not found', 'err': errFee})
