@@ -261,8 +261,8 @@ module.exports = {
           var tuitionPlusMiscFee = 0
           var amountDuePerMonth = 0
           tuitionFee.payments.forEach((tfpItem, tfpIndex) => {
-            tuitionPlusMiscFee = tfpItem.payments.amountToPayPerMonth + miscellanousFee.payments[tfpIndex].amountToPayPerMonth
-            amountDuePerMonth = (tfpItem.payments.numberOfDaysDue * amountDaysDueValue) + (miscellanousFee.payments[tfpIndex].numberOfDaysDue * amountDaysDueValue) 
+            tuitionPlusMiscFee = tfpItem.amountToPayPerMonth + miscellanousFee.payments[tfpIndex].amountToPayPerMonth
+            amountDuePerMonth = (tfpItem.numberOfDaysDue * amountDaysDueValue) + (miscellanousFee.payments[tfpIndex].numberOfDaysDue * amountDaysDueValue)
             enrollee.push(parseFloat(tuitionPlusMiscFee.toFixed(2)))
             enrollee.push(parseFloat(amountDuePerMonth.toFixed(2)))
           })
