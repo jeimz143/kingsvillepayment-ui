@@ -242,6 +242,7 @@ module.exports = {
         var grandTotal = 0
         var grandCollectibles = 0
         var reportList = []
+        var amountDaysDueValue = 85
         enrolledList.forEach(async (listItem, listIndex) => { 
           var enrollee = []
 
@@ -256,23 +257,15 @@ module.exports = {
           enrollee.push(parseFloat(registrationFee.amount.toFixed(2)))
           enrollee.push(parseFloat(books.amount.toFixed(2)))
           enrollee.push(parseFloat(tuitionFee.discount.toFixed(2)))
-
-          var tuitionPlusMiscFee = 0
-          var amountDue = 0
           
-          // In Cash
-          if (listItem.paymentTerm === 1) {
-            tuitionPlusMiscFee += tuitionFee.amount + miscellanousFee.amount
+          var tuitionPlusMiscFee = 0
+          var amountDuePerMonth = 0
+          tuitionFee.payments.forEach((tfpItem, tfpIndex) => {
+            tuitionPlusMiscFee = tfpItem.payments.amountToPayPerMonth + miscellanousFee.payments[tfpIndex].amountToPayPerMonth
+            amountDuePerMonth = (tfpItem.payments.numberOfDaysDue * amountDaysDueValue) + (miscellanousFee.payments[tfpIndex].numberOfDaysDue * amountDaysDueValue) 
             enrollee.push(parseFloat(tuitionPlusMiscFee.toFixed(2)))
-
-            if (tuitionFee.payments.length !== 0 && miscellanousFee.payments.length !== 0) {
-              amountDue += (tuitionFee.payments[0].numberOfDaysDue * 85) + (miscellanousFee.payments[0].numberOfDaysDue * 85)
-            }
-            enrollee.push(parseFloat(amountDue.toFixed(2)))
-
-          // Monthly
-          } else {
-          }
+            enrollee.push(parseFloat(amountDuePerMonth.toFixed(2)))
+          })
 
           reportList.push(enrollee)
 
