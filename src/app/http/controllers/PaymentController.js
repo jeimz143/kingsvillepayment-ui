@@ -284,7 +284,7 @@ module.exports = {
           })
           // validate if enrollment is for Cash Basis
           if (listItem.paymentTerm === 1) {
-            for (var noOfNoValues = 18; noOfNoValues < 0; noOfNoValues--) {
+            for (var noOfNoValues = 18; noOfNoValues > 0; noOfNoValues--) {
               enrollee.push(0.00)
             }
           }
