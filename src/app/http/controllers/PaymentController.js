@@ -265,6 +265,15 @@ module.exports = {
           workSheet.spliceRows(rowNumber, 1, enrollee, [])
           rowNumber += 1
         })
+
+        rowNumber += 1
+        workSheet.spliceRows(rowNumber, 1, [ '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', parseFloat(grandTotal).toFixed(2), parseFloat(grandCollectibles).toFixed(2), '', '' ])
+        workbook.xlsx.writeFile('storage/downloads/SummaryPayments.xlsx').then(function () {
+          res.download('storage/downloads/SummaryPayments.xlsx', function (err) {
+            console.log('---------- error downloading file: ' + err)
+          })
+        })
+        
       })
   },
   async GenerateReportX (req, res) {
