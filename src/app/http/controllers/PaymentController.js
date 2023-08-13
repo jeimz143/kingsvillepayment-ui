@@ -147,8 +147,127 @@ module.exports = {
       })
     }
   },
-
   async GenerateReport (req, res) {
+    res.setHeader('Content-disposition', 'attachment; filename=' + 'SummaryPayments.xlsx')
+    res.setHeader('Content-type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+
+    const Excel = require('exceljs')
+
+    var workbook = new Excel.Workbook()
+
+    workbook.xlsx.readFile(`${__dirname}/../../../database/data/SummaryPayments.xlsx`)
+      .then(async function () {
+        var levelCode = req.body.levelCode
+        var schoolBranch = req.body.branch
+        var schoolYearCode = req.body.schoolYearCode
+        var workSheetNameList = [
+          'PRESCHOOL',
+          'PREKINDERGARTEN',
+          'GRAD-KINDERGARTEN',
+          'G1',
+          'G2',
+          'G3',
+          'G4',
+          'G5',
+          'GRAD-G6',
+          'G7',
+          'G8',
+          'G9',
+          'G10',
+          'G11',
+          'GRAD-G12'
+        ]
+        var workSheet = workbook.getWorksheet('PRESCHOOL')
+        if (levelCode === 'KG0000') {
+          workSheet = workbook.getWorksheet('GRAD-KINDERGARTEN')
+        } else if (levelCode === 'GRLVL0001') {
+          workSheet = workbook.getWorksheet('G1')
+        } else if (levelCode === 'GRLVL0002') {
+          workSheet = workbook.getWorksheet('G2')
+        } else if (levelCode === 'GRLVL0003') {
+          workSheet = workbook.getWorksheet('G3')
+        } else if (levelCode === 'GRLVL0004') {
+          workSheet = workbook.getWorksheet('G4')
+        } else if (levelCode === 'GRLVL0005') {
+          workSheet = workbook.getWorksheet('G5')
+        } else if (levelCode === 'GRLVL0006') {
+          workSheet = workbook.getWorksheet('GRAD-G6')
+        } else if (levelCode === 'GRLVL0007') {
+          workSheet = workbook.getWorksheet('G7')
+        } else if (levelCode === 'GRLVL0008') {
+          workSheet = workbook.getWorksheet('G8')
+        } else if (levelCode === 'GRLVL0009') {
+          workSheet = workbook.getWorksheet('G9')
+        } else if (levelCode === 'GRLVL0010') {
+          workSheet = workbook.getWorksheet('G10')
+        } else if (levelCode === 'GRLVL0011') {
+          workSheet = workbook.getWorksheet('G11')
+        } else if (levelCode === 'GRLVL0012') {
+          workSheet = workbook.getWorksheet('GRAD-G12')
+        }
+
+        for (var i = 0; i < workSheetNameList.length; i++) {
+          if (workSheetNameList[i] !== workSheet.name) {
+            workbook.removeWorksheet(workSheetNameList[i])
+          }
+        }
+        workSheet.columns.forEach((wsColumn, wsColumnIndex) => {
+          if (wsColumnIndex >= 3) {
+            wsColumn.width = 12
+          }
+        })
+
+        var enrolledList = await Enrollment.find({ branch: schoolBranch, schoolYearCode: schoolYearCode, levelCode: levelCode }).populate([{
+          path: 'fees',
+          model: 'EnrollmentFees',
+          populate: [
+            {
+              path: 'payments',
+              model: 'PaymentFees',
+              populate: [
+                {
+                  path: 'receipt',
+                  model: 'Receipts'
+                },
+                {
+                  path: 'userId',
+                  model: 'Users'
+                }
+              ]
+            }
+          ]
+        }]).exec()
+
+        var rowNumber = 8
+        // var grandTotal = 0
+        // var grandCollectibles = 0
+        var reportList = []
+        enrolledList.forEach(async (listItem, listIndex) => { 
+          var enrollee = []
+
+          var registrationFee = listItem.fees.find((rf) => rf.name === 'Registration Fees')
+          var books = listItem.fees.find((rf) => rf.name === 'Books')
+          var tuitionFee = listItem.fees.find((rf) => rf.name === 'Tuition Fees')
+          var miscellanousFee = listItem.fees.find((rf) => rf.name === 'Miscellaneous Fees')
+
+          var tuitionPlusMiscFee = tuitionFee.amount + miscellanousFee.amount
+          
+          enrollee.push(listIndex + 1)
+          enrollee.push(listItem.studentNumber)
+          enrollee.push(listItem.studentName)
+          enrollee.push(parseFloat(registrationFee.amount.toFixed(2)))
+          enrollee.push(parseFloat(books.amount.toFixed(2)))
+          enrollee.push(parseFloat(tuitionFee.discount.toFixed(2)))
+          enrollee.push(parseFloat(tuitionPlusMiscFee.toFixed(2)))
+
+          reportList.push(enrollee)
+
+          workSheet.spliceRows(rowNumber, 1, enrollee, [])
+          rowNumber += 1
+        })
+      })
+  },
+  async GenerateReportX (req, res) {
     res.setHeader('Content-disposition', 'attachment; filename=' + 'SummaryPayments.xlsx')
     res.setHeader('Content-type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
@@ -217,51 +336,51 @@ module.exports = {
             wsColumn.width = 12
           }
         })
-        // var subHeader = ['', '', '', 1500, 4850, 0]
-        // var levelCodeItem = await Level.findOne({ branch: schoolBranch, code: levelCode }).exec()
+        var subHeader = ['', '', '', 1500, 4850, 0]
+        var levelCodeItem = await Level.findOne({ branch: schoolBranch, code: levelCode }).exec()
         var feeToFind = []
         for (i = 4; i <= 14; i++) {
           feeToFind.push({ code: `KV11001${i}` })
         }
         var FeeItem = await Fee.find({ $and: [{ branch: schoolBranch }, { $or: feeToFind }] }).exec()
-        // var levelCodeQuotient = levelCodeItem.unitPrice / 10
-        // for (i = 1; i <= 10; i++) {
-        //   subHeader.push(levelCodeQuotient)
-        //   subHeader.push(0)
-        // }
-        // FeeItem.forEach((feeItem, feeItemIndex) => {
-        //   if (feeItemIndex === (FeeItem.length - 1)) {
-        //     subHeader.push(0)
-        //   }
-        //   subHeader.push(feeItem.unitPrice)
-        // })
-        // var subHeaderTotal = 0
-        // subHeader.forEach((headerItem, headerItemIndex) => {
-        //   if (headerItemIndex >= 3 && headerItemIndex <= 38) {
-        //     subHeaderTotal += headerItem
-        //   }
-        // })
-        // var schoolYearHeader = workSheet.getCell('A4')
-        // schoolYearHeader.value = `STATEMENT OF ACCOUNT (PAYMENTS) S.Y. ${schoolYearCode}`
-        // schoolYearHeader.font = {
-        //   bold: true,
-        //   size: 14
-        // }
-        // schoolYearHeader.alignment = {
-        //   vertical: 'middle',
-        //   horizontal: 'center'
-        // }
-        // subHeader.push(subHeaderTotal)
-        // subHeader.push(0)
-        // workSheet.spliceRows(7, 1, subHeader)
-        // var rowSeven = workSheet.getRow(7)
-        // rowSeven.eachCell(function (cell, colNumber) {
-        //   rowSeven.getCell(colNumber).numFmt = '0.00'
-        //   rowSeven.getCell(colNumber).font = {
-        //     color: {argb: '991111'},
-        //     bold: true
-        //   }
-        // })
+        var levelCodeQuotient = levelCodeItem.unitPrice / 10
+        for (i = 1; i <= 10; i++) {
+          subHeader.push(levelCodeQuotient)
+          subHeader.push(0)
+        }
+        FeeItem.forEach((feeItem, feeItemIndex) => {
+          if (feeItemIndex === (FeeItem.length - 1)) {
+            subHeader.push(0)
+          }
+          subHeader.push(feeItem.unitPrice)
+        })
+        var subHeaderTotal = 0
+        subHeader.forEach((headerItem, headerItemIndex) => {
+          if (headerItemIndex >= 3 && headerItemIndex <= 38) {
+            subHeaderTotal += headerItem
+          }
+        })
+        var schoolYearHeader = workSheet.getCell('A4')
+        schoolYearHeader.value = `STATEMENT OF ACCOUNT (PAYMENTS) S.Y. ${schoolYearCode}`
+        schoolYearHeader.font = {
+          bold: true,
+          size: 14
+        }
+        schoolYearHeader.alignment = {
+          vertical: 'middle',
+          horizontal: 'center'
+        }
+        subHeader.push(subHeaderTotal)
+        subHeader.push(0)
+        workSheet.spliceRows(7, 1, subHeader)
+        var rowSeven = workSheet.getRow(7)
+        rowSeven.eachCell(function (cell, colNumber) {
+          rowSeven.getCell(colNumber).numFmt = '0.00'
+          rowSeven.getCell(colNumber).font = {
+            color: {argb: '991111'},
+            bold: true
+          }
+        })
         var enrolledList = await Enrollment.find({ branch: schoolBranch, schoolYearCode: schoolYearCode, levelCode: levelCode }).populate([{
           path: 'fees',
           model: 'EnrollmentFees',
