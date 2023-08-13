@@ -22,10 +22,7 @@ module.exports = {
     })
   },
   async Picklist (req, res) {
-    var query = (req.body.terms) ? { $or: [{ 'name': { $regex: new RegExp(req.body.terms, 'i') } }, { 'code': { $regex: new RegExp(req.body.terms, 'i') } }] } : {}
-    if (req.user.branch !== null) {
-      query['branch'] = req.user.branch
-    }
+    var query = (req.body.terms) ? { $and: [{ branch: req.body.branch }, { $or: [{ 'name': { $regex: new RegExp(req.body.terms, 'i') } }, { 'code': { $regex: new RegExp(req.body.terms, 'i') } }] }] } : { branch: req.body.branch }
     await Level.find(query).limit(10).exec(function (errLevel, response) {
       if (errLevel) {
         res.status(404).json({'error': 'not found', 'err': errLevel})
