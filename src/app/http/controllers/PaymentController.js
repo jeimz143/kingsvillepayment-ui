@@ -239,8 +239,8 @@ module.exports = {
         }]).exec()
 
         var rowNumber = 8
-        // var grandTotal = 0
-        // var grandCollectibles = 0
+        var grandTotal = 0
+        var grandCollectibles = 0
         var reportList = []
         enrolledList.forEach(async (listItem, listIndex) => { 
           var enrollee = []
@@ -273,7 +273,7 @@ module.exports = {
             console.log('---------- error downloading file: ' + err)
           })
         })
-        
+
       })
   },
   async GenerateReportX (req, res) {
