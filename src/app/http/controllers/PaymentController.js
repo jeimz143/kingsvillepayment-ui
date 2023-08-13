@@ -243,21 +243,37 @@ module.exports = {
         var grandCollectibles = 0
         var reportList = []
         var amountDaysDueValue = 85
-        enrolledList.forEach(async (listItem, listIndex) => { 
+        enrolledList.forEach(async (listItem, listIndex) => {
           var enrollee = []
 
           var registrationFee = listItem.fees.find((rf) => rf.name === 'Registration Fees')
           var books = listItem.fees.find((rf) => rf.name === 'Books')
           var tuitionFee = listItem.fees.find((rf) => rf.name === 'Tuition Fees')
           var miscellanousFee = listItem.fees.find((rf) => rf.name === 'Miscellaneous Fees')
+          var eventFee = listItem.fees.find((rf) => rf.name === 'Event Fee')
+          var parangalFee = listItem.fees.find((rf) => rf.name === 'Parangal Fee')
+          var fieldTrip = listItem.fees.find((rf) => rf.name === 'Field Trip')
+          var royalBall = listItem.fees.find((rf) => rf.name === 'Royal Ball')
+          var yearBook = listItem.fees.find((rf) => rf.name === 'Annual Yearbook Graduating')
+          var framedGradPicture = listItem.fees.find((rf) => rf.name === 'Framed Grad Piture')
+          var diploma = listItem.fees.find((rf) => rf.name === 'Framed Diploma, Theca, Framed Grad Picture')
+          var pin = listItem.fees.find((rf) => rf.name === 'Pin')
+          var nameplate = listItem.fees.find((rf) => rf.name === 'Nameplate')
+          var uniforms = listItem.fees.filter((rf) => rf.name === 'Uniform')
+          var supplies = listItem.fees.find((rf) => rf.name === 'Supplies - All Students')
+          var van = listItem.fees.find((rf) => rf.name === 'Van')
 
+          // Student Information
           enrollee.push(listIndex + 1)
           enrollee.push(listItem.studentNumber)
           enrollee.push(listItem.studentName)
+
+          // Mandatory Fees
           enrollee.push(parseFloat(registrationFee.amount.toFixed(2)))
           enrollee.push(parseFloat(books.amount.toFixed(2)))
           enrollee.push(parseFloat(tuitionFee.discount.toFixed(2)))
-          
+
+          // Tuition Fees Plus Misc.
           var tuitionPlusMiscFee = 0
           var amountDuePerMonth = 0
           tuitionFee.payments.forEach((tfpItem, tfpIndex) => {
@@ -266,6 +282,65 @@ module.exports = {
             enrollee.push(parseFloat(tuitionPlusMiscFee.toFixed(2)))
             enrollee.push(parseFloat(amountDuePerMonth.toFixed(2)))
           })
+          // validate if enrollment is for Cash Basis
+          if (listItem.paymentTerm === 1) {
+            for (var noOfNoValues = 18; noOfNoValues < 0; noOfNoValues--) {
+              enrollee.push(0.00)
+            }
+          }
+
+          // Other Item Fees
+          if (eventFee) {
+            enrollee.push(parseFloat(eventFee.payments[0].amountToPayPerMonth.toFixed(2)))
+          } else { enrollee.push(0.00) }
+
+          if (supplies) {
+            enrollee.push(parseFloat(supplies.payments[0].amountToPayPerMonth.toFixed(2)))
+          } else { enrollee.push(0.00) }
+
+          if (fieldTrip) {
+            enrollee.push(parseFloat(fieldTrip.payments[0].amountToPayPerMonth.toFixed(2)))
+          } else { enrollee.push(0.00) }
+
+          if (royalBall) {
+            enrollee.push(parseFloat(royalBall.payments[0].amountToPayPerMonth.toFixed(2)))
+          } else { enrollee.push(0.00) }
+
+          if (parangalFee) {
+            enrollee.push(parseFloat(parangalFee.payments[0].amountToPayPerMonth.toFixed(2)))
+          } else { enrollee.push(0.00) }
+
+          if (yearBook) {
+            enrollee.push(parseFloat(yearBook.payments[0].amountToPayPerMonth.toFixed(2)))
+          } else { enrollee.push(0.00) }
+
+          if (framedGradPicture) {
+            enrollee.push(parseFloat(framedGradPicture.payments[0].amountToPayPerMonth.toFixed(2)))
+          } else { enrollee.push(0.00) }
+
+          if (diploma) {
+            enrollee.push(parseFloat(diploma.payments[0].amountToPayPerMonth.toFixed(2)))
+          } else { enrollee.push(0.00) }
+
+          if (pin) {
+            enrollee.push(parseFloat(pin.payments[0].amountToPayPerMonth.toFixed(2)))
+          } else { enrollee.push(0.00) }
+
+          if (nameplate) {
+            enrollee.push(parseFloat(nameplate.payments[0].amountToPayPerMonth.toFixed(2)))
+          } else { enrollee.push(0.00) }
+
+          if (uniforms.length !== 0) {
+            var uniFormAmount = 0
+            uniforms.forEach((uniform) => {
+              uniFormAmount += uniform.payments[0].amountToPayPerMonth
+            })
+            enrollee.push(parseFloat(uniFormAmount.toFixed(2)))
+          } else { enrollee.push(0.00) }
+
+          if (van) {
+            enrollee.push(parseFloat(van.payments[0].amountToPayPerMonth.toFixed(2)))
+          } else { enrollee.push(0.00) }
 
           reportList.push(enrollee)
 
@@ -280,7 +355,6 @@ module.exports = {
             console.log('---------- error downloading file: ' + err)
           })
         })
-
       })
   },
   async GenerateReportX (req, res) {

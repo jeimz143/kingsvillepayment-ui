@@ -128,376 +128,376 @@ const data = [
   },
   {
     code: '',
-    name: 'Kids - PE Shirt Size 10',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - PE Shirt Size 10',
     unitPrice: 450,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - PE Shirt Size 12',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - PE Shirt Size 12',
     unitPrice: 450,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - PE Shirt Size 14',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - PE Shirt Size 14',
     unitPrice: 450,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - PE Shirt Size 16',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - PE Shirt Size 16',
     unitPrice: 450,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - PE Shirt Size 18',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - PE Shirt Size 18',
     unitPrice: 450,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - PE Short/Skirt Size 10',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - PE Short/Skirt Size 10',
     unitPrice: 375,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - PE Short/Skirt Size 12',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - PE Short/Skirt Size 12',
     unitPrice: 375,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - PE Short/Skirt Size 14',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - PE Short/Skirt Size 14',
     unitPrice: 375,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - PE Short/Skirt Size 16',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - PE Short/Skirt Size 16',
     unitPrice: 400,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - PE Short/Skirt Size 18',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - PE Short/Skirt Size 18',
     unitPrice: 400,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - PE J-Pants Size 10',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - PE J-Pants Size 10',
     unitPrice: 450,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - PE J-Pants Size 12',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - PE J-Pants Size 12',
     unitPrice: 450,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - PE J-Pants Size 14',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - PE J-Pants Size 14',
     unitPrice: 450,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - PE J-Pants Size 16',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - PE J-Pants Size 16',
     unitPrice: 475,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - PE J-Pants Size 18',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - PE J-Pants Size 18',
     unitPrice: 475,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE Shirt XS',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE Shirt XS',
     unitPrice: 500,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE Shirt S',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE Shirt S',
     unitPrice: 500,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE Shirt M',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE Shirt M',
     unitPrice: 500,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE Shirt L',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE Shirt L',
     unitPrice: 525,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE Shirt XL',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE Shirt XL',
     unitPrice: 550,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE Shirt XXL',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE Shirt XXL',
     unitPrice: 550,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE Short/Skirt XS',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE Short/Skirt XS',
     unitPrice: 425,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE Short/Skirt S',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE Short/Skirt S',
     unitPrice: 425,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE Short/Skirt M',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE Short/Skirt M',
     unitPrice: 425,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE Short/Skirt L',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE Short/Skirt L',
     unitPrice: 500,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE Short/Skirt XL',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE Short/Skirt XL',
     unitPrice: 500,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE Short/Skirt XXL',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE Short/Skirt XXL',
     unitPrice: 500,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE J-Pants XS',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE J-Pants XS',
     unitPrice: 475,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE J-Pants S',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE J-Pants S',
     unitPrice: 475,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE J-Pants M',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE J-Pants M',
     unitPrice: 475,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE J-Pants L',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE J-Pants L',
     unitPrice: 525,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE J-Pants XL',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE J-Pants XL',
     unitPrice: 525,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - PE J-Pants XXL',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - PE J-Pants XXL',
     unitPrice: 525,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - KVS Small',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - KVS Small',
     unitPrice: 350,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - KVS Medium',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - KVS Medium',
     unitPrice: 350,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - KVS Large',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - KVS Large',
     unitPrice: 365,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - KVS X-Large',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - KVS X-Large',
     unitPrice: 365,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - KVS XX-Large',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - KVS XX-Large',
     unitPrice: 375,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - KVS Small',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - KVS Small',
     unitPrice: 375,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - KVS Medium',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - KVS Medium',
     unitPrice: 385,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - KVS Large',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - KVS Large',
     unitPrice: 385,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - KVS X-Large',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - KVS X-Large',
     unitPrice: 395,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - KVS XX-Large',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - KVS XX-Large',
     unitPrice: 400,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Kids - Coat',
-    description: '',
+    name: 'Uniform',
+    description: 'Kids - Coat',
     unitPrice: 1500,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Adult - Coat',
-    description: '',
+    name: 'Uniform',
+    description: 'Adult - Coat',
     unitPrice: 1700,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Tela - White 120/Yrd',
-    description: '',
+    name: 'Uniform',
+    description: 'Tela - White 120/Yrd',
     unitPrice: 120,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
   },
   {
     code: '',
-    name: 'Tela - Checkered 125/Yrd',
-    description: '',
+    name: 'Uniform',
+    description: 'Tela - Checkered 125/Yrd',
     unitPrice: 120,
     isAnticipatedEventsAccessories: true,
     branch: 'KVB0001'
