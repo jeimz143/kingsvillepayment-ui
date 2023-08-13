@@ -80,7 +80,7 @@ module.exports = {
   },
   async ShowMandatory (req, res) {
     try {
-      await Fee.find({ branch: req.body.branch, isMandatory: true }, function (err, fees) {
+      await Fee.find({ $and: [{ isMandatory: true }, { branch: req.body.branch }] }, function (err, fees) {
         if (err) {
           res.status(404).json({'error': 'not found', 'err': err})
           return

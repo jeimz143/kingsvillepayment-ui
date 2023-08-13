@@ -136,7 +136,7 @@ module.exports = function (app, io) {
     .get(isAuthenticated(), feeList.Index)
     .post(isAuthenticated(), feeList.Store)
   app.route('/api/fees/mandatory')
-    .get(isAuthenticated(), feeList.ShowMandatory)
+    .post(isAuthenticated(), feeList.ShowMandatory)
   app.route('/api/fees/picklist')
     .post(feeList.Picklist)
   app.route('/api/fees/:id')
