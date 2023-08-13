@@ -147,6 +147,7 @@ module.exports = {
       })
     }
   },
+
   async GenerateReport (req, res) {
     res.setHeader('Content-disposition', 'attachment; filename=' + 'SummaryPayments.xlsx')
     res.setHeader('Content-type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
@@ -216,51 +217,51 @@ module.exports = {
             wsColumn.width = 12
           }
         })
-        var subHeader = ['', '', '', 1500, 4850, 0]
-        var levelCodeItem = await Level.findOne({ code: levelCode }).exec()
+        // var subHeader = ['', '', '', 1500, 4850, 0]
+        // var levelCodeItem = await Level.findOne({ branch: schoolBranch, code: levelCode }).exec()
         var feeToFind = []
         for (i = 4; i <= 14; i++) {
           feeToFind.push({ code: `KV11001${i}` })
         }
-        var FeeItem = await Fee.find({ $or: feeToFind }).exec()
-        var levelCodeQuotient = levelCodeItem.unitPrice / 10
-        for (i = 1; i <= 10; i++) {
-          subHeader.push(levelCodeQuotient)
-          subHeader.push(0)
-        }
-        FeeItem.forEach((feeItem, feeItemIndex) => {
-          if (feeItemIndex === (FeeItem.length - 1)) {
-            subHeader.push(0)
-          }
-          subHeader.push(feeItem.unitPrice)
-        })
-        var subHeaderTotal = 0
-        subHeader.forEach((headerItem, headerItemIndex) => {
-          if (headerItemIndex >= 3 && headerItemIndex <= 38) {
-            subHeaderTotal += headerItem
-          }
-        })
-        var schoolYearHeader = workSheet.getCell('A4')
-        schoolYearHeader.value = `STATEMENT OF ACCOUNT (PAYMENTS) S.Y. ${schoolYearCode}`
-        schoolYearHeader.font = {
-          bold: true,
-          size: 14
-        }
-        schoolYearHeader.alignment = {
-          vertical: 'middle',
-          horizontal: 'center'
-        }
-        subHeader.push(subHeaderTotal)
-        subHeader.push(0)
-        workSheet.spliceRows(7, 1, subHeader)
-        var rowSeven = workSheet.getRow(7)
-        rowSeven.eachCell(function (cell, colNumber) {
-          rowSeven.getCell(colNumber).numFmt = '0.00'
-          rowSeven.getCell(colNumber).font = {
-            color: {argb: '991111'},
-            bold: true
-          }
-        })
+        var FeeItem = await Fee.find({ $and: [{ branch: schoolBranch }, { $or: feeToFind }] }).exec()
+        // var levelCodeQuotient = levelCodeItem.unitPrice / 10
+        // for (i = 1; i <= 10; i++) {
+        //   subHeader.push(levelCodeQuotient)
+        //   subHeader.push(0)
+        // }
+        // FeeItem.forEach((feeItem, feeItemIndex) => {
+        //   if (feeItemIndex === (FeeItem.length - 1)) {
+        //     subHeader.push(0)
+        //   }
+        //   subHeader.push(feeItem.unitPrice)
+        // })
+        // var subHeaderTotal = 0
+        // subHeader.forEach((headerItem, headerItemIndex) => {
+        //   if (headerItemIndex >= 3 && headerItemIndex <= 38) {
+        //     subHeaderTotal += headerItem
+        //   }
+        // })
+        // var schoolYearHeader = workSheet.getCell('A4')
+        // schoolYearHeader.value = `STATEMENT OF ACCOUNT (PAYMENTS) S.Y. ${schoolYearCode}`
+        // schoolYearHeader.font = {
+        //   bold: true,
+        //   size: 14
+        // }
+        // schoolYearHeader.alignment = {
+        //   vertical: 'middle',
+        //   horizontal: 'center'
+        // }
+        // subHeader.push(subHeaderTotal)
+        // subHeader.push(0)
+        // workSheet.spliceRows(7, 1, subHeader)
+        // var rowSeven = workSheet.getRow(7)
+        // rowSeven.eachCell(function (cell, colNumber) {
+        //   rowSeven.getCell(colNumber).numFmt = '0.00'
+        //   rowSeven.getCell(colNumber).font = {
+        //     color: {argb: '991111'},
+        //     bold: true
+        //   }
+        // })
         var enrolledList = await Enrollment.find({ branch: schoolBranch, schoolYearCode: schoolYearCode, levelCode: levelCode }).populate([{
           path: 'fees',
           model: 'EnrollmentFees',
@@ -437,6 +438,7 @@ module.exports = {
       const fromDate = new Date(moment(req.body.fromDate))
       const toDate = new Date(moment(req.body.toDate))
       await PaymentFee.find({
+        'branch': req.body.branch,
         'datePaid': {
           '$gte': fromDate,
           '$lte': toDate
