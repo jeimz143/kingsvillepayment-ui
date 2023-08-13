@@ -155,7 +155,7 @@ module.exports = {
 
     var workbook = new Excel.Workbook()
     // workbook.xlsx.readFile('storage/downloads/SummaryPayments.xlsx')
-    workbook.xlsx.readFile(`${__dirname}\\..\\..\\..\\database\\data\\SummaryPayments.xlsx`)
+    workbook.xlsx.readFile(`${__dirname}/../../../database/data/SummaryPayments.xlsx`)
       .then(async function () {
         var levelCode = req.body.levelCode
         var schoolYearCode = req.body.schoolYearCode
