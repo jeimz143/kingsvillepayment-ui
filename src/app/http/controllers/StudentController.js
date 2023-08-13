@@ -62,8 +62,7 @@ module.exports = {
     }
   },
   async Picklist (req, res) {
-    var query = (req.body.terms) ? { $or: [{ 'studentNumber': { $regex: new RegExp(req.body.terms, 'i') } }, { 'lastName': { $regex: new RegExp(req.body.terms, 'i') } }, { 'givenName': { $regex: new RegExp(req.body.terms, 'i') } }] } : {}
-    query['branch'] = req.body.branch
+    var query = (req.body.terms) ? { $or: [{ 'studentNumber': { $regex: new RegExp(req.body.terms, 'i') } }, { 'lastName': { $regex: new RegExp(req.body.terms, 'i') } }, { 'givenName': { $regex: new RegExp(req.body.terms, 'i') } }], $and: [{ branch: req.body.branch }] } : { branch: req.body.branch }
     await Student.find(query).limit(10).exec(function (errStudent, response) {
       if (errStudent) {
         res.status(404).json({ 'error': 'not found', 'err': errStudent })
