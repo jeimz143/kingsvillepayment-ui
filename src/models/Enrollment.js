@@ -91,7 +91,7 @@ EnrollmentSchema.statics.Store = async function (Enrollment, EnrollmentFee, Paym
     delete feesItem._id
     feesItem['userId'] = user._id
     feesItem['enrollment'] = TheEnrollment._id
-    feesItem['branch'] = TheEnrollment.branch
+    feesItem['branch'] = request.branch
     var TheEnrollmentFee = new EnrollmentFee(feesItem)
     enrollmentFeesIds.push(mongoose.Types.ObjectId(TheEnrollmentFee._id))
     TheEnrollmentFee.save()
