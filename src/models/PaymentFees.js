@@ -9,6 +9,10 @@ const PaymentFeeSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Users'
   },
+  branch: {
+    type: String,
+    default: null
+  },
   enrollmentFee: {
     type: Schema.Types.ObjectId,
     ref: 'EnrollmentFees'

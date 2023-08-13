@@ -167,6 +167,7 @@ EnrollmentFeeSchema.statics.Update = async function (EnrollmentFee, PaymentFee, 
     })
     var ThePaymentFee = null
     paymentItems['userId'] = req.user._id
+    paymentItems['branch'] = req.body.branch
     if (paymentItems.isNew) {
       delete paymentItems._id
       paymentItems['enrollmentFee'] = TheEnrollmentFee._id

@@ -12,6 +12,10 @@ const PaymentSchema = new Schema({
     type: Schema.Types.ObjectId,
     refs: 'Fees'
   },
+  branch: {
+    type: String,
+    default: null
+  },
   name: {
     type: String,
     required: 'Payment name is required'

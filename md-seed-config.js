@@ -8,7 +8,7 @@ const Level = require('./src/database/seeders/levels.seeder')
 const Fee = require('./src/database/seeders/fees.seeder')
 const Student = require('./src/database/seeders/students.seeder')
 const SchoolYear = require('./src/database/seeders/schoolyears.seeder')
-const Enrollment = require('./src/database/seeders/enrollments.seeder')
+// const Enrollment = require('./src/database/seeders/enrollments.seeder')
 
 const mongoURL = process.env.MONGO_DB_URL
 console.log(mongoURL)
@@ -24,7 +24,7 @@ const seedersList = {
   Fee,
   Student,
   SchoolYear,
-  Enrollment,
+  // Enrollment,
   Permissions,
   Role,
   Users

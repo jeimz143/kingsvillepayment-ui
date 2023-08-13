@@ -91,6 +91,7 @@ EnrollmentSchema.statics.Store = async function (Enrollment, EnrollmentFee, Paym
     delete feesItem._id
     feesItem['userId'] = user._id
     feesItem['enrollment'] = TheEnrollment._id
+    feesItem['branch'] = TheEnrollment.branch
     var TheEnrollmentFee = new EnrollmentFee(feesItem)
     enrollmentFeesIds.push(mongoose.Types.ObjectId(TheEnrollmentFee._id))
     TheEnrollmentFee.save()
@@ -104,46 +105,6 @@ EnrollmentSchema.statics.Store = async function (Enrollment, EnrollmentFee, Paym
     return cb(null, newEnrollment)
   })
 }
-// EnrollmentSchema.statics.Update = async function (Enrollment, EnrollmentFees, req, cb) {
-//   let vm = this
-//   var TheEnrollment = JSON.parse(JSON.stringify(req.body))
-//   var feesToAdd = []
-//   TheEnrollment.fees.forEach((feesItem, feesIndex) => {
-//     var theFeeItemToAdd = feesItem
-//     if (theFeeItemToAdd.isNew) {
-//       delete theFeeItemToAdd._id
-//     }
-//     feesToAdd.push(theFeeItemToAdd)
-//   })
-//   var setData = {
-//     number: TheEnrollment.number,
-//     studentNumber: TheEnrollment.studentNumber,
-//     studentName: TheEnrollment.studentName,
-//     levelCode: TheEnrollment.levelCode,
-//     levelDescription: TheEnrollment.levelDescription,
-//     paymentTerm: TheEnrollment.paymentTerm,
-//     fees: feesToAdd,
-//     updated_at: Date.now(),
-//   }
-//   vm.update({ _id: req.params.id }, { $set: setData }).exec(function (err, response) {
-//     if (err) return cb(err)
-//     return cb(null, response)
-//   })
-//   // var enrollmentFeesObjectIds = []
-//   // TheEnrollment.fees.forEach(async (feesItem, feesIndex) => {
-//   //   var isItExisting = await isEnrollmentFeeExisting(EnrollmentFees, feesItem)
-//   //     if (isItExisting !== 0) {
-//   //       EnrollmentFees.Update(feesItem, function (err, enrollment) {})
-//   //     } else {
-//   //       console.log(feesItem)
-//   //       var theEnrollmentFee = new EnrollmentFees(feesItem)
-//   //       theEnrollmentFee.save()
-//   //       vm.update({ _id: req.params.id }, { $push: { fees: theEnrollmentFee._id } }).exec(function (err, response) {
-//   //         console.log(response)
-//   //       })
-//   //     }
-//   // })
-// }
 EnrollmentSchema.statics.ApproveStatus = async function (Enrollment, req, cb) {
   let vm = this
   var setData = {
