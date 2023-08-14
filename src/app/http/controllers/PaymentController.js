@@ -413,15 +413,6 @@ module.exports = {
           // Set Value Status
           var currentRow = workSheet.getRow(rowNumber)
           currentRow.eachCell(function (cell, col) {
-            cell.border = {
-              top: {style: 'thin'},
-              left: {style: 'thin'},
-              bottom: {style: 'thin'},
-              right: {style: 'thin'}
-            }
-            cell.font = {
-              size: 8
-            }
             // Reg. Fee Status
             if (col === 4) {
               if (registrationFee.isPaid) {
@@ -596,6 +587,16 @@ module.exports = {
                   fgColor: { argb: '4caf50' }
                 }
               }
+            }
+
+            cell.border = {
+              top: {style: 'thin'},
+              left: {style: 'thin'},
+              bottom: {style: 'thin'},
+              right: {style: 'thin'}
+            }
+            cell.font = {
+              size: 8
             }
           })
 
