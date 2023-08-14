@@ -354,7 +354,13 @@ module.exports = {
             enrollee.push(parseFloat(van.toFixed(2)))
           } else { enrollee.push(0.00) }
 
-          reportList.push(enrollee)
+          var totalAmount = 0
+
+          for (var enrolleeIndex = 3; enrolleeIndex <= enrollee.length; enrolleeIndex++) {
+            totalAmount += enrollee[enrolleeIndex]
+          }
+
+          enrollee.push(totalAmount)
 
           workSheet.spliceRows(rowNumber, 1, enrollee, [])
           rowNumber += 1
