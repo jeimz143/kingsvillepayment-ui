@@ -257,11 +257,11 @@ module.exports = {
           var yearBook = listItem.fees.find((rf) => rf.name === 'Annual Yearbook Graduating')
           var framedGradPicture = listItem.fees.find((rf) => rf.name === 'Framed Grad Piture')
           var diploma = listItem.fees.find((rf) => rf.name === 'Framed Diploma, Theca, Framed Grad Picture')
-          var pin = listItem.fees.find((rf) => rf.name === 'Pin')
-          var nameplate = listItem.fees.find((rf) => rf.name === 'Nameplate')
+          var pins = listItem.fees.filter((rf) => rf.name === 'Pin')
+          var nameplates = listItem.fees.filter((rf) => rf.name === 'Nameplate')
           var uniforms = listItem.fees.filter((rf) => rf.name === 'Uniform')
-          var supplies = listItem.fees.find((rf) => rf.name === 'Supplies - All Students')
-          var van = listItem.fees.find((rf) => rf.name === 'Van')
+          var supplies = listItem.fees.filter((rf) => rf.name === 'Supplies - All Students')
+          var vans = listItem.fees.filter((rf) => rf.name === 'Van')
 
           // Student Information
           enrollee.push(listIndex + 1)
@@ -322,24 +322,36 @@ module.exports = {
             enrollee.push(parseFloat(diploma.amount.toFixed(2)))
           } else { enrollee.push(0.00) }
 
-          if (pin) {
-            enrollee.push(parseFloat(pin.amount.toFixed(2)))
+          if (pins.length !== 0) {
+            var pin = 0
+            pins.forEach((i) => {
+              pin += i.amount
+            })
+            enrollee.push(parseFloat(pin.toFixed(2)))
           } else { enrollee.push(0.00) }
 
-          if (nameplate) {
-            enrollee.push(parseFloat(nameplate.amount.toFixed(2)))
+          if (nameplates.length !== 0) {
+            var nameplate = 0
+            nameplates.forEach((i) => {
+              nameplate += i.amount
+            })
+            enrollee.push(parseFloat(nameplate.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (uniforms.length !== 0) {
-            var uniFormAmount = 0
-            uniforms.forEach((uniform) => {
-              uniFormAmount += uniform.amount
+            var uniform = 0
+            uniforms.forEach((i) => {
+              uniform += i.amount
             })
-            enrollee.push(parseFloat(uniFormAmount.toFixed(2)))
+            enrollee.push(parseFloat(uniform.toFixed(2)))
           } else { enrollee.push(0.00) }
 
-          if (van) {
-            enrollee.push(parseFloat(van.amount.toFixed(2)))
+          if (vans.length !== 0) {
+            var van = 0
+            vans.forEach((i) => {
+              van += i.amount
+            })
+            enrollee.push(parseFloat(van.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           reportList.push(enrollee)
