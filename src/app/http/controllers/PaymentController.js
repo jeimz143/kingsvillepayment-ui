@@ -207,7 +207,7 @@ module.exports = {
           workSheet = workbook.getWorksheet('GRAD-G12')
         }
 
-        const branch = await Branch.find({ code: req.body.branch }).exec()
+        const branch = await Branch.findOne({ code: req.body.branch }).exec()
 
         var schoolYearBranch = workSheet.getCell('A2')
         schoolYearBranch.value = branch.description
