@@ -476,7 +476,7 @@ module.exports = {
 
             // Supplies
             if (col === 28) {
-              if (supplies.isPaid) {
+              if (supplies && supplies.isPaid) {
                 cell.fill = {
                   type: 'pattern',
                   pattern: 'solid',
@@ -487,7 +487,7 @@ module.exports = {
 
             // Field Trip
             if (col === 29) {
-              if (fieldTrip.isPaid) {
+              if (fieldTrip && fieldTrip.isPaid) {
                 cell.fill = {
                   type: 'pattern',
                   pattern: 'solid',
@@ -498,7 +498,7 @@ module.exports = {
 
             // Royal Ball
             if (col === 30) {
-              if (royalBall.isPaid) {
+              if (royalBall && royalBall.isPaid) {
                 cell.fill = {
                   type: 'pattern',
                   pattern: 'solid',
@@ -509,7 +509,7 @@ module.exports = {
 
             // Parangal Fee
             if (col === 31) {
-              if (parangalFee.isPaid) {
+              if (parangalFee && parangalFee.isPaid) {
                 cell.fill = {
                   type: 'pattern',
                   pattern: 'solid',
@@ -520,7 +520,7 @@ module.exports = {
 
             // Annual Yearbook
             if (col === 32) {
-              if (yearBook.isPaid) {
+              if (yearBook && yearBook.isPaid) {
                 cell.fill = {
                   type: 'pattern',
                   pattern: 'solid',
@@ -531,7 +531,7 @@ module.exports = {
 
             // Framed Grad. Pic.
             if (col === 33) {
-              if (framedGradPicture.isPaid) {
+              if (framedGradPicture && framedGradPicture.isPaid) {
                 cell.fill = {
                   type: 'pattern',
                   pattern: 'solid',
@@ -542,7 +542,7 @@ module.exports = {
 
             // Diploma
             if (col === 34) {
-              if (framedGradPicture.isPaid) {
+              if (framedGradPicture && framedGradPicture.isPaid) {
                 cell.fill = {
                   type: 'pattern',
                   pattern: 'solid',
