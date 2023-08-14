@@ -208,9 +208,10 @@ module.exports = {
         }
 
         const branch = await Branch.findOne({ code: req.body.branch }).exec()
+        const pBranch = JSON.parse(JSON.stringify(branch))
 
         var schoolYearBranch = workSheet.getCell('A2')
-        schoolYearBranch.value = branch.description
+        schoolYearBranch.value = pBranch.description
         schoolYearBranch.font = {
           bold: false,
           size: 12
