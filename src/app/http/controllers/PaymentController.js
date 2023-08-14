@@ -406,6 +406,7 @@ module.exports = {
           }
 
           enrollee.push(status)
+          enrollee.push('')
 
           workSheet.spliceRows(rowNumber, 1, enrollee, [])
 
@@ -460,6 +461,141 @@ module.exports = {
                 }
                 tfCol++
               })
+            }
+
+            // Event Fee
+            if (col === 27) {
+              if (eventFee.isPaid) {
+                cell.fill = {
+                  type: 'pattern',
+                  pattern: 'solid',
+                  fgColor: { argb: '4caf50' }
+                }
+              }
+            }
+
+            // Supplies
+            if (col === 28) {
+              if (supplies.isPaid) {
+                cell.fill = {
+                  type: 'pattern',
+                  pattern: 'solid',
+                  fgColor: { argb: '4caf50' }
+                }
+              }
+            }
+
+            // Field Trip
+            if (col === 29) {
+              if (fieldTrip.isPaid) {
+                cell.fill = {
+                  type: 'pattern',
+                  pattern: 'solid',
+                  fgColor: { argb: '4caf50' }
+                }
+              }
+            }
+
+            // Royal Ball
+            if (col === 30) {
+              if (royalBall.isPaid) {
+                cell.fill = {
+                  type: 'pattern',
+                  pattern: 'solid',
+                  fgColor: { argb: '4caf50' }
+                }
+              }
+            }
+
+            // Parangal Fee
+            if (col === 31) {
+              if (parangalFee.isPaid) {
+                cell.fill = {
+                  type: 'pattern',
+                  pattern: 'solid',
+                  fgColor: { argb: '4caf50' }
+                }
+              }
+            }
+
+            // Annual Yearbook
+            if (col === 32) {
+              if (yearBook.isPaid) {
+                cell.fill = {
+                  type: 'pattern',
+                  pattern: 'solid',
+                  fgColor: { argb: '4caf50' }
+                }
+              }
+            }
+
+            // Framed Grad. Pic.
+            if (col === 33) {
+              if (framedGradPicture.isPaid) {
+                cell.fill = {
+                  type: 'pattern',
+                  pattern: 'solid',
+                  fgColor: { argb: '4caf50' }
+                }
+              }
+            }
+
+            // Diploma
+            if (col === 34) {
+              if (framedGradPicture.isPaid) {
+                cell.fill = {
+                  type: 'pattern',
+                  pattern: 'solid',
+                  fgColor: { argb: '4caf50' }
+                }
+              }
+            }
+
+            // Pins
+            if (col === 35) {
+              var unpaidPins = listItem.fees.filter((rf) => rf.name === 'Pin' && !rf.isPaid)
+              if (unpaidPins.length === 0) {
+                cell.fill = {
+                  type: 'pattern',
+                  pattern: 'solid',
+                  fgColor: { argb: '4caf50' }
+                }
+              }
+            }
+
+            // Nameplates
+            if (col === 36) {
+              var unpaidNameplates = listItem.fees.filter((rf) => rf.name === 'Nameplate' && !rf.isPaid)
+              if (unpaidNameplates.length === 0) {
+                cell.fill = {
+                  type: 'pattern',
+                  pattern: 'solid',
+                  fgColor: { argb: '4caf50' }
+                }
+              }
+            }
+
+            // Uniform
+            if (col === 37) {
+              var unpaidUniform = listItem.fees.filter((rf) => rf.name === 'Uniform' && !rf.isPaid)
+              if (unpaidUniform.length === 0) {
+                cell.fill = {
+                  type: 'pattern',
+                  pattern: 'solid',
+                  fgColor: { argb: '4caf50' }
+                }
+              }
+            }
+
+            if (col === 38) {
+              var unpaidVans = listItem.fees.filter((rf) => rf.name === 'Van' && !rf.isPaid)
+              if (unpaidVans.length === 0) {
+                cell.fill = {
+                  type: 'pattern',
+                  pattern: 'solid',
+                  fgColor: { argb: '4caf50' }
+                }
+              }
             }
           })
 
