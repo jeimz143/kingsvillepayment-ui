@@ -291,55 +291,55 @@ module.exports = {
 
           // Other Item Fees
           if (eventFee) {
-            enrollee.push(parseFloat(eventFee.payments[0].amountToPayPerMonth.toFixed(2)))
+            enrollee.push(parseFloat(eventFee.unitPrice.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (supplies) {
-            enrollee.push(parseFloat(supplies.payments[0].amountToPayPerMonth.toFixed(2)))
+            enrollee.push(parseFloat(supplies.unitPrice.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (fieldTrip) {
-            enrollee.push(parseFloat(fieldTrip.payments[0].amountToPayPerMonth.toFixed(2)))
+            enrollee.push(parseFloat(fieldTrip.unitPrice.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (royalBall) {
-            enrollee.push(parseFloat(royalBall.payments[0].amountToPayPerMonth.toFixed(2)))
+            enrollee.push(parseFloat(royalBall.unitPrice.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (parangalFee) {
-            enrollee.push(parseFloat(parangalFee.payments[0].amountToPayPerMonth.toFixed(2)))
+            enrollee.push(parseFloat(parangalFee.unitPrice.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (yearBook) {
-            enrollee.push(parseFloat(yearBook.payments[0].amountToPayPerMonth.toFixed(2)))
+            enrollee.push(parseFloat(yearBook.unitPrice.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (framedGradPicture) {
-            enrollee.push(parseFloat(framedGradPicture.payments[0].amountToPayPerMonth.toFixed(2)))
+            enrollee.push(parseFloat(framedGradPicture.unitPrice.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (diploma) {
-            enrollee.push(parseFloat(diploma.payments[0].amountToPayPerMonth.toFixed(2)))
+            enrollee.push(parseFloat(diploma.unitPrice.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (pin) {
-            enrollee.push(parseFloat(pin.payments[0].amountToPayPerMonth.toFixed(2)))
+            enrollee.push(parseFloat(pin.unitPrice.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (nameplate) {
-            enrollee.push(parseFloat(nameplate.payments[0].amountToPayPerMonth.toFixed(2)))
+            enrollee.push(parseFloat(nameplate.unitPrice.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (uniforms.length !== 0) {
             var uniFormAmount = 0
             uniforms.forEach((uniform) => {
-              uniFormAmount += uniform.payments[0].amountToPayPerMonth
+              uniFormAmount += uniform.unitPrice
             })
             enrollee.push(parseFloat(uniFormAmount.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (van) {
-            enrollee.push(parseFloat(van.payments[0].amountToPayPerMonth.toFixed(2)))
+            enrollee.push(parseFloat(van.unitPrice.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           reportList.push(enrollee)
