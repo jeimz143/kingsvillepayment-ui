@@ -359,8 +359,17 @@ module.exports = {
           for (var enrolleeIndex = 3; enrolleeIndex < enrollee.length; enrolleeIndex++) {
             totalAmount += enrollee[enrolleeIndex]
           }
+          enrollee.push(totalAmount.toFixed(2))
 
-          enrollee.push(totalAmount)
+          var unpaidFees = listItem.fees.filter(e => !e.isPaid)
+          var totalBalance = 0
+          var totalCollectibles = 0
+          unpaidFees.forEach((ufItem) => {
+            totalBalance += ufItem.balance
+          })
+
+          totalCollectibles = totalAmount - totalBalance
+          enrollee.push(totalCollectibles.toFixed(2))
 
           workSheet.spliceRows(rowNumber, 1, enrollee, [])
           rowNumber += 1
