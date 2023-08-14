@@ -7,6 +7,7 @@ const PaymentFee = require('../../../models/PaymentFees')
 const Receipt = require('../../../models/Receipt')
 const Fee = require('../../../models/Fee')
 const Level = require('../../../models/Level')
+const Branch = require('../../../models/Branch')
 // const { level } = require('winston')
 
 const calculateTotal = (arr = []) => {
@@ -204,6 +205,30 @@ module.exports = {
           workSheet = workbook.getWorksheet('G11')
         } else if (levelCode === 'GRLVL0012') {
           workSheet = workbook.getWorksheet('GRAD-G12')
+        }
+
+        const branch = await Branch.find({ code: req.body.branch }).exec()
+
+        var schoolYearBranch = workSheet.getCell('A2')
+        schoolYearBranch.value = branch.description
+        schoolYearBranch.font = {
+          bold: false,
+          size: 12
+        }
+        schoolYearBranch.alignment = {
+          vertical: 'middle',
+          horizontal: 'center'
+        }
+
+        var schoolYearHeader = workSheet.getCell('A4')
+        schoolYearHeader.value = `STATEMENT OF ACCOUNT (PAYMENTS) S.Y. ${schoolYearCode}`
+        schoolYearHeader.font = {
+          bold: true,
+          size: 14
+        }
+        schoolYearHeader.alignment = {
+          vertical: 'middle',
+          horizontal: 'center'
         }
 
         for (var i = 0; i < workSheetNameList.length; i++) {
