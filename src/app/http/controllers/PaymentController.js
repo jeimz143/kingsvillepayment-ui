@@ -291,55 +291,55 @@ module.exports = {
 
           // Other Item Fees
           if (eventFee) {
-            enrollee.push(parseFloat(eventFee.unitPrice.toFixed(2)))
+            enrollee.push(parseFloat(eventFee.amount.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (supplies) {
-            enrollee.push(parseFloat(supplies.unitPrice.toFixed(2)))
+            enrollee.push(parseFloat(supplies.amount.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (fieldTrip) {
-            enrollee.push(parseFloat(fieldTrip.unitPrice.toFixed(2)))
+            enrollee.push(parseFloat(fieldTrip.amount.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (royalBall) {
-            enrollee.push(parseFloat(royalBall.unitPrice.toFixed(2)))
+            enrollee.push(parseFloat(royalBall.amount.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (parangalFee) {
-            enrollee.push(parseFloat(parangalFee.unitPrice.toFixed(2)))
+            enrollee.push(parseFloat(parangalFee.amount.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (yearBook) {
-            enrollee.push(parseFloat(yearBook.unitPrice.toFixed(2)))
+            enrollee.push(parseFloat(yearBook.amount.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (framedGradPicture) {
-            enrollee.push(parseFloat(framedGradPicture.unitPrice.toFixed(2)))
+            enrollee.push(parseFloat(framedGradPicture.amount.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (diploma) {
-            enrollee.push(parseFloat(diploma.unitPrice.toFixed(2)))
+            enrollee.push(parseFloat(diploma.amount.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (pin) {
-            enrollee.push(parseFloat(pin.unitPrice.toFixed(2)))
+            enrollee.push(parseFloat(pin.amount.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (nameplate) {
-            enrollee.push(parseFloat(nameplate.unitPrice.toFixed(2)))
+            enrollee.push(parseFloat(nameplate.amount.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (uniforms.length !== 0) {
             var uniFormAmount = 0
             uniforms.forEach((uniform) => {
-              uniFormAmount += uniform.unitPrice
+              uniFormAmount += uniform.amount
             })
             enrollee.push(parseFloat(uniFormAmount.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           if (van) {
-            enrollee.push(parseFloat(van.unitPrice.toFixed(2)))
+            enrollee.push(parseFloat(van.amount.toFixed(2)))
           } else { enrollee.push(0.00) }
 
           reportList.push(enrollee)
