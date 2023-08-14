@@ -356,7 +356,7 @@ module.exports = {
 
           var totalAmount = 0
 
-          for (var enrolleeIndex = 3; enrolleeIndex <= enrollee.length; enrolleeIndex++) {
+          for (var enrolleeIndex = 3; enrolleeIndex < enrollee.length; enrolleeIndex++) {
             totalAmount += enrollee[enrolleeIndex]
           }
 
