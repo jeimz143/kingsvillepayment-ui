@@ -441,25 +441,22 @@ module.exports = {
             }
 
             // Tuition Fee & Misc
-            if (col >= 7 && col <= 26) {
-              if (!tuitionStatusTriggered) {
-                tuitionFee.payments.forEach((tfpItem, tfpIndex) => {
-                  if (tfpItem.isPaid && miscellanousFee.payments[tfpIndex].isPaid) {
-                    var tColumn = col + tfpIndex
-                    currentRow.getCell(tColumn).fill = {
-                      type: 'pattern',
-                      pattern: 'solid',
-                      fgColor: { argb: '4caf50' }
-                    }
-                    currentRow.getCell(tColumn + 1).fill = {
-                      type: 'pattern',
-                      pattern: 'solid',
-                      fgColor: { argb: '4caf50' }
-                    }
+            if (col === 7) {
+              tuitionFee.payments.forEach((tfpItem, tfpIndex) => {
+                if (tfpItem.isPaid && miscellanousFee.payments[tfpIndex].isPaid) {
+                  var tColumn = col + tfpIndex
+                  currentRow.getCell(tColumn).fill = {
+                    type: 'pattern',
+                    pattern: 'solid',
+                    fgColor: { argb: '4caf50' }
                   }
-                })
-                tuitionStatusTriggered = true
-              }
+                  currentRow.getCell(tColumn + 1).fill = {
+                    type: 'pattern',
+                    pattern: 'solid',
+                    fgColor: { argb: '4caf50' }
+                  }
+                }
+              })
             }
           })
 
