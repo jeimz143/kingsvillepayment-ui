@@ -267,7 +267,6 @@ module.exports = {
         var rowNumber = 8
         var grandTotal = 0
         var grandCollectibles = 0
-        var reportList = []
         var amountDaysDueValue = 85
         enrolledList.forEach(async (listItem, listIndex) => {
           var enrollee = []
@@ -380,13 +379,14 @@ module.exports = {
             enrollee.push(parseFloat(van.toFixed(2)))
           } else { enrollee.push(0.00) }
 
+          // Total Fee
           var totalAmount = 0
-
           for (var enrolleeIndex = 3; enrolleeIndex < enrollee.length; enrolleeIndex++) {
             totalAmount += enrollee[enrolleeIndex]
           }
           enrollee.push(totalAmount.toFixed(2))
 
+          // Collectibles
           var unpaidFees = listItem.fees.filter(e => !e.isPaid)
           var totalBalance = 0
           var totalCollectibles = 0
@@ -396,8 +396,42 @@ module.exports = {
 
           totalCollectibles = totalBalance
           enrollee.push(totalCollectibles.toFixed(2))
+          // Status
+          var status = 'Pending'
+          if (totalCollectibles <= 0) {
+            status = 'Fully Paid'
+          }
+          if (totalCollectibles > 0) {
+            status = 'With Balance'
+          }
+
+          enrollee.push(status)
 
           workSheet.spliceRows(rowNumber, 1, enrollee, [])
+
+          // Set Value Status
+          var currentRow = workSheet.getRow(rowNumber)
+
+          currentRow.eachCell(function (row, col) {
+            // Reg. Fee Status
+            row.getCell(col).border = {
+              top: {style: 'thin'},
+              left: {style: 'thin'},
+              bottom: {style: 'thin'},
+              right: {style: 'thin'}
+            }
+            if (col === 4) {
+              if (registrationFee.isPaid) {
+                row.getCell(col).fill = {
+                  type: 'pattern',
+                  pattern: 'solid',
+                  fgColor: { argb: '4caf50' }
+                }
+              }
+            }
+            row.commit()
+          })
+
           rowNumber += 1
         })
 
