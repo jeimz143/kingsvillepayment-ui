@@ -440,7 +440,7 @@ module.exports = {
               }
             }
 
-            // Tuition Fee & Misc
+            // Tuition Fee & Miscs
             if (col === 7) {
               var tfCol = parseInt(col)
               tuitionFee.payments.forEach((tfpItem, tfpIndex) => {
