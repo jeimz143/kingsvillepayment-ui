@@ -257,10 +257,10 @@ module.exports = {
           var yearBook = listItem.fees.find((rf) => rf.name === 'Annual Yearbook Graduating')
           var framedGradPicture = listItem.fees.find((rf) => rf.name === 'Framed Grad Piture')
           var diploma = listItem.fees.find((rf) => rf.name === 'Framed Diploma, Theca, Framed Grad Picture')
+          var supplies = listItem.fees.find((rf) => rf.name === 'Supplies - All Students')
           var pins = listItem.fees.filter((rf) => rf.name === 'Pin')
           var nameplates = listItem.fees.filter((rf) => rf.name === 'Nameplate')
           var uniforms = listItem.fees.filter((rf) => rf.name === 'Uniform')
-          var supplies = listItem.fees.filter((rf) => rf.name === 'Supplies - All Students')
           var vans = listItem.fees.filter((rf) => rf.name === 'Van')
 
           // Student Information
