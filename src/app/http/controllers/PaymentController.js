@@ -411,13 +411,15 @@ module.exports = {
 
           // Set Value Status
           var currentRow = workSheet.getRow(rowNumber)
-          var tuitionStatusTriggered = false
           currentRow.eachCell(function (cell, col) {
             cell.border = {
               top: {style: 'thin'},
               left: {style: 'thin'},
               bottom: {style: 'thin'},
               right: {style: 'thin'}
+            }
+            cell.font = {
+              size: 8
             }
             // Reg. Fee Status
             if (col === 4) {
