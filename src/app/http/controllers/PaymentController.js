@@ -237,11 +237,11 @@ module.exports = {
             workbook.removeWorksheet(workSheetNameList[i])
           }
         }
-        workSheet.columns.forEach((wsColumn, wsColumnIndex) => {
-          if (wsColumnIndex >= 3) {
-            wsColumn.width = 12
-          }
-        })
+        // workSheet.columns.forEach((wsColumn, wsColumnIndex) => {
+        //   if (wsColumnIndex >= 3) {
+        //     wsColumn.width = 12
+        //   }
+        // })
 
         var enrolledList = await Enrollment.find({ branch: schoolBranch, schoolYearCode: schoolYearCode, levelCode: levelCode }).populate([{
           path: 'fees',
@@ -411,25 +411,56 @@ module.exports = {
 
           // Set Value Status
           var currentRow = workSheet.getRow(rowNumber)
-
-          currentRow.eachCell(function (row, col) {
-            // Reg. Fee Status
-            row.getCell(col).border = {
+          var tuitionStatusTriggered = false
+          currentRow.eachCell(function (cell, col) {
+            cell.border = {
               top: {style: 'thin'},
               left: {style: 'thin'},
               bottom: {style: 'thin'},
               right: {style: 'thin'}
             }
+            // Reg. Fee Status
             if (col === 4) {
               if (registrationFee.isPaid) {
-                row.getCell(col).fill = {
+                cell.fill = {
                   type: 'pattern',
                   pattern: 'solid',
                   fgColor: { argb: '4caf50' }
                 }
               }
             }
-            row.commit()
+            // Books
+            if (col === 5) {
+              if (books.isPaid) {
+                cell.fill = {
+                  type: 'pattern',
+                  pattern: 'solid',
+                  fgColor: { argb: '4caf50' }
+                }
+              }
+            }
+
+            // Tuition Fee & Misc
+            if (col >= 7 && col <= 26) {
+              if (!tuitionStatusTriggered) {
+                tuitionFee.payments.forEach((tfpItem, tfpIndex) => {
+                  if (tfpItem.isPaid && miscellanousFee.payments[tfpIndex].isPaid) {
+                    var tColumn = col + tfpIndex
+                    currentRow.getCell(tColumn).fill = {
+                      type: 'pattern',
+                      pattern: 'solid',
+                      fgColor: { argb: '4caf50' }
+                    }
+                    currentRow.getCell(tColumn + 1).fill = {
+                      type: 'pattern',
+                      pattern: 'solid',
+                      fgColor: { argb: '4caf50' }
+                    }
+                  }
+                })
+                tuitionStatusTriggered = true
+              }
+            }
           })
 
           rowNumber += 1
