@@ -368,7 +368,7 @@ module.exports = {
             totalBalance += ufItem.balance
           })
 
-          totalCollectibles = totalAmount - totalBalance
+          totalCollectibles = totalBalance
           enrollee.push(totalCollectibles.toFixed(2))
 
           workSheet.spliceRows(rowNumber, 1, enrollee, [])
