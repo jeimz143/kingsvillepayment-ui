@@ -312,7 +312,7 @@ module.exports = {
           // validate if enrollment is for Cash Basis
           if (listItem.paymentTerm === 1) {
             if (tuitionFee.payments.length === 0) {
-              enrollee.push(listItem.amount)
+              enrollee.push(tuitionFee.amount)
               enrollee.push(0.00)
             }
             for (var i = noOfNoValues; i > 0; i--) {
