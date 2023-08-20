@@ -731,7 +731,7 @@ module.exports = {
             bold: true
           }
         })
-        var enrolledList = await Enrollment.find({ branch: schoolBranch, schoolYearCode: schoolYearCode, levelCode: levelCode }).populate([{
+        var enrolledList = await Enrollment.find({ branch: schoolBranch, schoolYearCode: schoolYearCode, levelCode: levelCode, documentStatus: 1 }).populate([{
           path: 'fees',
           model: 'EnrollmentFees',
           populate: [
