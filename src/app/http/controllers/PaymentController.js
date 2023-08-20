@@ -243,7 +243,7 @@ module.exports = {
         //   }
         // })
 
-        var enrolledList = await Enrollment.find({ branch: schoolBranch, schoolYearCode: schoolYearCode, levelCode: levelCode }).populate([{
+        var enrolledList = await Enrollment.find({ branch: schoolBranch, schoolYearCode: schoolYearCode, levelCode: levelCode, documentStatus: 1 }).populate([{
           path: 'fees',
           model: 'EnrollmentFees',
           populate: [
@@ -308,10 +308,10 @@ module.exports = {
             enrollee.push(parseFloat(amountDuePerMonth.toFixed(2)))
           })
 
+          var noOfNoValues = 18
           // validate if enrollment is for Cash Basis
           if (listItem.paymentTerm === 1) {
-            var noOfNoValues = 18
-            if (listItem.payments.length === 0) {
+            if (tuitionFee.payments.length === 0) {
               enrollee.push(listItem.amount)
               enrollee.push(0.00)
             }
@@ -731,7 +731,7 @@ module.exports = {
             bold: true
           }
         })
-        var enrolledList = await Enrollment.find({ branch: schoolBranch, schoolYearCode: schoolYearCode, levelCode: levelCode }).populate([{
+        var enrolledList = await Enrollment.find({ branch: schoolBranch, schoolYearCode: schoolYearCode, levelCode: levelCode, documentStatus: 1 }).populate([{
           path: 'fees',
           model: 'EnrollmentFees',
           populate: [
