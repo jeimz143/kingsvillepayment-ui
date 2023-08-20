@@ -307,9 +307,15 @@ module.exports = {
             enrollee.push(parseFloat(tuitionPlusMiscFee.toFixed(2)))
             enrollee.push(parseFloat(amountDuePerMonth.toFixed(2)))
           })
+
           // validate if enrollment is for Cash Basis
           if (listItem.paymentTerm === 1) {
-            for (var noOfNoValues = 18; noOfNoValues > 0; noOfNoValues--) {
+            var noOfNoValues = 18
+            if (listItem.payments.length === 0) {
+              enrollee.push(listItem.amount)
+              enrollee.push(0.00)
+            }
+            for (var i = noOfNoValues; i > 0; i--) {
               enrollee.push(0.00)
             }
           }
