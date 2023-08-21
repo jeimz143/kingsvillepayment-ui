@@ -2,14 +2,10 @@ const { Seeder } = require('mongoose-data-seed')
 const Model = require('../../models').SchoolYear
 
 const data = [{
-  code: '2020-2021',
-  schoolStartDate: '2020-08-20T00:00:00.000+08:00',
-  schoolEndDate: '2021-05-20T00:00:00.000+08:00'
-},
-{
   code: '2023-2024',
-  schoolStartDate: '2023-08-20T00:00:00.000+08:00',
-  schoolEndDate: '2024-05-20T00:00:00.000+08:00'
+  schoolStartDate: new Date('2023-08-20'),
+  schoolEndDate: new Date('2024-05-20'),
+  isOpen: true
 }]
 
 class SchoolYearSeeder extends Seeder {

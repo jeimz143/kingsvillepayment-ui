@@ -9,11 +9,11 @@ const SchoolYearSchema = new Schema({
     required: 'Code field is Required'
   },
   schoolStartDate: {
-    type: String,
+    type: Date,
     required: 'schoolStartDate field is required'
   },
   schoolEndDate: {
-    type: String,
+    type: Date,
     required: 'schoolEndDate field is required'
   },
   isOpen: {
