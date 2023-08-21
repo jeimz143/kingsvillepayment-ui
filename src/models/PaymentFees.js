@@ -156,7 +156,7 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
           pf['amountDue'] = pf['amountToPayPerMonth']
         }
         intervalMonthToPay++
-        paymentfees.push(pf)
+        paymentfees.push(new PaymentFee(pf))
       }
     }
     await PaymentFee.insertMany(paymentfees)
