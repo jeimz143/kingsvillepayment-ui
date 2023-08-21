@@ -163,7 +163,7 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
     }
     await PaymentFee.insertMany(paymentfees)
     // update payments
-    theFee.payments = paymentfees.map((item) => mongoose.Mongoose.ObjectId(item._id))
+    theFee.payments = paymentfees.map((item) => mongoose.Types.ObjectId(item._id))
     await theFee.save()
   })
 }

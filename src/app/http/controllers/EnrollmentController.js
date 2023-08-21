@@ -27,7 +27,6 @@ module.exports = {
   async Store (req, res) {
     // var socketio = req.app.get('socketio')
     try {
-      
       await Enrollment.Store(Enrollment, EnrollmentFee, PaymentFee, req.body, req.user, async function (err, enrollment) {
         if (err) throw err
         if (enrollment) {
