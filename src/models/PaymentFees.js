@@ -162,11 +162,9 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
     await PaymentFee.insertMany(paymentfees)
     // update payments
     const paymentIds = paymentfees.map((item) => mongoose.Types.ObjectId(item._id))
-    await EnrollmentFee.update({ _id: feeItem._id }, { $set: { payments: paymentIds } }).exec()
-    if (feeIndex >= enrollment.fees.length) {
-      cb(null, true)
-    }
+    await EnrollmentFee.updateOne({ _id: feeItem._id }, { $set: { payments: paymentIds } }).exec()
   })
+  return cb(null, true)
 }
 
 module.exports = mongoose.model('PaymentFees', PaymentFeeSchema)
