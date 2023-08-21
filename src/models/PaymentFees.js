@@ -109,10 +109,11 @@ PaymentFeeSchema.statics.Destroy = function (req, cb) {
   })
 }
 
-PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, PaymentFee, req, cb) {
+PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, EnrollmentFee, PaymentFee, req, cb) {
   // let vm = this
   let r = req.body
   enrollment.fees.forEach(async (feeItem) => {
+    var theFee = await EnrollmentFee.findById(feeItem._id).exec()
     var paymentfees = []
     var pf = {
       userId: mongoose.Types.ObjectId(req.user._id),
@@ -160,8 +161,10 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, PaymentFe
         paymentfees.push(pf)
       }
     }
-    console.log(paymentfees)
     await PaymentFee.insertMany(paymentfees)
+    // update payments
+    theFee.payments = paymentfees.map((item) => mongoose.Mongoose.ObjectId(item._id))
+    await theFee.save()
   })
 }
 

@@ -27,10 +27,30 @@ module.exports = {
   async Store (req, res) {
     // var socketio = req.app.get('socketio')
     try {
-      await Enrollment.Store(Enrollment, EnrollmentFee, PaymentFee, req.body, req.user, async function (err, enrollment) {
+      await Enrollment.Store(Enrollment, PaymentFee, req.body, req.user, async function (err, enrollment) {
         if (err) throw err
         if (enrollment) {
-          await PaymentFee.StorePaymentFee(enrollment, PaymentFee, req, async function () {
+          const theEnrollment = await Enrollment.findById(enrollment._id).populate([{
+            path: 'fees',
+            model: 'EnrollmentFees',
+            populate: [
+              {
+                path: 'payments',
+                model: 'PaymentFees',
+                populate: [
+                  {
+                    path: 'receipt',
+                    model: 'Receipts'
+                  },
+                  {
+                    path: 'userId',
+                    model: 'Users'
+                  }
+                ]
+              }
+            ]
+          }]).exec()
+          await PaymentFee.StorePaymentFee(theEnrollment, EnrollmentFee, PaymentFee, req, async function () {
             res.send({
               details: 'stored!',
               enrollmentId: enrollment._id
