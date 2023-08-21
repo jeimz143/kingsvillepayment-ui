@@ -211,7 +211,7 @@ module.exports = {
         const pBranch = JSON.parse(JSON.stringify(branch))
 
         var schoolYearBranch = workSheet.getCell('A2')
-        schoolYearBranch.value = pBranch.description
+        schoolYearBranch.value = pBranch.address
         schoolYearBranch.font = {
           bold: false,
           size: 12
@@ -269,6 +269,7 @@ module.exports = {
         var grandCollectibles = 0
         var amountDaysDueValue = 85
         enrolledList.forEach(async (listItem, listIndex) => {
+          console.log(listItem)
           var enrollee = []
 
           var registrationFee = listItem.fees.find((rf) => rf.name === 'Registration Fees')
