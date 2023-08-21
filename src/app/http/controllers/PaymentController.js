@@ -560,8 +560,9 @@ module.exports = {
 
             // Pins
             if (col === 35) {
+              var pinss = listItem.fees.filter((rf) => rf.name === 'Pin')
               var unpaidPins = listItem.fees.filter((rf) => rf.name === 'Pin' && !rf.isPaid)
-              if (unpaidPins.length === 0) {
+              if (unpaidPins.length === 0 && pinss.length > 0) {
                 cell.fill = {
                   type: 'pattern',
                   pattern: 'solid',
