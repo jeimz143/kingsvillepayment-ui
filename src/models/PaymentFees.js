@@ -111,59 +111,60 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
   // let vm = this
   let r = req.body
   await enrollment.fees.forEach(async (feeItem, feeIndex) => {
-    var paymentfees = []
-    var pf = {
-      userId: req.user._id,
-      branch: r.branch,
-      enrollmentFee: feeItem._id,
-      formOfPayment: null,
-      cashTendered: 0,
-      dateToPay: null,
-      dueDate: null,
-      numberOfDaysDue: 0,
-      isPaid: false,
-      receipt: null,
-      remarks: ''
-    }
-
-    if (feeItem.paymentTerm === 1) {
-      pf['amountToPayPerMonth'] = feeItem.amount
-      pf['amountDue'] = feeItem.amount
-
-      paymentfees.push(new PaymentFee(pf))
-    } else {
-      var currentDate = moment(moment().format(), 'YYYY-MM-DD')
-
-      var schoolYear = await SchoolYear.findOne({ code: enrollment.schoolYearCode }).exec()
-      var schoolStart = moment(schoolYear.schoolStartDate)
-      var schoolEnd = moment(schoolYear.schoolEndDate)
-      console.log(schoolYear.schoolStartDate, schoolYear.schoolEndDate, schoolStart, schoolEnd)
-      var numberofSchoolMonth = Math.round(schoolEnd.diff(schoolStart, 'months', true)) + 1
-      var intervalMonthToPay = 0
-      var intervalDaysDueDate = 5
-      var amountDaysDueValue = 85
-
-      var dateToPay = moment(schoolStart.format('YYYY-MM-DD'), 'YYYY-MM-DD')
-
-      for (var i = 0; i < numberofSchoolMonth; i++) {
-        pf['dateToPay'] = moment(dateToPay.format('YYYY-MM-DD'), 'YYYY-MM-DD').add(intervalMonthToPay, 'month')
-        pf['dueDate'] = moment(pf['dateToPay'].format('YYYY-MM-DD'), 'YYYY-MM-DD').add(intervalDaysDueDate, 'days')
-        pf['amountToPayPerMonth'] = (feeItem.amount / numberofSchoolMonth)
-        var numberOfDaysDue = parseInt(currentDate.diff(pf['dueDate'], 'days', true))
-        if (numberOfDaysDue === 0) {
-          pf['amountDue'] = pf['amountToPayPerMonth'] + (numberOfDaysDue * amountDaysDueValue)
-        } else {
-          pf['amountDue'] = pf['amountToPayPerMonth']
-        }
-        intervalMonthToPay++
-        paymentfees.push(new PaymentFee(pf))
+    setTimeout(async function () {
+      var paymentfees = []
+      var pf = {
+        userId: req.user._id,
+        branch: r.branch,
+        enrollmentFee: feeItem._id,
+        formOfPayment: null,
+        cashTendered: 0,
+        dateToPay: null,
+        dueDate: null,
+        numberOfDaysDue: 0,
+        isPaid: false,
+        receipt: null,
+        remarks: ''
       }
-    }
-    await PaymentFee.insertMany(paymentfees)
-    // update payments
-    const paymentIds = paymentfees.map((item) => item._id)
-    console.log(paymentIds)
-    await EnrollmentFee.updateOne({ _id: feeItem._id }, { $set: { payments: paymentIds } }).exec()
+
+      if (feeItem.paymentTerm === 1) {
+        pf['amountToPayPerMonth'] = feeItem.amount
+        pf['amountDue'] = feeItem.amount
+
+        paymentfees.push(new PaymentFee(pf))
+      } else {
+        var currentDate = moment(moment().format(), 'YYYY-MM-DD')
+
+        var schoolYear = await SchoolYear.findOne({ code: enrollment.schoolYearCode }).exec()
+        var schoolStart = moment(schoolYear.schoolStartDate)
+        var schoolEnd = moment(schoolYear.schoolEndDate)
+        console.log(schoolYear.schoolStartDate, schoolYear.schoolEndDate, schoolStart, schoolEnd)
+        var numberofSchoolMonth = Math.round(schoolEnd.diff(schoolStart, 'months', true)) + 1
+        var intervalMonthToPay = 0
+        var intervalDaysDueDate = 5
+        var amountDaysDueValue = 85
+
+        var dateToPay = moment(schoolStart.format('YYYY-MM-DD'), 'YYYY-MM-DD')
+
+        for (var i = 0; i < numberofSchoolMonth; i++) {
+          pf['dateToPay'] = moment(dateToPay.format('YYYY-MM-DD'), 'YYYY-MM-DD').add(intervalMonthToPay, 'month')
+          pf['dueDate'] = moment(pf['dateToPay'].format('YYYY-MM-DD'), 'YYYY-MM-DD').add(intervalDaysDueDate, 'days')
+          pf['amountToPayPerMonth'] = (feeItem.amount / numberofSchoolMonth)
+          var numberOfDaysDue = parseInt(currentDate.diff(pf['dueDate'], 'days', true))
+          if (numberOfDaysDue === 0) {
+            pf['amountDue'] = pf['amountToPayPerMonth'] + (numberOfDaysDue * amountDaysDueValue)
+          } else {
+            pf['amountDue'] = pf['amountToPayPerMonth']
+          }
+          intervalMonthToPay++
+          paymentfees.push(new PaymentFee(pf))
+        }
+      }
+      await PaymentFee.insertMany(paymentfees)
+      // update payments
+      const paymentIds = paymentfees.map((item) => item._id)
+      await EnrollmentFee.updateOne({ _id: feeItem._id }, { $set: { payments: paymentIds } }).exec()
+    }, 800)
   })
   return cb(null, true)
 }
