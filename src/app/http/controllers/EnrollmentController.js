@@ -3,6 +3,7 @@
 const Enrollment = require('../../../models/Enrollment')
 const EnrollmentFee = require('../../../models/EnrollmentFees')
 const PaymentFee = require('../../../models/PaymentFees')
+const SchoolYear = require('../../../models/SchoolYear')
 const { parseDocumentStatus } = require('../../../helpers/enums')
 
 module.exports = {
@@ -50,7 +51,8 @@ module.exports = {
               }
             ]
           }]).exec()
-          await PaymentFee.StorePaymentFee(theEnrollment, EnrollmentFee, PaymentFee, req, async function () {
+          await PaymentFee.StorePaymentFee(theEnrollment, EnrollmentFee, PaymentFee, SchoolYear, req, async function () {
+            console.log('SUCCESS')
             res.send({
               details: 'stored!',
               enrollmentId: enrollment._id

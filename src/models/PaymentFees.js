@@ -5,8 +5,6 @@ const moment = require('moment')
 const Schema = mongoose.Schema
 const AutoIncrement = require('mongoose-sequence')(mongoose)
 
-const SchoolYear = require('./SchoolYear')
-
 const PaymentFeeSchema = new Schema({
   userId: {
     type: Schema.Types.ObjectId,
@@ -109,7 +107,7 @@ PaymentFeeSchema.statics.Destroy = function (req, cb) {
   })
 }
 
-PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, EnrollmentFee, PaymentFee, req, cb) {
+PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, EnrollmentFee, PaymentFee, SchoolYear, req, cb) {
   // let vm = this
   let r = req.body
   enrollment.fees.forEach(async (feeItem) => {
@@ -165,7 +163,7 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
     // update payments
     theFee.payments = paymentfees.map((item) => mongoose.Types.ObjectId(item._id))
     await theFee.save()
-    cb()
+    return cb(null, true)
   })
 }
 
