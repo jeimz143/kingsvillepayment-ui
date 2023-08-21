@@ -269,7 +269,7 @@ module.exports = {
         var grandCollectibles = 0
         var amountDaysDueValue = 85
         enrolledList.forEach(async (listItem, listIndex) => {
-          console.log(listItem)
+          console.log(listIndex, listItem)
           var enrollee = []
 
           var registrationFee = listItem.fees.find((rf) => rf.name === 'Registration Fees')
