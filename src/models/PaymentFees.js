@@ -113,9 +113,9 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
   await enrollment.fees.forEach(async (feeItem, feeIndex) => {
     var paymentfees = []
     var pf = {
-      userId: mongoose.Types.ObjectId(req.user._id),
+      userId: req.user._id,
       branch: r.branch,
-      enrollmentFee: mongoose.Types.ObjectId(feeItem._id),
+      enrollmentFee: feeItem._id,
       formOfPayment: null,
       cashTendered: 0,
       dateToPay: null,
@@ -162,6 +162,7 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
     await PaymentFee.insertMany(paymentfees)
     // update payments
     const paymentIds = paymentfees.map((item) => item._id)
+    console.log(paymentIds)
     await EnrollmentFee.updateOne({ _id: feeItem._id }, { $set: { payments: paymentIds } }).exec()
   })
   return cb(null, true)
