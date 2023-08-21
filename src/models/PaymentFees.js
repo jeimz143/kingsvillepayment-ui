@@ -165,6 +165,7 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
     // update payments
     theFee.payments = paymentfees.map((item) => mongoose.Types.ObjectId(item._id))
     await theFee.save()
+    cb()
   })
 }
 
