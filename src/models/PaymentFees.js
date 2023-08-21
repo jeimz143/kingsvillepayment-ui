@@ -110,8 +110,7 @@ PaymentFeeSchema.statics.Destroy = function (req, cb) {
 PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, EnrollmentFee, PaymentFee, SchoolYear, req, cb) {
   // let vm = this
   let r = req.body
-  enrollment.fees.forEach(async (feeItem) => {
-    var theFee = await EnrollmentFee.findById(feeItem._id).exec()
+  await enrollment.fees.forEach(async (feeItem, feeIndex) => {
     var paymentfees = []
     var pf = {
       userId: mongoose.Types.ObjectId(req.user._id),
@@ -161,9 +160,11 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
     }
     await PaymentFee.insertMany(paymentfees)
     // update payments
-    theFee.payments = paymentfees.map((item) => mongoose.Types.ObjectId(item._id))
-    await theFee.save()
-    return cb(null, true)
+    const paymentIds = paymentfees.map((item) => mongoose.Types.ObjectId(item._id))
+    await EnrollmentFee.update({ _id: feeItem._id }, { $set: { payments: paymentIds } }).exec()
+    if (feeIndex >= enrollment.fees.length) {
+      cb(null, true)
+    }
   })
 }
 
