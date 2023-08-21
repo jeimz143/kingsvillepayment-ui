@@ -51,12 +51,10 @@ module.exports = {
               }
             ]
           }]).exec()
-          await PaymentFee.StorePaymentFee(theEnrollment, EnrollmentFee, PaymentFee, SchoolYear, req, async function () {
-            console.log('SUCCESS')
-            res.send({
-              details: 'stored!',
-              enrollmentId: enrollment._id
-            })
+          await PaymentFee.StorePaymentFee(theEnrollment, EnrollmentFee, PaymentFee, SchoolYear, req)
+          res.send({
+            details: 'stored!',
+            enrollmentId: enrollment._id
           })
         }
       })
