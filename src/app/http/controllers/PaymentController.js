@@ -572,8 +572,9 @@ module.exports = {
 
             // Nameplates
             if (col === 36) {
+              var nameplates = listItem.fees.filter((rf) => rf.name === 'Nameplate')
               var unpaidNameplates = listItem.fees.filter((rf) => rf.name === 'Nameplate' && !rf.isPaid)
-              if (unpaidNameplates.length === 0) {
+              if (unpaidNameplates.length === 0 && nameplates.length > 0) {
                 cell.fill = {
                   type: 'pattern',
                   pattern: 'solid',
@@ -584,8 +585,9 @@ module.exports = {
 
             // Uniform
             if (col === 37) {
+              var uniforms = listItem.fees.filter((rf) => rf.name === 'Uniform')
               var unpaidUniform = listItem.fees.filter((rf) => rf.name === 'Uniform' && !rf.isPaid)
-              if (unpaidUniform.length === 0) {
+              if (unpaidUniform.length === 0 && uniforms.length > 0) {
                 cell.fill = {
                   type: 'pattern',
                   pattern: 'solid',
@@ -595,8 +597,9 @@ module.exports = {
             }
 
             if (col === 38) {
+              var vans = listItem.fees.filter((rf) => rf.name === 'Van')
               var unpaidVans = listItem.fees.filter((rf) => rf.name === 'Van' && !rf.isPaid)
-              if (unpaidVans.length === 0) {
+              if (unpaidVans.length === 0 && vans.length > 0) {
                 cell.fill = {
                   type: 'pattern',
                   pattern: 'solid',
