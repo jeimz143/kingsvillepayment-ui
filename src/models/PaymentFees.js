@@ -135,10 +135,8 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
       var currentDate = moment(moment().format(), 'YYYY-MM-DD')
 
       var schoolYear = await SchoolYear.find({ code: enrollment.schoolYearCode }).exec()
-      var syStart = new Date(schoolYear.schoolStartDate)
-      var syEnd = new Date(schoolYear.schoolEndDate)
-      var schoolStart = moment.unix(syStart.parse()).format('YYYY-MM-DD')
-      var schoolEnd = moment.unix(syEnd.parse()).format('YYYY-MM-DD')
+      var schoolStart = moment(schoolYear.schoolStartDate).format('YYYY-MM-DD')
+      var schoolEnd = moment(schoolYear.schoolEndDate).format('YYYY-MM-DD')
       console.log(schoolYear, schoolStart, schoolEnd)
       var numberofSchoolMonth = Math.round(schoolEnd.diff(schoolStart, 'months', true)) + 1
       var intervalMonthToPay = 0
