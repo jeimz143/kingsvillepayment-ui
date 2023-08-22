@@ -3,7 +3,7 @@
 const mongoose = require('mongoose')
 const moment = require('moment')
 const Schema = mongoose.Schema
-const AutoIncrement = require('mongoose-sequence')(mongoose)
+const AutoIncrement = require('mongoose-auto-increment')
 
 const PaymentFeeSchema = new Schema({
   userId: {
@@ -70,7 +70,7 @@ const PaymentFeeSchema = new Schema({
     default: Date.now()
   }
 })
-PaymentFeeSchema.plugin(AutoIncrement, { inc_field: 'payment_fee_no' })
+PaymentFeeSchema.plugin(AutoIncrement.plugin, { model: 'PaymentFees', field: 'payment_fee_no', startAt: 100, incrementBy: 1 })
 PaymentFeeSchema.statics.Store = function (PaymentFee, request, cb) {
   var ThePaymentFee = new PaymentFee(request)
   ThePaymentFee.save(function (err, newPaymentFee) {
