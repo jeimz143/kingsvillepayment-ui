@@ -164,7 +164,7 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
     }
     const paymentIds = paymentfees.map((item) => item._id)
     var feeAlreadyPaid = false
-    if (enrollment.isScholar) {
+    if (enrollment.isScholar && (feeItem.name === 'Books' || feeItem.name === 'Tuition Fees')) {
       feeAlreadyPaid = true
     }
     await EnrollmentFee.updateOne({ _id: feeItem._id }, { $set: { payments: paymentIds, isPaid: feeAlreadyPaid } }).exec()
