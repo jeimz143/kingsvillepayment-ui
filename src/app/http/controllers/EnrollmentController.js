@@ -31,7 +31,7 @@ module.exports = {
       await Enrollment.Store(Enrollment, EnrollmentFee, PaymentFee, req.body, req.user, async function (err, enrollment) {
         if (err) throw err
         if (enrollment) {
-          const theEnrollment = await Enrollment.findById(enrollment._id).populate([{
+          await Enrollment.findById(enrollment._id).populate([{
             path: 'fees',
             model: 'EnrollmentFees',
             populate: [
@@ -50,11 +50,12 @@ module.exports = {
                 ]
               }
             ]
-          }]).exec()
-          await PaymentFee.StorePaymentFee(theEnrollment, EnrollmentFee, PaymentFee, SchoolYear, req)
-          res.send({
-            details: 'stored!',
-            enrollmentId: enrollment._id
+          }]).exec(async function (_enErr, theEnrollment) {
+            await PaymentFee.StorePaymentFee(theEnrollment, EnrollmentFee, PaymentFee, SchoolYear, req)
+            res.send({
+              details: 'stored!',
+              enrollmentId: enrollment._id
+            })
           })
         }
       })
