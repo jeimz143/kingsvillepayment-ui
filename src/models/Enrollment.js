@@ -98,6 +98,9 @@ EnrollmentSchema.statics.Store = async function (Enrollment, EnrollmentFee, Paym
   })
   TheEnrollment.fees = enrollmentFeesIds
   TheEnrollment['userId'] = user._id
+  if (request.isScholar) {
+    TheEnrollment['documentStatus'] = 1
+  }
   TheEnrollment.save(function (err, newEnrollment) {
     if (err) return cb(err)
     if (!newEnrollment) return cb(err)
