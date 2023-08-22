@@ -3,7 +3,7 @@
 const mongoose = require('mongoose')
 const moment = require('moment')
 const Schema = mongoose.Schema
-const AutoIncrement = require('mongoose-auto-increment')(mongoose)
+const AutoIncrement = require('mongoose-sequence')(mongoose)
 
 const PaymentFeeSchema = new Schema({
   userId: {
