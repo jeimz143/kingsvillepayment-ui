@@ -338,7 +338,7 @@ module.exports = {
 
     var workbook = new Excel.Workbook()
     // workbook.xlsx.readFile('storage/downloads/StatementOfAccount.xlsx')
-    workbook.xlsx.readFile(`${__dirname}\\..\\..\\..\\database\\data\\StatementOfAccount.xlsx`)
+    workbook.xlsx.readFile(`${__dirname}/../../../database/data/StatementOfAccount.xlsx`)
       .then(async function () {
         const moment = require('moment')
         var tmSection = []
