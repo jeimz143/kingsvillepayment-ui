@@ -110,10 +110,6 @@ PaymentFeeSchema.statics.Destroy = function (req, cb) {
 PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, EnrollmentFee, PaymentFee, SchoolYear, req) {
   // let vm = this
   let r = req.body
-  var feeAlreadyPaid = false
-  if (enrollment.isScholar) {
-    feeAlreadyPaid = true
-  }
   await enrollment.fees.forEach(async (feeItem, feeIndex) => {
     var paymentfees = []
     var pf = {
@@ -125,13 +121,13 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
       dateToPay: null,
       dueDate: null,
       numberOfDaysDue: 0,
-      isPaid: feeAlreadyPaid,
+      isPaid: false,
       receipt: null,
       remarks: ''
     }
 
-    if (feeItem.name === 'Miscellaneous Fees' || feeItem.name === 'Registration Fees') {
-      pf.isPaid = false
+    if (enrollment.isScholar && (feeItem.name === 'Books' || feeItem.name === 'Tuition Fees')) {
+      pf.isPaid = true
     }
 
     if (feeItem.paymentTerm === 1) {
@@ -167,6 +163,10 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
       }
     }
     const paymentIds = paymentfees.map((item) => item._id)
+    var feeAlreadyPaid = false
+    if (enrollment.isScholar) {
+      feeAlreadyPaid = true
+    }
     await EnrollmentFee.updateOne({ _id: feeItem._id }, { $set: { payments: paymentIds, isPaid: feeAlreadyPaid } }).exec()
     setTimeout(async function () {
       await PaymentFee.insertMany(paymentfees)
