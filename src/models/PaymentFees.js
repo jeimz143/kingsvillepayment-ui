@@ -167,9 +167,11 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
     if (enrollment.isScholar && (feeItem.name === 'Books' || feeItem.name === 'Tuition Fees')) {
       feeAlreadyPaid = true
     }
-    await EnrollmentFee.updateOne({ _id: feeItem._id }, { $set: { payments: paymentIds, isPaid: feeAlreadyPaid } }).exec()
-    setTimeout(async function () {
-      await PaymentFee.insertMany(paymentfees)
+    await setTimeout(async function () {
+      await EnrollmentFee.updateOne({ _id: feeItem._id }, { $set: { payments: paymentIds, isPaid: feeAlreadyPaid } }).exec()
+      await setTimeout(async function () {
+        await PaymentFee.insertMany(paymentfees)
+      }, 800)
     }, 800)
   })
 }
