@@ -170,7 +170,14 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
     }
     try {
       await EnrollmentFee.updateOne({ _id: feeItem._id }, { $set: { payments: paymentIds, isPaid: feeAlreadyPaid } }).exec(async function (_err, ef) {
-        PaymentFee.create(paymentfees)
+        paymentfees.forEach((pfItem) => {
+          pfItem.save(function (err, data) {
+            if (err) {
+              throw err
+            }
+            console.log(data)
+          })
+        })
       })
     } catch (err) {
       console.log('ERROR:', err)
