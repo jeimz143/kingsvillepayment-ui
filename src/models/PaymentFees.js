@@ -70,6 +70,7 @@ const PaymentFeeSchema = new Schema({
     default: Date.now()
   }
 })
+PaymentFeeSchema.plugin(AutoIncrement, { inc_field: 'paymentFeeNumber' })
 PaymentFeeSchema.plugin(AutoIncrement, { inc_field: 'referenceNumber', start_seq: 1000 })
 PaymentFeeSchema.statics.Store = function (PaymentFee, request, cb) {
   var ThePaymentFee = new PaymentFee(request)
@@ -167,9 +168,13 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
     if (enrollment.isScholar && (feeItem.name === 'Books' || feeItem.name === 'Tuition Fees')) {
       feeAlreadyPaid = true
     }
-    await EnrollmentFee.updateOne({ _id: feeItem._id }, { $set: { payments: paymentIds, isPaid: feeAlreadyPaid } }).exec(async function (_err, ef) {
-      PaymentFee.create(paymentfees)
-    })
+    try {
+      await EnrollmentFee.updateOne({ _id: feeItem._id }, { $set: { payments: paymentIds, isPaid: feeAlreadyPaid } }).exec(async function (_err, ef) {
+        PaymentFee.create(paymentfees)
+      })
+    } catch (err) {
+      console.log('ERROR:', err)
+    }
   })
 }
 
