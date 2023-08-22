@@ -109,7 +109,7 @@ PaymentFeeSchema.statics.Destroy = function (req, cb) {
 
 PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, EnrollmentFee, PaymentFee, SchoolYear, req) {
   // let vm = this
-  let r = req.body
+  let r = req
   await enrollment.fees.forEach(async (feeItem, feeIndex) => {
     var paymentfees = []
     var pf = {

@@ -78,7 +78,7 @@ const EnrollmentSchema = new Schema({
   }
 })
 
-EnrollmentSchema.statics.Store = async function (Enrollment, EnrollmentFee, PaymentFee, request, user, cb) {
+EnrollmentSchema.statics.Store = async function (Enrollment, EnrollmentFee, PaymentFee, SchoolYear, request, user, cb) {
   var today = new Date()
   var total = await Enrollment.countDocuments()
   var dd = String(today.getDate()).padStart(2, '0')
@@ -101,10 +101,10 @@ EnrollmentSchema.statics.Store = async function (Enrollment, EnrollmentFee, Paym
   if (request.isScholar) {
     TheEnrollment['documentStatus'] = 1
   }
-  TheEnrollment.save(function (err, newEnrollment) {
+  TheEnrollment.save(async function (err, newEnrollment) {
     if (err) return cb(err)
     if (!newEnrollment) return cb(err)
-
+    await PaymentFee.StorePaymentFee(newEnrollment, EnrollmentFee, PaymentFee, SchoolYear, request)
     return cb(null, newEnrollment)
   })
 }

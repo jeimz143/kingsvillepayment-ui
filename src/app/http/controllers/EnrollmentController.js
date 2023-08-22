@@ -28,7 +28,7 @@ module.exports = {
   async Store (req, res) {
     // var socketio = req.app.get('socketio')
     try {
-      await Enrollment.Store(Enrollment, EnrollmentFee, PaymentFee, req.body, req.user, async function (err, enrollment) {
+      await Enrollment.Store(Enrollment, EnrollmentFee, PaymentFee, SchoolYear, req.body, req.user, async function (err, enrollment) {
         if (err) throw err
         if (enrollment) {
           await Enrollment.findById(enrollment._id).populate([{
@@ -37,21 +37,10 @@ module.exports = {
             populate: [
               {
                 path: 'payments',
-                model: 'PaymentFees',
-                populate: [
-                  {
-                    path: 'receipt',
-                    model: 'Receipts'
-                  },
-                  {
-                    path: 'userId',
-                    model: 'Users'
-                  }
-                ]
+                model: 'PaymentFees'
               }
             ]
           }]).exec(async function (_enErr, theEnrollment) {
-            await PaymentFee.StorePaymentFee(theEnrollment, EnrollmentFee, PaymentFee, SchoolYear, req)
             res.send({
               details: 'stored!',
               enrollmentId: enrollment._id
