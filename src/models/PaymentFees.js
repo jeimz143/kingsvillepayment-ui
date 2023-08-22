@@ -130,6 +130,10 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
       remarks: ''
     }
 
+    if (feeItem.name === 'Miscellaneous Fees' || feeItem.name === 'Registration Fees') {
+      pf.isPaid = false
+    }
+
     if (feeItem.paymentTerm === 1) {
       pf['amountToPayPerMonth'] = feeItem.amount
       pf['amountDue'] = feeItem.amount
