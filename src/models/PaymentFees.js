@@ -110,6 +110,10 @@ PaymentFeeSchema.statics.Destroy = function (req, cb) {
 PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, EnrollmentFee, PaymentFee, SchoolYear, req) {
   // let vm = this
   let r = req.body
+  var feeAlreadyPaid = false
+  if (enrollment.isScholar) {
+    feeAlreadyPaid = true
+  }
   await enrollment.fees.forEach(async (feeItem, feeIndex) => {
     var paymentfees = []
     var pf = {
@@ -121,7 +125,7 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
       dateToPay: null,
       dueDate: null,
       numberOfDaysDue: 0,
-      isPaid: false,
+      isPaid: feeAlreadyPaid,
       receipt: null,
       remarks: ''
     }
@@ -137,7 +141,6 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
       var schoolYear = await SchoolYear.findOne({ code: enrollment.schoolYearCode }).exec()
       var schoolStart = moment(schoolYear.schoolStartDate)
       var schoolEnd = moment(schoolYear.schoolEndDate)
-      console.log(schoolYear.schoolStartDate, schoolYear.schoolEndDate, schoolStart, schoolEnd)
       var numberofSchoolMonth = Math.round(schoolEnd.diff(schoolStart, 'months', true)) + 1
       var intervalMonthToPay = 0
       var intervalDaysDueDate = 5
@@ -160,7 +163,7 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
       }
     }
     const paymentIds = paymentfees.map((item) => item._id)
-    await EnrollmentFee.updateOne({ _id: feeItem._id }, { $set: { payments: paymentIds } }).exec()
+    await EnrollmentFee.updateOne({ _id: feeItem._id }, { $set: { payments: paymentIds, isPaid: feeAlreadyPaid } }).exec()
     setTimeout(async function () {
       await PaymentFee.insertMany(paymentfees)
     }, 800)
