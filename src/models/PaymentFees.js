@@ -170,7 +170,7 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
     await EnrollmentFee.updateOne({ _id: feeItem._id }, { $set: { payments: paymentIds, isPaid: feeAlreadyPaid } }).exec()
     setTimeout(async function () {
       await PaymentFee.insertMany(paymentfees)
-    }, 300)
+    }, 800)
   })
 }
 
