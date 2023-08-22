@@ -70,6 +70,7 @@ const PaymentFeeSchema = new Schema({
     default: Date.now()
   }
 })
+AutoIncrement.initialize(mongoose.connection)
 PaymentFeeSchema.plugin(AutoIncrement.plugin, { model: 'PaymentFees', field: 'payment_fee_no', startAt: 100, incrementBy: 1 })
 PaymentFeeSchema.statics.Store = function (PaymentFee, request, cb) {
   var ThePaymentFee = new PaymentFee(request)
