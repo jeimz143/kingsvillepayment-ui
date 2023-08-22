@@ -111,7 +111,7 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
   // let vm = this
   let r = req
   await enrollment.fees.forEach(async (feeId, feeIndex) => {
-    const feeItem = await EnrollmentFee.findById(feeId).exec()
+    const feeItem = await EnrollmentFee.findOne(feeId).exec()
     var paymentfees = []
     var pf = {
       userId: user._id,

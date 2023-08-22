@@ -93,7 +93,7 @@ EnrollmentSchema.statics.Store = async function (Enrollment, EnrollmentFee, Paym
     feesItem['enrollment'] = TheEnrollment._id
     feesItem['branch'] = request.branch
     var TheEnrollmentFee = new EnrollmentFee(feesItem)
-    enrollmentFeesIds.push(mongoose.Types.ObjectId(TheEnrollmentFee._id))
+    enrollmentFeesIds.push(TheEnrollmentFee._id)
     TheEnrollmentFee.save()
   })
   TheEnrollment.fees = enrollmentFeesIds
@@ -104,10 +104,13 @@ EnrollmentSchema.statics.Store = async function (Enrollment, EnrollmentFee, Paym
   TheEnrollment.save(async function (err, newEnrollment) {
     if (err) return cb(err)
     if (!newEnrollment) return cb(err)
-    await PaymentFee.StorePaymentFee(newEnrollment, EnrollmentFee, PaymentFee, SchoolYear, request, user)
+    await setTimeout(async function () {
+      await PaymentFee.StorePaymentFee(newEnrollment, EnrollmentFee, PaymentFee, SchoolYear, request, user)
+    }, 1000)
     return cb(null, newEnrollment)
   })
 }
+
 EnrollmentSchema.statics.ApproveStatus = async function (Enrollment, req, cb) {
   let vm = this
   var setData = {
