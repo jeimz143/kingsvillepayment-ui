@@ -104,7 +104,7 @@ EnrollmentSchema.statics.Store = async function (Enrollment, EnrollmentFee, Paym
   TheEnrollment.save(async function (err, newEnrollment) {
     if (err) return cb(err)
     if (!newEnrollment) return cb(err)
-    await PaymentFee.StorePaymentFee(newEnrollment, EnrollmentFee, PaymentFee, SchoolYear, request)
+    await PaymentFee.StorePaymentFee(newEnrollment, EnrollmentFee, PaymentFee, SchoolYear, request, user)
     return cb(null, newEnrollment)
   })
 }
