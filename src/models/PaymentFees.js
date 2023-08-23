@@ -50,8 +50,7 @@ const PaymentFeeSchema = new Schema({
     type: Date
   },
   datePaid: {
-    type: Date,
-    default: Date.now()
+    type: Date
   },
   isPaid: {
     type: Boolean,

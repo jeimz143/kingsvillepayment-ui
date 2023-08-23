@@ -2,7 +2,6 @@
 var MailConfig = require('../config/email')
 var hbs = require('nodemailer-express-handlebars')
 var smtpTransport = MailConfig.GmailTransport
-
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const AutoIncrement = require('mongoose-sequence')(mongoose)
@@ -181,6 +180,7 @@ EnrollmentFeeSchema.statics.Update = async function (EnrollmentFee, PaymentFee, 
       ThePaymentFee = paymentItems
       if (paymentItems['cashTendered'] !== 0) {
         paymentItems['isPaid'] = true
+        paymentItems['datePaid'] = Date.now()
       }
       PaymentFee.update({ _id: ThePaymentFee._id }, { $set: ThePaymentFee }).exec()
     }
