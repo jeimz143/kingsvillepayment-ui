@@ -361,7 +361,7 @@ module.exports = {
 
         tmSection.push([
           moment(books.payments[0].datePaid).format('MM/DD/YYYY'),
-          `${books.payments[0].userId.givenName} ${books.payments[0].userId.lastName}`,
+          (books.payments[0].userId) ? `${books.payments[0].userId.givenName} ${books.payments[0].userId.lastName}` : '',
           (books.payments[0].receipt) ? books.payments[0].receipt.orNumber : '',
           books.payments[0].amountToPayPerMonth,
           '', '', '', '', '', '', '', '', '', '', '', '', '', '',
@@ -369,7 +369,7 @@ module.exports = {
         ])
         tmSection.push([
           moment(registrationFee.payments[0].datePaid).format('MM/DD/YYYY'),
-          `${registrationFee.payments[0].userId.givenName} ${registrationFee.payments[0].userId.lastName}`,
+          (registrationFee.payments[0].userId) ? `${registrationFee.payments[0].userId.givenName} ${registrationFee.payments[0].userId.lastName}` : '',
           (registrationFee.payments[0].receipt) ? registrationFee.payments[0].receipt.orNumber : '',
           '',
           registrationFee.payments[0].amountToPayPerMonth, '', '', '', '', '', '', '', '', '', '', '', '', '',
@@ -377,7 +377,7 @@ module.exports = {
         ])
         tmSection.push([
           moment(miscellaneousFee.payments[0].datePaid).format('MM/DD/YYYY'),
-          `${miscellaneousFee.payments[0].userId.givenName} ${miscellaneousFee.payments[0].userId.lastName}`,
+          (miscellaneousFee.payments[0].userId) ? `${miscellaneousFee.payments[0].userId.givenName} ${miscellaneousFee.payments[0].userId.lastName}` : '',
           (miscellaneousFee.payments[0].receipt) ? miscellaneousFee.payments[0].receipt.orNumber : '',
           '', '',
           miscellaneousFee.payments[0].amountToPayPerMonth, '', '', '', '', '', '', '', '', '', '', '', '',
@@ -389,7 +389,7 @@ module.exports = {
           if (paymentItem.receipt !== null && paymentItem.isPaid) {
             var theTmSection = [
               moment(paymentItem.datePaid).format('MM/DD/YYYY'),
-              `${paymentItem.userId.givenName} ${paymentItem.userId.lastName}`,
+              (paymentItem.userId) ? `${paymentItem.userId.givenName} ${paymentItem.userId.lastName}` : '',
               (paymentItem.receipt) ? paymentItem.receipt.orNumber : ''
             ]
             for (var i = 0; i < amountIndexPosition; i++) {
@@ -434,7 +434,7 @@ module.exports = {
         if (eventFee && eventFee.payments.length !== 0) {
           if (eventFee.payments[0].isPaid) {
             workSheet.getCell('A23').value = moment(eventFee.payments[0].datePaid).format('MM/DD/YYYY')
-            workSheet.getCell('B23').value = `${eventFee.payments[0].userId.givenName} ${eventFee.payments[0].userId.lastName}`
+            workSheet.getCell('B23').value = (eventFee.payments[0].userId) ? `${eventFee.payments[0].userId.givenName} ${eventFee.payments[0].userId.lastName}` : ''
             workSheet.getCell('C23').value = eventFee.payments[0].receipt.orNumber
             workSheet.getCell('J23').value = (eventFee.payments[0].isPaid) ? 'Paid' : 'Unpaid'
           }
@@ -443,7 +443,7 @@ module.exports = {
         if (fieldTrip && fieldTrip.payments.length !== 0) {
           if (fieldTrip.payments[0].isPaid) {
             workSheet.getCell('A24').value = moment(fieldTrip.payments[0].datePaid).format('MM/DD/YYYY')
-            workSheet.getCell('B24').value = `${fieldTrip.payments[0].userId.givenName} ${fieldTrip.payments[0].userId.lastName}`
+            workSheet.getCell('B24').value = (fieldTrip.payments[0].userId) ? `${fieldTrip.payments[0].userId.givenName} ${fieldTrip.payments[0].userId.lastName}` : ''
             workSheet.getCell('C24').value = fieldTrip.payments[0].receipt.orNumber
             workSheet.getCell('J24').value = (fieldTrip.payments[0].isPaid) ? 'Paid' : 'Unpaid'
           }
@@ -452,7 +452,7 @@ module.exports = {
         if (royalBall && royalBall.payments.length !== 0) {
           if (royalBall.payments[0].isPaid) {
             workSheet.getCell('A25').value = moment(royalBall.payments[0].datePaid).format('MM/DD/YYYY')
-            workSheet.getCell('B25').value = `${royalBall.payments[0].userId.givenName} ${royalBall.payments[0].userId.lastName}`
+            workSheet.getCell('B25').value = (royalBall.payments[0].userId) ? `${royalBall.payments[0].userId.givenName} ${royalBall.payments[0].userId.lastName}` : ''
             workSheet.getCell('C25').value = royalBall.payments[0].receipt.orNumber
             workSheet.getCell('J25').value = (royalBall.payments[0].isPaid) ? 'Paid' : 'Unpaid'
           }
@@ -461,7 +461,7 @@ module.exports = {
         if (supplies && supplies.payments.length !== 0) {
           if (supplies.payments[0].isPaid) {
             workSheet.getCell('A26').value = moment(supplies.payments[0].datePaid).format('MM/DD/YYYY')
-            workSheet.getCell('B26').value = `${supplies.payments[0].userId.givenName} ${supplies.payments[0].userId.lastName}`
+            workSheet.getCell('B26').value = (supplies.payments[0].userId) ? `${supplies.payments[0].userId.givenName} ${supplies.payments[0].userId.lastName}` : ''
             workSheet.getCell('C26').value = supplies.payments[0].receipt.orNumber
             workSheet.getCell('J26').value = (supplies.payments[0].isPaid) ? 'Paid' : 'Unpaid'
           }
@@ -477,7 +477,7 @@ module.exports = {
             if (coatItem.payments[0].isPaid) {
               coatTotalAmount += coatItem.payments[0].amountDue
               coatReceipts.push(coatItem.payments[0].receipt.orNumber)
-              coatUser.push(`${coatItem.payments[0].userId.givenName} ${coatItem.payments[0].userId.lastName}`)
+              coatUser.push((coatItem.payments[0].userId) ? `${coatItem.payments[0].userId.givenName} ${coatItem.payments[0].userId.lastName}` : '')
               paidCoat += 1
             } else {
               unpaidCoat += 1
@@ -501,7 +501,7 @@ module.exports = {
             if (uniformItem.payments[0].isPaid) {
               uniformTotalAmount += uniformItem.payments[0].amountDue
               uniformReceipts.push(uniformItem.payments[0].receipt.orNumber)
-              uniformUser.push(`${uniformItem.payments[0].userId.givenName} ${uniformItem.payments[0].userId.lastName}`)
+              uniformUser.push((uniformItem.payments[0].userId) ? `${uniformItem.payments[0].userId.givenName} ${uniformItem.payments[0].userId.lastName}` : '')
               paiduniform += 1
             } else {
               unpaiduniform += 1
@@ -519,7 +519,7 @@ module.exports = {
         if (parangalFee && parangalFee.payments.length !== 0) {
           if (parangalFee.payments[0].isPaid) {
             workSheet.getCell(`K${pfCellNumber}`).value = moment(parangalFee.payments[0].datePaid).format('MM/DD/YYYY')
-            workSheet.getCell(`L${pfCellNumber}`).value = `${parangalFee.payments[0].userId.givenName} ${parangalFee.payments[0].userId.lastName}`
+            workSheet.getCell(`L${pfCellNumber}`).value = (parangalFee.payments[0].userId) ? `${parangalFee.payments[0].userId.givenName} ${parangalFee.payments[0].userId.lastName}` : ''
             workSheet.getCell(`M${pfCellNumber}`).value = parangalFee.payments[0].receipt.orNumber
             workSheet.getCell(`T${pfCellNumber}`).value = (parangalFee.payments[0].isPaid) ? 'Paid' : 'Unpaid'
           }
@@ -529,7 +529,7 @@ module.exports = {
         if (yearBook && yearBook.payments.length !== 0) {
           if (yearBook.payments[0].isPaid) {
             workSheet.getCell('K25').value = moment(yearBook.payments[0].datePaid).format('MM/DD/YYYY')
-            workSheet.getCell('L25').value = `${yearBook.payments[0].userId.givenName} ${yearBook.payments[0].userId.lastName}`
+            workSheet.getCell('L25').value = (yearBook.payments[0].userId) ? `${yearBook.payments[0].userId.givenName} ${yearBook.payments[0].userId.lastName}` : ''
             workSheet.getCell('M25').value = yearBook.payments[0].receipt.orNumber
             workSheet.getCell('T25').value = (yearBook.payments[0].isPaid) ? 'Paid' : 'Unpaid'
           }
@@ -539,7 +539,7 @@ module.exports = {
         if (frameGradPic && frameGradPic.payments.length !== 0) {
           if (frameGradPic.payments[0].isPaid) {
             workSheet.getCell('K26').value = moment(frameGradPic.payments[0].datePaid).format('MM/DD/YYYY')
-            workSheet.getCell('L26').value = `${frameGradPic.payments[0].userId.givenName} ${frameGradPic.payments[0].userId.lastName}`
+            workSheet.getCell('L26').value = (frameGradPic.payments[0].userId) ? `${frameGradPic.payments[0].userId.givenName} ${frameGradPic.payments[0].userId.lastName}` : ''
             workSheet.getCell('M26').value = frameGradPic.payments[0].receipt.orNumber
             workSheet.getCell('T26').value = (frameGradPic.payments[0].isPaid) ? 'Paid' : 'Unpaid'
           }
@@ -549,7 +549,7 @@ module.exports = {
         if (frameGradPicTheca && frameGradPicTheca.payments.length !== 0) {
           if (frameGradPicTheca.payments[0].isPaid) {
             workSheet.getCell('K27').value = moment(frameGradPicTheca.payments[0].datePaid).format('MM/DD/YYYY')
-            workSheet.getCell('L27').value = `${frameGradPicTheca.payments[0].userId.givenName} ${frameGradPicTheca.payments[0].userId.lastName}`
+            workSheet.getCell('L27').value = (frameGradPicTheca.payments[0].userId) ? `${frameGradPicTheca.payments[0].userId.givenName} ${frameGradPicTheca.payments[0].userId.lastName}` : ''
             workSheet.getCell('M27').value = frameGradPicTheca.payments[0].receipt.orNumber
             workSheet.getCell('T27').value = (frameGradPicTheca.payments[0].isPaid) ? 'Paid' : 'Unpaid'
           }
