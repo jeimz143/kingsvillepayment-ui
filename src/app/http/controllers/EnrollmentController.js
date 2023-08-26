@@ -320,7 +320,7 @@ module.exports = {
       total: total
     })
   },
-  async GenerateSOAReportXX (req, res) {
+  async GenerateSOAReport (req, res) {
     res.setHeader('Content-disposition', 'attachment; filename=' + 'StudentSOA.xlsx')
     res.setHeader('Content-type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
