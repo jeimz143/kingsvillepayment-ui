@@ -320,7 +320,7 @@ module.exports = {
       total: total
     })
   },
-  async GenerateSOAReport (req, res) {
+  async GenerateSOAReportXX (req, res) {
     res.setHeader('Content-disposition', 'attachment; filename=' + 'StudentSOA.xlsx')
     res.setHeader('Content-type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
@@ -362,7 +362,7 @@ module.exports = {
         tmSection.push([
           moment(books.payments[0].datePaid).format('MM/DD/YYYY'),
           `${books.payments[0].userId.givenName} ${books.payments[0].userId.lastName}`,
-          books.payments[0].receipt.orNumber,
+          (books.payments[0].receipt) ? books.payments[0].receipt.orNumber : '',
           books.payments[0].amountToPayPerMonth,
           '', '', '', '', '', '', '', '', '', '', '', '', '', '',
           books.payments[0].amountDue
@@ -370,7 +370,7 @@ module.exports = {
         tmSection.push([
           moment(registrationFee.payments[0].datePaid).format('MM/DD/YYYY'),
           `${registrationFee.payments[0].userId.givenName} ${registrationFee.payments[0].userId.lastName}`,
-          registrationFee.payments[0].receipt.orNumber,
+          (registrationFee.payments[0].receipt) ? registrationFee.payments[0].receipt.orNumber : '',
           '',
           registrationFee.payments[0].amountToPayPerMonth, '', '', '', '', '', '', '', '', '', '', '', '', '',
           registrationFee.payments[0].amountDue
@@ -378,7 +378,7 @@ module.exports = {
         tmSection.push([
           moment(miscellaneousFee.payments[0].datePaid).format('MM/DD/YYYY'),
           `${miscellaneousFee.payments[0].userId.givenName} ${miscellaneousFee.payments[0].userId.lastName}`,
-          miscellaneousFee.payments[0].receipt.orNumber,
+          (miscellaneousFee.payments[0].receipt) ? miscellaneousFee.payments[0].receipt.orNumber : '',
           '', '',
           miscellaneousFee.payments[0].amountToPayPerMonth, '', '', '', '', '', '', '', '', '', '', '', '',
           miscellaneousFee.payments[0].amountDue
@@ -390,7 +390,7 @@ module.exports = {
             var theTmSection = [
               moment(paymentItem.datePaid).format('MM/DD/YYYY'),
               `${paymentItem.userId.givenName} ${paymentItem.userId.lastName}`,
-              paymentItem.receipt.orNumber
+              (paymentItem.receipt) ? paymentItem.receipt.orNumber : ''
             ]
             for (var i = 0; i < amountIndexPosition; i++) {
               theTmSection.push('')

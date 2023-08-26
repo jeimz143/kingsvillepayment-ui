@@ -47,6 +47,10 @@ const LevelSchema = new Schema({
     type: String,
     default: null
   },
+  isGraduating: {
+    type: Boolean,
+    default: false
+  },
   deleted_at: {
     type: Date
   },

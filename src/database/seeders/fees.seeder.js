@@ -488,7 +488,7 @@ const data = [
   },
   {
     code: '',
-    name: 'Uniform',
+    name: 'Textile',
     description: 'Tela - White 120/Yrd',
     unitPrice: 120,
     isAnticipatedEventsAccessories: true,
@@ -496,7 +496,7 @@ const data = [
   },
   {
     code: '',
-    name: 'Uniform',
+    name: 'Textile',
     description: 'Tela - Checkered 125/Yrd',
     unitPrice: 120,
     isAnticipatedEventsAccessories: true,

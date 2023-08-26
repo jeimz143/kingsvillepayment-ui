@@ -21,6 +21,7 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 5350.00,
+  isGraduating: true,
   branch: 'KVB0001'
 },
 {
@@ -87,6 +88,7 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 7350.00,
+  isGraduating: true,
   branch: 'KVB0001'
 },
 {
@@ -163,6 +165,7 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 8500.00,
+  isGraduating: true,
   branch: 'KVB0001'
 }]
 

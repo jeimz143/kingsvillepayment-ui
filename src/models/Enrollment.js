@@ -49,6 +49,10 @@ const EnrollmentSchema = new Schema({
       ref: 'EnrollmentFees'
     }
   ],
+  isGraduating: {
+    type: Boolean,
+    default: false
+  },
   isScholar: {
     type: Boolean,
     default: false
