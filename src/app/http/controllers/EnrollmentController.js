@@ -499,7 +499,7 @@ module.exports = {
           }
         }
 
-        var coat = enrollee.fees.filter((rf) => rf.name.includes('Coat') || rf.name.includes('Textile'))
+        var coat = enrollee.fees.filter((rf) => (rf.name === 'Uniform' && rf.description.toLowerCase().includes('coat')) || rf.name.includes('Textile'))
         var coatTotalAmount = 0
         var coatReceipts = []
         var coatUser = []
@@ -509,7 +509,7 @@ module.exports = {
           if (coatItem.payments.length !== 0) {
             if (coatItem.payments[0].isPaid) {
               coatTotalAmount += coatItem.payments[0].amountDue
-              coatReceipts.push(coatItem.payments[0].receipt.orNumber)
+              coatReceipts.push((coatItem.payments[0].receipt) ? coatItem.payments[0].receipt.orNumber : '')
               coatUser.push((coatItem.payments[0].userId) ? `${coatItem.payments[0].userId.givenName} ${coatItem.payments[0].userId.lastName}` : '')
               paidCoat += 1
             } else {
@@ -526,7 +526,7 @@ module.exports = {
           workSheet.getCell('I27').value = `Paid: ${paidCoat}, Unpaid: ${unpaidCoat}`
         }
 
-        var uniform = enrollee.fees.filter((rf) => rf.name.includes('PE') || rf.name.includes('KVS'))
+        var uniform = enrollee.fees.filter((rf) => rf.name === 'Uniform' && (rf.description.toLowerCase().includes('pe') || rf.description.toLowerCase().includes('kvs')))
         var uniformTotalAmount = 0
         var uniformReceipts = []
         var uniformUser = []
@@ -536,7 +536,7 @@ module.exports = {
           if (uniformItem.payments.length !== 0) {
             if (uniformItem.payments[0].isPaid) {
               uniformTotalAmount += uniformItem.payments[0].amountDue
-              uniformReceipts.push(uniformItem.payments[0].receipt.orNumber)
+              uniformReceipts.push((uniformItem.payments[0].receipt) ? uniformItem.payments[0].receipt.orNumber : '')
               uniformUser.push((uniformItem.payments[0].userId) ? `${uniformItem.payments[0].userId.givenName} ${uniformItem.payments[0].userId.lastName}` : '')
               paiduniform += 1
             } else {
@@ -552,7 +552,7 @@ module.exports = {
           workSheet.getCell('I28').value = `Paid: ${paiduniform}, Unpaid: ${unpaiduniform}`
         }
 
-        var pinNameplate = enrollee.fees.filter((rf) => rf.name.includes('Nameplate') || rf.name.includes('Pin'))
+        var pinNameplate = enrollee.fees.filter((rf) => rf.name === 'Nameplate' || rf.name === 'Pin')
         var pinNameplateTotalAmount = 0
         var pinNameplateReceipts = []
         var pinNameplateUser = []
@@ -562,7 +562,7 @@ module.exports = {
           if (pinNameplateItem.payments.length !== 0) {
             if (pinNameplateItem.payments[0].isPaid) {
               pinNameplateTotalAmount += pinNameplateItem.payments[0].amountDue
-              pinNameplateReceipts.push(pinNameplateItem.payments[0].receipt.orNumber)
+              pinNameplateReceipts.push((pinNameplateItem.payments[0].receipt) ? pinNameplateItem.payments[0].receipt.orNumber : '')
               pinNameplateUser.push((pinNameplateItem.payments[0].userId) ? `${pinNameplateItem.payments[0].userId.givenName} ${pinNameplateItem.payments[0].userId.lastName}` : '')
               paidpinNameplate += 1
             } else {
@@ -590,7 +590,7 @@ module.exports = {
           if (parangalFee.payments[0].isPaid) {
             workSheet.getCell(`J${pfCellNumber}`).value = moment(parangalFee.payments[0].datePaid).format('MM/DD/YYYY')
             workSheet.getCell(`K${pfCellNumber}`).value = (parangalFee.payments[0].userId) ? `${parangalFee.payments[0].userId.givenName} ${parangalFee.payments[0].userId.lastName}` : ''
-            workSheet.getCell(`L${pfCellNumber}`).value = parangalFee.payments[0].receipt.orNumber
+            workSheet.getCell(`L${pfCellNumber}`).value = (parangalFee.payments[0].receipt) ? parangalFee.payments[0].receipt.orNumber : ''
             workSheet.getCell(`R${pfCellNumber}`).value = parangalFee.payments[0].amountDue
             workSheet.getCell(`S${pfCellNumber}`).value = (parangalFee.payments[0].isPaid) ? 'Paid' : 'Unpaid'
           }
@@ -600,7 +600,7 @@ module.exports = {
           if (yearBook.payments[0].isPaid) {
             workSheet.getCell('J25').value = moment(yearBook.payments[0].datePaid).format('MM/DD/YYYY')
             workSheet.getCell('K25').value = (yearBook.payments[0].userId) ? `${yearBook.payments[0].userId.givenName} ${yearBook.payments[0].userId.lastName}` : ''
-            workSheet.getCell('L25').value = yearBook.payments[0].receipt.orNumber
+            workSheet.getCell('L25').value = (yearBook.payments[0].receipt) ? yearBook.payments[0].receipt.orNumber : ''
             workSheet.getCell('R25').value = parangalFee.payments[0].amountDue
             workSheet.getCell('S25').value = (yearBook.payments[0].isPaid) ? 'Paid' : 'Unpaid'
           }
@@ -611,7 +611,7 @@ module.exports = {
           if (frameGradPic.payments[0].isPaid) {
             workSheet.getCell('J26').value = moment(frameGradPic.payments[0].datePaid).format('MM/DD/YYYY')
             workSheet.getCell('K26').value = (frameGradPic.payments[0].userId) ? `${frameGradPic.payments[0].userId.givenName} ${frameGradPic.payments[0].userId.lastName}` : ''
-            workSheet.getCell('L26').value = frameGradPic.payments[0].receipt.orNumber
+            workSheet.getCell('L26').value = (frameGradPic.payments[0].receipt) ? frameGradPic.payments[0].receipt.orNumber : ''
             workSheet.getCell('R26').value = frameGradPic.payments[0].amountDue
             workSheet.getCell('S26').value = (frameGradPic.payments[0].isPaid) ? 'Paid' : 'Unpaid'
           }
@@ -622,7 +622,7 @@ module.exports = {
           if (frameGradPicTheca.payments[0].isPaid) {
             workSheet.getCell('J27').value = moment(frameGradPicTheca.payments[0].datePaid).format('MM/DD/YYYY')
             workSheet.getCell('K27').value = (frameGradPicTheca.payments[0].userId) ? `${frameGradPicTheca.payments[0].userId.givenName} ${frameGradPicTheca.payments[0].userId.lastName}` : ''
-            workSheet.getCell('L27').value = frameGradPicTheca.payments[0].receipt.orNumber
+            workSheet.getCell('L27').value = (frameGradPicTheca.payments[0].receipt) ? frameGradPicTheca.payments[0].receipt.orNumber : ''
             workSheet.getCell('R27').value = frameGradPic.payments[0].amountDue
             workSheet.getCell('S27').value = (frameGradPicTheca.payments[0].isPaid) ? 'Paid' : 'Unpaid'
           }
