@@ -512,9 +512,9 @@ module.exports = {
               coatReceipts.push((coatItem.payments[0].receipt) ? coatItem.payments[0].receipt.orNumber : '')
               coatUser.push((coatItem.payments[0].userId) ? `${coatItem.payments[0].userId.givenName} ${coatItem.payments[0].userId.lastName}` : '')
               paidCoat += 1
-            } else {
-              unpaidCoat += 1
             }
+          } else {
+            unpaidCoat += 1
           }
         })
 
@@ -539,9 +539,9 @@ module.exports = {
               uniformReceipts.push((uniformItem.payments[0].receipt) ? uniformItem.payments[0].receipt.orNumber : '')
               uniformUser.push((uniformItem.payments[0].userId) ? `${uniformItem.payments[0].userId.givenName} ${uniformItem.payments[0].userId.lastName}` : '')
               paiduniform += 1
-            } else {
-              unpaiduniform += 1
             }
+          } else {
+            unpaiduniform += 1
           }
         })
         if (uniformTotalAmount !== 0) {
@@ -565,9 +565,9 @@ module.exports = {
               pinNameplateReceipts.push((pinNameplateItem.payments[0].receipt) ? pinNameplateItem.payments[0].receipt.orNumber : '')
               pinNameplateUser.push((pinNameplateItem.payments[0].userId) ? `${pinNameplateItem.payments[0].userId.givenName} ${pinNameplateItem.payments[0].userId.lastName}` : '')
               paidpinNameplate += 1
-            } else {
-              unpaidpinNameplate += 1
             }
+          } else {
+            unpaidpinNameplate += 1
           }
         })
         if (pinNameplateTotalAmount !== 0) {
