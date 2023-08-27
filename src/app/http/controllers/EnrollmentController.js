@@ -5,7 +5,9 @@ const EnrollmentFee = require('../../../models/EnrollmentFees')
 const PaymentFee = require('../../../models/PaymentFees')
 const SchoolYear = require('../../../models/SchoolYear')
 const { parseDocumentStatus } = require('../../../helpers/enums')
-
+const Excel = require('exceljs')
+const _ = require('lodash')
+const moment = require('moment')
 module.exports = {
   async Index (req, res) {
     var socketio = req.app.get('socketio')
@@ -321,6 +323,133 @@ module.exports = {
     })
   },
   async GenerateSOAReport (req, res) {
+    res.setHeader('Content-disposition', 'attachment; filename=' + 'StudentSOA.xlsx')
+    res.setHeader('Content-type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+
+    var enrollee = await Enrollment.findById(req.body._id).populate([{
+      path: 'fees',
+      model: 'EnrollmentFees',
+      populate: [
+        {
+          path: 'payments',
+          model: 'PaymentFees',
+          populate: [
+            {
+              path: 'receipt',
+              model: 'Receipts'
+            },
+            {
+              path: 'userId',
+              model: 'Users'
+            }
+          ]
+        }
+      ]
+    }]).exec()
+
+    var workbook = new Excel.Workbook()
+
+    var soalist = []
+
+    workbook.xlsx.readFile(`${__dirname}/../../../database/data/StatementOfAccount.xlsx`)
+      .then(async function () {
+        var monthValues = req.body.monthValues
+        var books = enrollee.fees.find((rf) => rf.name === 'Books')
+        var registrationFee = enrollee.fees.find((rf) => rf.name === 'Registration Fees')
+        var tuitionFee = enrollee.fees.find((rf) => rf.name === 'Tuition Fees')
+        var miscellanousFee = enrollee.fees.find((rf) => rf.name === 'Miscellaneous Fees')
+        var eventFee = enrollee.fees.find((rf) => rf.name === 'Event Fee')
+        var parangalFee = enrollee.fees.find((rf) => rf.name === 'Parangal Fee')
+        var fieldTrip = enrollee.fees.find((rf) => rf.name === 'Field Trip')
+        var royalBall = enrollee.fees.find((rf) => rf.name === 'Royal Ball')
+        var yearBook = enrollee.fees.find((rf) => rf.name === 'Annual Yearbook Graduating')
+        var framedGradPicture = enrollee.fees.find((rf) => rf.name === 'Framed Grad Piture')
+        var diploma = enrollee.fees.find((rf) => rf.name === 'Framed Diploma, Theca, Framed Grad Picture')
+        var supplies = enrollee.fees.find((rf) => rf.name === 'Supplies - All Students')
+        var pins = enrollee.fees.filter((rf) => rf.name === 'Pin')
+        var nameplates = enrollee.fees.filter((rf) => rf.name === 'Nameplate')
+        var uniforms = enrollee.fees.filter((rf) => rf.name === 'Uniform')
+        var vans = enrollee.fees.filter((rf) => rf.name === 'Van')
+    
+        if (!_.isEmpty(books)) {
+          soalist.push([
+            (books.payments[0].datePaid && books.payments[0].isPaid) ? moment(books.payments[0].datePaid).format('MM/DD/YYYY') : '',
+            (books.payments[0].userId && books.payments[0].isPaid) ? `${books.payments[0].userId.givenName} ${books.payments[0].userId.lastName}` : '',
+            (books.payments[0].receipt && books.payments[0].isPaid) ? books.payments[0].receipt.orNumber : 'None',
+            books.payments[0].amountToPayPerMonth,
+            '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+            books.payments[0].amountDue
+          ])
+        }
+        if (!_.isEmpty(registrationFee)) {
+          soalist.push([
+            moment(registrationFee.payments[0].datePaid).format('MM/DD/YYYY'),
+            (registrationFee.payments[0].userId) ? `${registrationFee.payments[0].userId.givenName} ${registrationFee.payments[0].userId.lastName}` : '',
+            (registrationFee.payments[0].receipt) ? registrationFee.payments[0].receipt.orNumber : '',
+            '',
+            registrationFee.payments[0].amountToPayPerMonth, '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+            registrationFee.payments[0].amountDue
+          ])
+        }
+        if (!_.isEmpty(tuitionFee)) {
+          var amountIndexPosition = 6
+          var emptyIndexToAdd = parseInt(monthValues.length)
+          tuitionFee.payments.forEach((paymentItem, paymentIndex) => {
+            if (paymentItem.receipt !== null && paymentItem.isPaid) {
+              var soaItem = [
+                (paymentItem.datePaid && paymentItem.isPaid) ? moment(paymentItem.datePaid).format('MM/DD/YYYY') : '',
+                (paymentItem.userId && paymentItem.isPaid) ? `${paymentItem.userId.givenName} ${paymentItem.userId.lastName}` : '',
+                (paymentItem.receipt && paymentItem.isPaid) ? paymentItem.receipt.orNumber : ''
+              ]
+              for (var i = 0; i < amountIndexPosition; i++) {
+                soaItem.push('')
+              }
+              soaItem.push(paymentItem.amountToPayPerMonth + miscellanousFee.payments[paymentIndex].amountToPayPerMonth)
+              amountIndexPosition = amountIndexPosition + 1
+              /* after */
+              emptyIndexToAdd = emptyIndexToAdd - 1
+              for (var j = 0; j < emptyIndexToAdd; j++) {
+                soaItem.push('')
+              }
+              soaItem.push(paymentItem.amountDue + miscellanousFee.payments[paymentIndex].amountDue)
+              soalist.push(soaItem)
+            }
+          })
+        }
+
+        var rowNumber = 7
+        var workSheet = workbook.getWorksheet('Statement Of Account')
+        var tlevelCode = `${enrollee.levelCode[enrollee.levelCode.length - 2]}${enrollee.levelCode[enrollee.levelCode.length - 1]}`
+        workSheet.getCell('A1').value = tlevelCode
+        workSheet.getCell('C3').value = enrollee.studentNumber
+        workSheet.getCell('C4').value = enrollee.studentName
+        workSheet.getCell('N1').value = req.body.serialNo
+        workSheet.getCell('J2').value = `Serial No.: ${req.body.schoolYear}`
+        soalist.forEach((tmItem, tmIndex) => {
+          workSheet.spliceRows(rowNumber, 1, tmItem)
+          var theRowOnProcess = workSheet.getRow(rowNumber)
+          theRowOnProcess.eachCell(function (cell, colNumber) {
+            if (colNumber > 3) {
+              theRowOnProcess.getCell(colNumber).numFmt = '0.00'
+            }
+            theRowOnProcess.getCell(colNumber).border = {
+              top: {style: 'thin'},
+              left: {style: 'thin'},
+              bottom: {style: 'thin'},
+              right: {style: 'thin'}
+            }
+          })
+          rowNumber++
+        })
+
+        workbook.xlsx.writeFile('storage/downloads/StatementOfAccount.xlsx').then(function () {
+          res.download('storage/downloads/StatementOfAccount.xlsx', function (err) {
+            console.log('---------- error downloading file: ' + err)
+          })
+        })
+      })
+  },
+  async GenerateSOAReportxxx (req, res) {
     res.setHeader('Content-disposition', 'attachment; filename=' + 'StudentSOA.xlsx')
     res.setHeader('Content-type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
