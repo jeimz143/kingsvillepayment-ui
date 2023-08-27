@@ -549,8 +549,8 @@ module.exports = {
           workSheet.getCell('B28').value = uniformUser
           workSheet.getCell('C28').value = uniformReceipts
           workSheet.getCell('H28').value = uniformTotalAmount
-          workSheet.getCell('I28').value = `Paid: ${paiduniform}, Unpaid: ${unpaiduniform}`
         }
+        workSheet.getCell('I28').value = `Paid: ${paiduniform}, Unpaid: ${unpaiduniform}`
 
         var pinNameplate = enrollee.fees.filter((rf) => rf.name === 'Nameplate' || rf.name === 'Pin')
         var pinNameplateTotalAmount = 0
@@ -565,9 +565,9 @@ module.exports = {
               pinNameplateReceipts.push((pinNameplateItem.payments[0].receipt) ? pinNameplateItem.payments[0].receipt.orNumber : '')
               pinNameplateUser.push((pinNameplateItem.payments[0].userId) ? `${pinNameplateItem.payments[0].userId.givenName} ${pinNameplateItem.payments[0].userId.lastName}` : '')
               paidpinNameplate += 1
+            } else {
+              unpaidpinNameplate += 1
             }
-          } else {
-            unpaidpinNameplate += 1
           }
         })
         if (pinNameplateTotalAmount !== 0) {
@@ -575,8 +575,8 @@ module.exports = {
           workSheet.getCell('B29').value = pinNameplateUser
           workSheet.getCell('C29').value = pinNameplateReceipts
           workSheet.getCell('H29').value = pinNameplateTotalAmount
-          workSheet.getCell('I29').value = `Paid: ${paidpinNameplate}, Unpaid: ${unpaidpinNameplate}`
         }
+        workSheet.getCell('I29').value = `Paid: ${paidpinNameplate}, Unpaid: ${unpaidpinNameplate}`
 
         /*
         *
