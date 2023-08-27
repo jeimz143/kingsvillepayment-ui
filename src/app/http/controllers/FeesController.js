@@ -28,7 +28,7 @@ module.exports = {
           branch: req.body.branch
         },
         {
-          $or: [{ 'code': { $regex: new RegExp(req.body.terms, 'i') } }, { 'name': { $regex: new RegExp(req.body.terms, 'i') } }]
+          $or: [{ 'code': { $regex: new RegExp(req.body.terms, 'i') } }, { 'name': { $regex: new RegExp(req.body.terms, 'i') } }, { 'description': { $regex: new RegExp(req.body.terms, 'i') } }]
         },
         {
           $or: [{ 'isMandatory': false }]
