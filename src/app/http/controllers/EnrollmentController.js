@@ -392,7 +392,7 @@ module.exports = {
           ])
         }
         if (!_.isEmpty(tuitionFee)) {
-          var amountIndexPosition = 6
+          var amountIndexPosition = 5
           var emptyIndexToAdd = parseInt(monthValues.length)
           tuitionFee.payments.forEach((paymentItem, paymentIndex) => {
             if (paymentItem.receipt !== null && paymentItem.isPaid) {
@@ -402,7 +402,13 @@ module.exports = {
                 (paymentItem.receipt && paymentItem.isPaid) ? paymentItem.receipt.orNumber : ''
               ]
               for (var i = 0; i < amountIndexPosition; i++) {
-                soaItem.push('')
+                if (i === 3) {
+                  soaItem.push(tuitionFee.amount + miscellanousFee.amount)
+                } else if (i === 4) {
+                  soaItem.push(paymentItem.amountToPayPerMonth + miscellanousFee.payments[paymentIndex].amountToPayPerMonth)
+                } else {
+                  soaItem.push('')
+                }
               }
               soaItem.push(paymentItem.amountToPayPerMonth + miscellanousFee.payments[paymentIndex].amountToPayPerMonth)
               amountIndexPosition = amountIndexPosition + 1
