@@ -391,7 +391,7 @@ module.exports = {
           for (var enrolleeIndex = 3; enrolleeIndex < enrollee.length; enrolleeIndex++) {
             totalAmount += enrollee[enrolleeIndex]
           }
-          enrollee.push(totalAmount.toFixed(2))
+          enrollee.push(totalAmount)
 
           // Collectibles
           var unpaidFees = listItem.fees.filter(e => !e.isPaid)
@@ -402,7 +402,7 @@ module.exports = {
           })
 
           totalCollectibles = totalBalance
-          enrollee.push(totalCollectibles.toFixed(2))
+          enrollee.push(totalCollectibles)
           // Status
           var status = 'Pending'
           if (totalCollectibles <= 0) {
