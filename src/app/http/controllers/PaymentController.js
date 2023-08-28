@@ -895,8 +895,12 @@ module.exports = {
           })
           rowNumber += 1
         })
+        var endRowEnrollee = rowNumber
         rowNumber += 1
         workSheet.spliceRows(rowNumber, 1, [ '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', parseFloat(grandTotal).toFixed(2), parseFloat(grandCollectibles).toFixed(2), '', '' ])
+        var endRow = rowNumber
+        workSheet.getCell(`AM${endRow}`).value = { formula: `SUM(AM8:AM${endRowEnrollee})`, date1904: false }
+        workSheet.getCell(`AN${endRow}`).value = { formula: `SUM(AN8:AN${endRowEnrollee})`, date1904: false }
         workbook.xlsx.writeFile('storage/downloads/SummaryPayments.xlsx').then(function () {
           res.download('storage/downloads/SummaryPayments.xlsx', function (err) {
             console.log('---------- error downloading file: ' + err)
