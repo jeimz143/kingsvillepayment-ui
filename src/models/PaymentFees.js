@@ -116,7 +116,6 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
       userId: user._id,
       branch: r.branch,
       enrollmentFee: feeItem._id,
-      formOfPayment: null,
       cashTendered: 0,
       dateToPay: null,
       dueDate: null,
@@ -130,13 +129,7 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
       pf.isPaid = true
     }
 
-    if (feeItem.paymentTerm === 1) {
-      pf['amountToPayPerMonth'] = feeItem.amount
-      pf['amountDue'] = feeItem.amount
-
-      paymentfees.push(new PaymentFee(pf))
-    } else {
-      var currentDate = moment(moment().format(), 'YYYY-MM-DD')
+    var currentDate = moment(moment().format(), 'YYYY-MM-DD')
 
       var schoolYear = await SchoolYear.findOne({ code: enrollment.schoolYearCode }).exec()
       var schoolStart = moment(schoolYear.schoolStartDate)
@@ -148,15 +141,35 @@ PaymentFeeSchema.statics.StorePaymentFee = async function (enrollment, Enrollmen
 
       var dateToPay = moment(schoolStart.format('YYYY-MM-DD'), 'YYYY-MM-DD')
 
+    if (feeItem.paymentTerm === 1) {
+      pf['dateToPay'] = moment(dateToPay.format('YYYY-MM-DD'), 'YYYY-MM-DD')
+      pf['dueDate'] = moment(pf['dateToPay'].format('YYYY-MM-DD'), 'YYYY-MM-DD').add(intervalDaysDueDate, 'days')
+      pf['amountToPayPerMonth'] = feeItem.amount
+      pf['amountDue'] = feeItem.amount
+
+      var numberOfDaysDue = parseInt(currentDate.diff(pf['dueDate'], 'days', true))
+        if (!enrollment.isScholar) {
+          if (numberOfDaysDue > 0) {
+            pf['amountDue'] = pf['amountToPayPerMonth'] + (numberOfDaysDue * amountDaysDueValue)
+          } else {
+            pf['amountDue'] = pf['amountToPayPerMonth']
+          }
+        }
+
+      paymentfees.push(new PaymentFee(pf))
+    } else {
+
       for (var i = 0; i < numberofSchoolMonth; i++) {
         pf['dateToPay'] = moment(dateToPay.format('YYYY-MM-DD'), 'YYYY-MM-DD').add(intervalMonthToPay, 'month')
         pf['dueDate'] = moment(pf['dateToPay'].format('YYYY-MM-DD'), 'YYYY-MM-DD').add(intervalDaysDueDate, 'days')
         pf['amountToPayPerMonth'] = (feeItem.amount / numberofSchoolMonth)
         var numberOfDaysDue = parseInt(currentDate.diff(pf['dueDate'], 'days', true))
-        if (numberOfDaysDue === 0) {
-          pf['amountDue'] = pf['amountToPayPerMonth'] + (numberOfDaysDue * amountDaysDueValue)
-        } else {
-          pf['amountDue'] = pf['amountToPayPerMonth']
+        if (!enrollment.isScholar) {
+          if (numberOfDaysDue > 0) {
+            pf['amountDue'] = pf['amountToPayPerMonth'] + (numberOfDaysDue * amountDaysDueValue)
+          } else {
+            pf['amountDue'] = pf['amountToPayPerMonth']
+          }
         }
         intervalMonthToPay++
         paymentfees.push(new PaymentFee(pf))
