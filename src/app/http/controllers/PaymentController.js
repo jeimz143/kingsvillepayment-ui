@@ -222,11 +222,11 @@ module.exports = {
         }
 
         var cashier = workSheet.getCell('A32')
-        cashier.value = pbranch.assignedCashier
+        cashier.value = pBranch.assignedCashier
         var officeManager = workSheet.getCell('Q32')
-        officeManager.value = pbranch.assignedOfficeManager
+        officeManager.value = pBranch.assignedOfficeManager
         var schoolHead = workSheet.getCell('AI32')
-        schoolHead.value = pbranch.assignedSchoolHead
+        schoolHead.value = pBranch.assignedSchoolHead
 
         var schoolYearHeader = workSheet.getCell('A4')
         schoolYearHeader.value = `STATEMENT OF ACCOUNT (PAYMENTS) S.Y. ${schoolYearCode}`
