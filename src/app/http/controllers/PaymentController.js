@@ -221,11 +221,11 @@ module.exports = {
           horizontal: 'center'
         }
 
-        cashier = workSheet.getCell('A32')
+        var cashier = workSheet.getCell('A32')
         cashier.value = pbranch.assignedCashier
-        officeManager = workSheet.getCell('Q32')
+        var officeManager = workSheet.getCell('Q32')
         officeManager.value = pbranch.assignedOfficeManager
-        schoolHead = workSheet.getCell('AI32')
+        var schoolHead = workSheet.getCell('AI32')
         schoolHead.value = pbranch.assignedSchoolHead
 
         var schoolYearHeader = workSheet.getCell('A4')
