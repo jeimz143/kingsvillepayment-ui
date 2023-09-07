@@ -13,9 +13,9 @@ const data = [{
     code: 'KVB0002',
     name: 'Umingan',
     address: 'Umingan, Pangasinan',
-    assignedCashier: 'Francis Grace O. Baybayan',
-    assignedOfficeManager: 'Leslie F. Loyola',
-    assignedSchoolHead: 'Dondon S. Pablo'
+    assignedCashier: '',
+    assignedOfficeManager: '',
+    assignedSchoolHead: ''
   }]
 
 class BranchSeeder extends Seeder {
