@@ -221,6 +221,13 @@ module.exports = {
           horizontal: 'center'
         }
 
+        cashier = workSheet.getCell('A32')
+        cashier.value = pbranch.assignedCashier
+        officeManager = workSheet.getCell('Q32')
+        officeManager.value = pbranch.assignedOfficeManager
+        schoolHead = workSheet.getCell('AI32')
+        schoolHead.value = pbranch.assignedSchoolHead
+
         var schoolYearHeader = workSheet.getCell('A4')
         schoolYearHeader.value = `STATEMENT OF ACCOUNT (PAYMENTS) S.Y. ${schoolYearCode}`
         schoolYearHeader.font = {
@@ -237,11 +244,6 @@ module.exports = {
             workbook.removeWorksheet(workSheetNameList[i])
           }
         }
-        // workSheet.columns.forEach((wsColumn, wsColumnIndex) => {
-        //   if (wsColumnIndex >= 3) {
-        //     wsColumn.width = 12
-        //   }
-        // })
 
         var enrolledList = await Enrollment.find({ $and: [{ branch: schoolBranch, schoolYearCode: schoolYearCode, levelCode: levelCode }, { documentStatus: { $ne: 3 } }] }).populate([{
           path: 'fees',
@@ -740,6 +742,10 @@ module.exports = {
             bold: true
           }
         })
+
+        var branch = await 
+        
+        
         var enrolledList = await Enrollment.find({ branch: schoolBranch, schoolYearCode: schoolYearCode, levelCode: levelCode, documentStatus: 1 }).populate([{
           path: 'fees',
           model: 'EnrollmentFees',

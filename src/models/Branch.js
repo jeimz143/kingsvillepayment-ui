@@ -12,6 +12,18 @@ const BranchSchema = new Schema({
     type: String,
     Required: 'Branch name is required'
   },
+  assignedCashier: {
+    type: String,
+    default: ''
+  },
+  assignedOfficeManager: {
+    type: String,
+    default: ''
+  },
+  assignedSchoolHead: {
+    type: String,
+    default: ''
+  },
   address: {
     type: String
   },
