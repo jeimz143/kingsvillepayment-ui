@@ -19,31 +19,54 @@ data.push({
   lastName: 'Angeles',
   givenName: 'Mark Lester',
   middleName: 'Dizon',
-  role: 'SchoolHead',
+  role: 'Administrator',
   email: 'mark.lester@kingsville.edu.ph',
   gender: 1,
-  password: 'secret'
+  password: 'K!@#24ls'
 })
+
+data.push({
+  lastName: 'Lacson',
+  givenName: 'Theresa',
+  middleName: 'Dela Cruz',
+  role: 'SchoolHead',
+  email: 'theresa.angeles@kingsville.edu.ph',
+  gender: 1,
+  branch: 'Tayug',
+  password: '^&5&*Gkl;~'
+})
+
 
 data.push({
   lastName: 'Pablo',
   givenName: 'Don',
   middleName: '',
-  role: 'Registrar',
+  role: 'Administrator',
   email: 'pablo.don@kingsville.edu.ph',
   gender: 1,
-  password: 'secret'
+  password: '90$%^.!h#'
 })
 
 data.push({
   branch: 'KVB0001',
-  lastName: 'Villarica',
-  givenName: 'Vanessa',
-  middleName: 'Dolor',
+  lastName: 'Barrientos',
+  givenName: 'Rien Marie',
+  middleName: 'Nieto',
+  role: 'SchoolHead',
+  email: 'rienmarie.barrientos@kingsville.edu.ph',
+  gender: 2,
+  password: '&*8)5etd>'
+})
+
+data.push({
+  branch: 'KVB0001',
+  lastName: 'Baybayan',
+  givenName: 'Francis Grace',
+  middleName: 'Oribado',
   role: 'Cashier',
-  email: 'cashier@kingsville.edu.ph',
+  email: 'francisgrace.baybayan@kingsville.edu.ph',
   gender: 1,
-  password: 'secret'
+  password: '.?2$%&gHl;'
 })
 
 class UserSeeder extends Seeder {
