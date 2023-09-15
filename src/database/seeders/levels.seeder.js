@@ -185,7 +185,7 @@ const data = [{
   code: 'GRLVL0012',
   name: 'Grade 12',
   description: 'Senior High School',
-  nitPrice: 23000,
+  unitPrice: 23000,
   scholarUnitPrice: 11500,
   miscellUnitPrice: 11500,
   miscellScholarUnitPrice: 5750.00,
