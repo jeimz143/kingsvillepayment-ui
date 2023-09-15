@@ -10,8 +10,6 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 5350.00,
-  eventFee: 1249.00,
-  supplies: 500,
   branch: 'KVB0001'
 },
 {
@@ -23,8 +21,6 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 5350.00,
-  eventFee: 1249.00,
-  supplies: 500,
   isGraduating: true,
   branch: 'KVB0001'
 },
@@ -37,8 +33,6 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 6850.00,
-  eventFee: 1249.00,
-  supplies: 500,
   branch: 'KVB0001'
 },
 {
@@ -50,8 +44,6 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 6850.00,
-  eventFee: 1249.00,
-  supplies: 500,
   branch: 'KVB0001'
 },
 {
@@ -63,8 +55,6 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 6850.00,
-  eventFee: 1249.00,
-  supplies: 500,
   branch: 'KVB0001'
 },
 {
@@ -76,8 +66,6 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 7350.00,
-  eventFee: 1249.00,
-  supplies: 500,
   branch: 'KVB0001'
 },
 {
@@ -89,8 +77,6 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 7350.00,
-  eventFee: 1249.00,
-  supplies: 500,
   branch: 'KVB0001'
 },
 {
@@ -102,8 +88,6 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 7350.00,
-  eventFee: 1249.00,
-  supplies: 500,
   isGraduating: true,
   branch: 'KVB0001'
 },
@@ -118,8 +102,6 @@ const data = [{
   registrationFee: 1500,
   booksUnitPrice: 7350.00,
   booksScholarUnitPrice: 6850.00,
-  eventFee: 1249.00,
-  supplies: 500,
   branch: 'KVB0001'
 },
 {
@@ -133,8 +115,6 @@ const data = [{
   registrationFee: 1500,
   booksUnitPrice: 7350.00,
   booksScholarUnitPrice: 6850.00,
-  eventFee: 1249.00,
-  supplies: 500,
   branch: 'KVB0001'
 },
 {
@@ -148,8 +128,6 @@ const data = [{
   registrationFee: 1500,
   booksUnitPrice: 7350.00,
   booksScholarUnitPrice: 6850.00,
-  eventFee: 1249.00,
-  supplies: 500,
   branch: 'KVB0001'
 },
 {
@@ -163,8 +141,6 @@ const data = [{
   registrationFee: 1500,
   booksUnitPrice: 7350.00,
   booksScholarUnitPrice: 6850.00,
-  eventFee: 1249.00,
-  supplies: 500,
   branch: 'KVB0001'
 },
 {
@@ -177,8 +153,7 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 8500.00,
-  eventFee: 1249.00,
-  supplies: 500,
+  booksScholarUnitPrice: 8500.00,
   branch: 'KVB0001'
 },
 {
@@ -191,8 +166,7 @@ const data = [{
   miscellScholarUnitPrice: 5750.00,
   registrationFee: 1500,
   booksUnitPrice: 8500.00,
-  eventFee: 1249.00,
-  supplies: 500,
+  booksScholarUnitPrice: 8500.00,
   isGraduating: true,
   branch: 'KVB0001'
 }]
