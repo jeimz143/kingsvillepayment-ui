@@ -42,8 +42,9 @@ const data = [
     code: '',
     name: 'Event Fee',
     description: '(Buwan ng Wika, Literary Meet/Intramurals, Christmast Party, Foundation Day, Support for Little Miss Participation, Class Picture, Pajama Party)',
-    unitPrice: 1000,
+    unitPrice: 1249.00,
     isAnticipatedEventsAccessories: true,
+    isMandatory: true,
     branch: 'KVB0001'
   },
   {
@@ -52,6 +53,7 @@ const data = [
     description: '(Buwan ng Wika, Literary Meet/Intramurals, Christmast Party, Foundation Day, Support for Little Miss Participation, Class Picture, Pajama Party)',
     unitPrice: 500,
     isAnticipatedEventsAccessories: true,
+    isMandatory: true,
     branch: 'KVB0001'
   },
   {

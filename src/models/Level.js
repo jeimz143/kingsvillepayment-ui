@@ -43,6 +43,14 @@ const LevelSchema = new Schema({
     type: Number,
     default: 0
   },
+  eventFee: {
+    type: Number,
+    default: 0
+  },
+  supplies: {
+    type: Number,
+    default: 0
+  },
   branch: {
     type: String,
     default: null
